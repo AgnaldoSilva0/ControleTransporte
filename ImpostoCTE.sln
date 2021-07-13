@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImpostoCTE", "ImpostoCTE\ImpostoCTE.csproj", "{4DAE73BB-1254-46AF-8D2D-DFE8F6A163A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DAE73BB-1254-46AF-8D2D-DFE8F6A163A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DAE73BB-1254-46AF-8D2D-DFE8F6A163A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DAE73BB-1254-46AF-8D2D-DFE8F6A163A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DAE73BB-1254-46AF-8D2D-DFE8F6A163A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E9808A6-66A6-4045-AF4E-7893825F6CD4}
+	EndGlobalSection
+EndGlobal

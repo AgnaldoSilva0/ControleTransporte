@@ -43,9 +43,9 @@ namespace ImpostoCTE
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lbDescontoAviso = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.lbValorTotalImpostos = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbIcmsAtivado = new System.Windows.Forms.Label();
@@ -280,6 +280,17 @@ namespace ImpostoCTE
             this.panel3.Size = new System.Drawing.Size(480, 100);
             this.panel3.TabIndex = 1;
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.Control;
+            this.label17.Location = new System.Drawing.Point(456, 82);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(21, 7);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "V 1.0";
+            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -300,17 +311,6 @@ namespace ImpostoCTE
             this.lbDescontoAviso.Size = new System.Drawing.Size(35, 13);
             this.lbDescontoAviso.TabIndex = 2;
             this.lbDescontoAviso.Text = "NULL";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(456, 82);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(21, 7);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "V 1.0";
             // 
             // lbValorTotalImpostos
             // 
@@ -707,7 +707,7 @@ namespace ImpostoCTE
             this.mtbValorFrete.Size = new System.Drawing.Size(174, 20);
             this.mtbValorFrete.TabIndex = 11;
             this.mtbValorFrete.ValidatingType = typeof(int);
-            this.mtbValorFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbValorFrete_KeyPress);
+            this.mtbValorFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.testando);
             // 
             // comboBox2
             // 

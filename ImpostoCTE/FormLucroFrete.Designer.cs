@@ -64,6 +64,7 @@ namespace ImpostoCTE
             this.tbValorFreteLucro.Name = "tbValorFreteLucro";
             this.tbValorFreteLucro.Size = new System.Drawing.Size(100, 20);
             this.tbValorFreteLucro.TabIndex = 1;
+            this.tbValorFreteLucro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
             // 
             // tbDiariaLucro
             // 
@@ -71,6 +72,7 @@ namespace ImpostoCTE
             this.tbDiariaLucro.Name = "tbDiariaLucro";
             this.tbDiariaLucro.Size = new System.Drawing.Size(100, 20);
             this.tbDiariaLucro.TabIndex = 2;
+            this.tbDiariaLucro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
             // 
             // tbImpostoLucro
             // 
@@ -78,6 +80,7 @@ namespace ImpostoCTE
             this.tbImpostoLucro.Name = "tbImpostoLucro";
             this.tbImpostoLucro.Size = new System.Drawing.Size(100, 20);
             this.tbImpostoLucro.TabIndex = 3;
+            this.tbImpostoLucro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
             // 
             // tbCombustivelLucro
             // 
@@ -85,6 +88,7 @@ namespace ImpostoCTE
             this.tbCombustivelLucro.Name = "tbCombustivelLucro";
             this.tbCombustivelLucro.Size = new System.Drawing.Size(100, 20);
             this.tbCombustivelLucro.TabIndex = 4;
+            this.tbCombustivelLucro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
             // 
             // label1
             // 
@@ -147,6 +151,7 @@ namespace ImpostoCTE
             this.tbOutrasDespesasLucro.Name = "tbOutrasDespesasLucro";
             this.tbOutrasDespesasLucro.Size = new System.Drawing.Size(100, 20);
             this.tbOutrasDespesasLucro.TabIndex = 9;
+            this.tbOutrasDespesasLucro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
             // 
             // btCalcularLucro
             // 

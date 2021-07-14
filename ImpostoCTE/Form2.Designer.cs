@@ -40,8 +40,7 @@ namespace ImpostoCTE
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.lbDescontoAviso = new System.Windows.Forms.Label();
-            this.lbValorTotalImpostos = new System.Windows.Forms.Label();
+            this.lbAplicacao = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,20 +56,25 @@ namespace ImpostoCTE
             // 
             // listViewProdutos
             // 
-            this.listViewProdutos.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.listViewProdutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.listViewProdutos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.cHCodigo,
             this.cHDescricao,
             this.cHPreco,
             this.cHIpi});
+            this.listViewProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewProdutos.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.listViewProdutos.FullRowSelect = true;
             this.listViewProdutos.GridLines = true;
             this.listViewProdutos.HideSelection = false;
             this.listViewProdutos.Location = new System.Drawing.Point(3, 12);
+            this.listViewProdutos.MultiSelect = false;
             this.listViewProdutos.Name = "listViewProdutos";
             this.listViewProdutos.Size = new System.Drawing.Size(471, 303);
             this.listViewProdutos.TabIndex = 1;
             this.listViewProdutos.UseCompatibleStateImageBehavior = false;
             this.listViewProdutos.View = System.Windows.Forms.View.Details;
+            this.listViewProdutos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewProdutos_MouseClick);
             // 
             // cHCodigo
             // 
@@ -103,6 +107,7 @@ namespace ImpostoCTE
             this.btPesquisar.TabIndex = 2;
             this.btPesquisar.Text = "Pesquisar";
             this.btPesquisar.UseVisualStyleBackColor = true;
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // tbPesquisar
             // 
@@ -116,8 +121,7 @@ namespace ImpostoCTE
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.lbDescontoAviso);
-            this.panel3.Controls.Add(this.lbValorTotalImpostos);
+            this.panel3.Controls.Add(this.lbAplicacao);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 350);
             this.panel3.Name = "panel3";
@@ -140,32 +144,22 @@ namespace ImpostoCTE
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label22.Location = new System.Drawing.Point(6, 40);
+            this.label22.Location = new System.Drawing.Point(4, 5);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(205, 20);
+            this.label22.Size = new System.Drawing.Size(96, 20);
             this.label22.TabIndex = 3;
-            this.label22.Text = "Valor Total de Impostos:";
+            this.label22.Text = "Aplicações";
             // 
-            // lbDescontoAviso
+            // lbAplicacao
             // 
-            this.lbDescontoAviso.AutoSize = true;
-            this.lbDescontoAviso.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbDescontoAviso.Location = new System.Drawing.Point(265, 67);
-            this.lbDescontoAviso.Name = "lbDescontoAviso";
-            this.lbDescontoAviso.Size = new System.Drawing.Size(35, 13);
-            this.lbDescontoAviso.TabIndex = 2;
-            this.lbDescontoAviso.Text = "NULL";
-            // 
-            // lbValorTotalImpostos
-            // 
-            this.lbValorTotalImpostos.AutoSize = true;
-            this.lbValorTotalImpostos.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbValorTotalImpostos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbValorTotalImpostos.Location = new System.Drawing.Point(264, 38);
-            this.lbValorTotalImpostos.Name = "lbValorTotalImpostos";
-            this.lbValorTotalImpostos.Size = new System.Drawing.Size(38, 23);
-            this.lbValorTotalImpostos.TabIndex = 0;
-            this.lbValorTotalImpostos.Text = "0.0";
+            this.lbAplicacao.AutoSize = true;
+            this.lbAplicacao.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAplicacao.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbAplicacao.Location = new System.Drawing.Point(12, 49);
+            this.lbAplicacao.Name = "lbAplicacao";
+            this.lbAplicacao.Size = new System.Drawing.Size(28, 23);
+            this.lbAplicacao.TabIndex = 0;
+            this.lbAplicacao.Text = "...";
             // 
             // Form2
             // 
@@ -201,7 +195,6 @@ namespace ImpostoCTE
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label lbDescontoAviso;
-        private System.Windows.Forms.Label lbValorTotalImpostos;
+        private System.Windows.Forms.Label lbAplicacao;
     }
 }

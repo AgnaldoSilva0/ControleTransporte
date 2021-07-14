@@ -8,7 +8,7 @@ namespace ImpostoCTE
 {
     class Produto
     {
-        private String codigo, descricao;
+        private String codigo, descricao, aplicacao;
         private double preco;
         private int ipi;
 
@@ -24,5 +24,6 @@ namespace ImpostoCTE
         public string Descricao { get => descricao; set => descricao = value; }
         public double Preco { get => preco; set => preco = value; }
         public int Ipi { get => ipi; set => ipi = value; }
+        public string Aplicacao { get => aplicacao; set => aplicacao = value; }
     }
 }

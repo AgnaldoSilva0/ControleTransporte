@@ -144,6 +144,11 @@ namespace ImpostoCTE
             Operacoes.impedirLetrasTextBox(sender, e);
         }
 
+        private void testando(object sender, KeyPressEventArgs e)
+        {
+            Operacoes.impedirLetrasTextBox(sender, e);
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             openChieldForm(new Form2());

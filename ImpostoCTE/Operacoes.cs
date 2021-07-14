@@ -11,8 +11,12 @@ namespace ImpostoCTE
     {
         public static Double calcularTotalImposto(double icms, double pis, double cofins, double irt, double cs)
         {
-            double total = icms + pis + cofins + irt + cs;
-            return total;
+            return icms + pis + cofins + irt + cs;
+        }
+
+        public static Double calcularLucroFrete(double valorFrete, double imposto, double diaria, double combustivel, double outrasDespesas)
+        {
+            return valorFrete + imposto + diaria + combustivel + outrasDespesas;
         }
 
         public static void impedirLetrasTextBox(object sender, KeyPressEventArgs e) 

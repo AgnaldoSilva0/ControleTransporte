@@ -97,7 +97,6 @@ namespace ImpostoCTE
             // 
             this.cHIpi.Text = "IPI";
             this.cHIpi.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.cHIpi.Width = 29;
             // 
             // btPesquisar
             // 

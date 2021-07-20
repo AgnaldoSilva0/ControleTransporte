@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SQLite;
 using System.IO;
 using System.Linq;
@@ -40,9 +41,10 @@ namespace ImpostoCTE
             }
         }
 
+
         public static void insertBancoProduto()
         {
-            string baseDados = Application.StartupPath + @"\db\BDSQLite.db";
+            string baseDados = Application.StartupPath + @"\db\produtos.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
 
             SQLiteConnection conexao = new SQLiteConnection(strConection);
@@ -60,7 +62,7 @@ namespace ImpostoCTE
                 double preco = 2588.26;
                 int ipi = 22;
 
-                comando.CommandText = "INSERT INTO nomebanco VALUES (" + codigo + ", '" + descricao + "', '" + preco + "', '" + ipi +"' )";
+                comando.CommandText = "INSERT INTO produto VALUES (" + codigo + ", '" + descricao + "', '" + preco + "', '" + ipi +"' )";
 
                 comando.ExecuteNonQuery();
 
@@ -77,5 +79,48 @@ namespace ImpostoCTE
             }
         }
 
+        public List<Produto> pesquisarTodosItens()
+        {
+            string baseDados = Application.StartupPath + @"\db\DBSQLite.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            List<Produto> lista = new List<Produto>();
+            try
+            {
+                string query = "SELECT * FROM produto";
+                string nada = "nada";
+                //if (nada != "")
+                //{
+                //    query = "SELECT * FROM produto WHERE nome LIKE '" + nada + "'";
+                //}
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    Console.WriteLine(row["codigo"]);
+                    Console.WriteLine(row["descricao"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                
+            }
+            return lista;
+        }
     }
-}
+
+    }

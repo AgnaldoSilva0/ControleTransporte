@@ -79,20 +79,20 @@ namespace ImpostoCTE
             }
         }
 
-        public List<Produto> pesquisarTodosItens()
+        public static void pesquisarTodosItens()
         {
-            string baseDados = Application.StartupPath + @"\db\DBSQLite.db";
+            Listas.listProduto.Clear();
+            //string baseDados = Application.StartupPath + @"\db\DBSQLite.db"; C:\BDs\dds
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
 
             SQLiteConnection conexao = new SQLiteConnection(strConection);
-            List<Produto> lista = new List<Produto>();
             try
             {
-                string query = "SELECT * FROM produto";
-                string nada = "nada";
-                //if (nada != "")
+                string query = "SELECT * FROM banco_produto";
+                //if (codigo != "")
                 //{
-                //    query = "SELECT * FROM produto WHERE nome LIKE '" + nada + "'";
+                //   query = "SELECT * FROM produto WHERE nome LIKE '" + codigo + "'";
                 //}
 
                 DataTable dados = new DataTable();
@@ -106,8 +106,8 @@ namespace ImpostoCTE
 
                 foreach (System.Data.DataRow row in dados.Rows)
                 {
-                    Console.WriteLine(row["codigo"]);
-                    Console.WriteLine(row["descricao"]);
+                    Listas.listProduto.Add(new Produto(Convert.ToString(row["codigo"]), Convert.ToString(row["descricao"]), 
+                        Convert.ToDouble(row["preco"]), Convert.ToInt16(row["ipi"])));
                 }
             }
             catch (Exception ex)
@@ -119,7 +119,7 @@ namespace ImpostoCTE
                 conexao.Close();
                 
             }
-            return lista;
+            
         }
     }
 

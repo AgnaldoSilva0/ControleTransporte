@@ -41,6 +41,8 @@ namespace ImpostoCTE
             this.label17 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.lbAplicacao = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbValorVenda = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,6 +120,8 @@ namespace ImpostoCTE
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.panel3.Controls.Add(this.lbValorVenda);
+            this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label22);
             this.panel3.Controls.Add(this.lbAplicacao);
@@ -132,7 +136,7 @@ namespace ImpostoCTE
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(456, 82);
+            this.label17.Location = new System.Drawing.Point(456, 83);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(21, 7);
             this.label17.TabIndex = 1;
@@ -154,11 +158,33 @@ namespace ImpostoCTE
             this.lbAplicacao.AutoSize = true;
             this.lbAplicacao.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAplicacao.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbAplicacao.Location = new System.Drawing.Point(12, 49);
+            this.lbAplicacao.Location = new System.Drawing.Point(12, 34);
             this.lbAplicacao.Name = "lbAplicacao";
             this.lbAplicacao.Size = new System.Drawing.Size(28, 23);
             this.lbAplicacao.TabIndex = 0;
             this.lbAplicacao.Text = "...";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(4, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Valor:";
+            // 
+            // lbValorVenda
+            // 
+            this.lbValorVenda.AutoSize = true;
+            this.lbValorVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorVenda.ForeColor = System.Drawing.Color.Lime;
+            this.lbValorVenda.Location = new System.Drawing.Point(66, 72);
+            this.lbValorVenda.Name = "lbValorVenda";
+            this.lbValorVenda.Size = new System.Drawing.Size(31, 18);
+            this.lbValorVenda.TabIndex = 5;
+            this.lbValorVenda.Text = "0.0";
             // 
             // Form2
             // 
@@ -195,5 +221,7 @@ namespace ImpostoCTE
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lbAplicacao;
+        private System.Windows.Forms.Label lbValorVenda;
+        private System.Windows.Forms.Label label1;
     }
 }

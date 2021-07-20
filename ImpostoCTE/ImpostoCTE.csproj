@@ -88,6 +88,7 @@
       <DependentUpon>FormLucroFrete.cs</DependentUpon>
     </Compile>
     <Compile Include="Impostos.cs" />
+    <Compile Include="Listas.cs" />
     <Compile Include="Operacoes.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />

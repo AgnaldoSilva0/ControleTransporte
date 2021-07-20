@@ -22,6 +22,7 @@ namespace ImpostoCTE
         private void customizeDesign()
         {
             panelSubMenu.Visible = false;
+            panelSubMenuProduto.Visible = false;
         }
 
         private void hideSubMenu()
@@ -44,6 +45,11 @@ namespace ImpostoCTE
         private void btMenu_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSubMenu);
+        }
+
+        private void btMenuProduto_Click(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubMenuProduto);
         }
 
         private Form activeForm = null;
@@ -161,10 +167,18 @@ namespace ImpostoCTE
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
             openChieldForm(new FormLucroFrete());
         }
 
-
+        private void button5_Click(object sender, EventArgs e)
+        {
+            openChieldForm(new Forms.FormCadastroProduto());
+        }
     }
 
    

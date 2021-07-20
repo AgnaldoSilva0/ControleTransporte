@@ -46,7 +46,7 @@ namespace ImpostoCTE
             ConexaoBD.pesquisarTodosItens();
             foreach (var item in Listas.listProduto)
             {
-               if (item.Codigo.IndexOf(tbPesquisar.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+               if (item.Codigo.IndexOf(tbPesquisar.Text, StringComparison.OrdinalIgnoreCase) >= 0 || item.Descricao.IndexOf(tbPesquisar.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
                     listViewProdutos.Items.Add(new ListViewItem(new string[] { item.Codigo, item.Descricao, "R$ " + Convert.ToString(item.Preco), Convert.ToString(item.Ipi) }));
                 }

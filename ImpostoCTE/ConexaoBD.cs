@@ -42,9 +42,9 @@ namespace ImpostoCTE
         }
 
 
-        public static void insertBancoProduto()
+        public static void insertBancoProduto(string codigo, string descricao, double preco, int ipi)
         {
-            string baseDados = Application.StartupPath + @"\db\produtos.db";
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
 
             SQLiteConnection conexao = new SQLiteConnection(strConection);
@@ -56,13 +56,7 @@ namespace ImpostoCTE
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
 
-                //Aqui deve ser criado as variaveis que vai guardar os dados que vai ser inserido no banco de dados
-                string codigo = "6546";
-                string descricao = "KIT EMBREAGEM SACHS Pellegrino";
-                double preco = 2588.26;
-                int ipi = 22;
-
-                comando.CommandText = "INSERT INTO produto VALUES (" + codigo + ", '" + descricao + "', '" + preco + "', '" + ipi +"' )";
+                comando.CommandText = "INSERT INTO banco_produto(codigo, descricao, preco, ipi) VALUES ('" + codigo + "', '" + descricao + "', '" + preco + "', '" + ipi +"' )";
 
                 comando.ExecuteNonQuery();
 

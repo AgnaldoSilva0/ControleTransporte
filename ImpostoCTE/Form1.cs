@@ -179,6 +179,11 @@ namespace ImpostoCTE
         {
             openChieldForm(new Forms.FormCadastroProduto());
         }
+
+        private void btListaFrete_Click(object sender, EventArgs e)
+        {
+            openChieldForm(new Forms.FormListaFrete());
+        }
     }
 
    

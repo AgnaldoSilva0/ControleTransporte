@@ -31,6 +31,10 @@ namespace ImpostoCTE
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelSubMenuProduto = new System.Windows.Forms.Panel();
+            this.btListaFrete = new System.Windows.Forms.Button();
+            this.btLucroFrete = new System.Windows.Forms.Button();
+            this.btMenuProduto = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panelSubMenu = new System.Windows.Forms.Panel();
@@ -87,11 +91,8 @@ namespace ImpostoCTE
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
-            this.btMenuProduto = new System.Windows.Forms.Button();
-            this.panelSubMenuProduto = new System.Windows.Forms.Panel();
-            this.btLucroFrete = new System.Windows.Forms.Button();
-            this.btListaFrete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panelSubMenuProduto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -105,7 +106,6 @@ namespace ImpostoCTE
             this.panel4.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelSubMenuProduto.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -124,6 +124,67 @@ namespace ImpostoCTE
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(173, 566);
             this.panel1.TabIndex = 0;
+            // 
+            // panelSubMenuProduto
+            // 
+            this.panelSubMenuProduto.Controls.Add(this.btListaFrete);
+            this.panelSubMenuProduto.Controls.Add(this.btLucroFrete);
+            this.panelSubMenuProduto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuProduto.Location = new System.Drawing.Point(0, 323);
+            this.panelSubMenuProduto.Name = "panelSubMenuProduto";
+            this.panelSubMenuProduto.Size = new System.Drawing.Size(173, 74);
+            this.panelSubMenuProduto.TabIndex = 6;
+            // 
+            // btListaFrete
+            // 
+            this.btListaFrete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btListaFrete.FlatAppearance.BorderSize = 0;
+            this.btListaFrete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btListaFrete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
+            this.btListaFrete.Location = new System.Drawing.Point(0, 33);
+            this.btListaFrete.Name = "btListaFrete";
+            this.btListaFrete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btListaFrete.Size = new System.Drawing.Size(173, 33);
+            this.btListaFrete.TabIndex = 5;
+            this.btListaFrete.Text = "Lista de Frete";
+            this.btListaFrete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btListaFrete.UseVisualStyleBackColor = true;
+            this.btListaFrete.Click += new System.EventHandler(this.btListaFrete_Click);
+            // 
+            // btLucroFrete
+            // 
+            this.btLucroFrete.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btLucroFrete.FlatAppearance.BorderSize = 0;
+            this.btLucroFrete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLucroFrete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
+            this.btLucroFrete.Location = new System.Drawing.Point(0, 0);
+            this.btLucroFrete.Name = "btLucroFrete";
+            this.btLucroFrete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btLucroFrete.Size = new System.Drawing.Size(173, 33);
+            this.btLucroFrete.TabIndex = 4;
+            this.btLucroFrete.Text = "Lucro Frete";
+            this.btLucroFrete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLucroFrete.UseVisualStyleBackColor = true;
+            this.btLucroFrete.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // btMenuProduto
+            // 
+            this.btMenuProduto.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btMenuProduto.FlatAppearance.BorderSize = 0;
+            this.btMenuProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btMenuProduto.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMenuProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(229)))), ((int)(((byte)(190)))));
+            this.btMenuProduto.Image = ((System.Drawing.Image)(resources.GetObject("btMenuProduto.Image")));
+            this.btMenuProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btMenuProduto.Location = new System.Drawing.Point(0, 278);
+            this.btMenuProduto.Name = "btMenuProduto";
+            this.btMenuProduto.Size = new System.Drawing.Size(173, 45);
+            this.btMenuProduto.TabIndex = 5;
+            this.btMenuProduto.Text = "Transporte";
+            this.btMenuProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btMenuProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btMenuProduto.UseVisualStyleBackColor = true;
+            this.btMenuProduto.Click += new System.EventHandler(this.btMenuProduto_Click);
             // 
             // pictureBox2
             // 
@@ -792,66 +853,6 @@ namespace ImpostoCTE
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
-            // btMenuProduto
-            // 
-            this.btMenuProduto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btMenuProduto.FlatAppearance.BorderSize = 0;
-            this.btMenuProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMenuProduto.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btMenuProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(229)))), ((int)(((byte)(190)))));
-            this.btMenuProduto.Image = ((System.Drawing.Image)(resources.GetObject("btMenuProduto.Image")));
-            this.btMenuProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btMenuProduto.Location = new System.Drawing.Point(0, 278);
-            this.btMenuProduto.Name = "btMenuProduto";
-            this.btMenuProduto.Size = new System.Drawing.Size(173, 45);
-            this.btMenuProduto.TabIndex = 5;
-            this.btMenuProduto.Text = "Transporte";
-            this.btMenuProduto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btMenuProduto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btMenuProduto.UseVisualStyleBackColor = true;
-            this.btMenuProduto.Click += new System.EventHandler(this.btMenuProduto_Click);
-            // 
-            // panelSubMenuProduto
-            // 
-            this.panelSubMenuProduto.Controls.Add(this.btListaFrete);
-            this.panelSubMenuProduto.Controls.Add(this.btLucroFrete);
-            this.panelSubMenuProduto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuProduto.Location = new System.Drawing.Point(0, 323);
-            this.panelSubMenuProduto.Name = "panelSubMenuProduto";
-            this.panelSubMenuProduto.Size = new System.Drawing.Size(173, 74);
-            this.panelSubMenuProduto.TabIndex = 6;
-            // 
-            // btLucroFrete
-            // 
-            this.btLucroFrete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btLucroFrete.FlatAppearance.BorderSize = 0;
-            this.btLucroFrete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btLucroFrete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
-            this.btLucroFrete.Location = new System.Drawing.Point(0, 0);
-            this.btLucroFrete.Name = "btLucroFrete";
-            this.btLucroFrete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btLucroFrete.Size = new System.Drawing.Size(173, 33);
-            this.btLucroFrete.TabIndex = 4;
-            this.btLucroFrete.Text = "Lucro Frete";
-            this.btLucroFrete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btLucroFrete.UseVisualStyleBackColor = true;
-            this.btLucroFrete.Click += new System.EventHandler(this.button4_Click_1);
-            // 
-            // btListaFrete
-            // 
-            this.btListaFrete.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btListaFrete.FlatAppearance.BorderSize = 0;
-            this.btListaFrete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btListaFrete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
-            this.btListaFrete.Location = new System.Drawing.Point(0, 33);
-            this.btListaFrete.Name = "btListaFrete";
-            this.btListaFrete.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btListaFrete.Size = new System.Drawing.Size(173, 33);
-            this.btListaFrete.TabIndex = 5;
-            this.btListaFrete.Text = "Lista de Frete";
-            this.btListaFrete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btListaFrete.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -868,6 +869,7 @@ namespace ImpostoCTE
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.panelSubMenuProduto.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -890,7 +892,6 @@ namespace ImpostoCTE
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelSubMenuProduto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

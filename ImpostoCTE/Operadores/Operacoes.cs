@@ -22,7 +22,7 @@ namespace ImpostoCTE
         public static void impedirLetrasTextBox(object sender, KeyPressEventArgs e) 
         {
             //Se a tecla digitada não for número e nem backspace
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08)
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != 08 && e.KeyChar != '.')
             {
                 //Atribui True no Handled para cancelar o evento
                 e.Handled = true;

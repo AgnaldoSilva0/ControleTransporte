@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImpostoCTE.BancoDado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +26,8 @@ namespace ImpostoCTE.Forms
         private void btCadastrarProduto_Click(object sender, EventArgs e)
         {
             
-            ConexaoBD.insertBancoProduto(tbCodigoCadastro.Text, tbDescricaoCadastro.Text, 
-                Convert.ToDouble(tbPrecoCadastro.Text), Convert.ToInt16(tbIpiCadastro.Text));
+            Insert.insertBancoProduto(tbCodigoCadastro.Text, tbDescricaoCadastro.Text, 
+            Convert.ToDouble(tbPrecoCadastro.Text), Convert.ToInt16(tbIpiCadastro.Text));
 
             lbAvisoCadastro.Text = "Sucesso";
         }

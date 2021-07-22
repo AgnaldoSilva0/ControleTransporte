@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImpostoCTE.BancoDado;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace ImpostoCTE
         public Form2()
         {
             InitializeComponent();
-            ConexaoBD.pesquisarTodosItens();
+            Pesquisar.pesquisarTodosItens();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace ImpostoCTE
         private void btPesquisar_Click(object sender, EventArgs e)
         {
             listViewProdutos.Items.Clear();
-            ConexaoBD.pesquisarTodosItens();
+            Pesquisar.pesquisarTodosItens();
             foreach (var item in Listas.listProduto)
             {
                if (item.Codigo.IndexOf(tbPesquisar.Text, StringComparison.OrdinalIgnoreCase) >= 0 || item.Descricao.IndexOf(tbPesquisar.Text, StringComparison.OrdinalIgnoreCase) >= 0)

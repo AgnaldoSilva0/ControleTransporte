@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImpostoCTE.BancoDado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,6 +41,37 @@ namespace ImpostoCTE
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            
+        }
+
+        private void tbPlaca_Click(object sender, EventArgs e)
+        {
+            tbPlaca.Select(tbPlaca.Text.Length, 0);
+        }
+
+        private void btFecharTelaLucro_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btArmazenarFrete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string data = dtData.Text;
+                int cte = Convert.ToInt16(tbCte.Text);
+                int mdfe = Convert.ToInt16(tbMdfe.Text);
+                string veiculo = cbVeiculo.Text;
+                string placa = tbPlaca.Text;
+                string cidade = tbCidade.Text;
+                string tomador = cbTomador.Text;
+                double valorFrete = Convert.ToDouble(tbValorFrete.Text);
+                string observacao = tbObservacao.Text;
+                Insert.inserirFrete(data, cte, mdfe, veiculo, placa, cidade, tomador, valorFrete, observacao);
+            } catch (System.FormatException)
+            {
+                MessageBox.Show("Um dos campos está vazio");
+            }
             
         }
     }

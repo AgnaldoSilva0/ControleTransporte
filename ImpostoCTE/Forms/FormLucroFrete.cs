@@ -59,8 +59,8 @@ namespace ImpostoCTE
             try
             {
                 string data = dtData.Text;
-                int cte = Convert.ToInt16(tbCte.Text);
-                int mdfe = Convert.ToInt16(tbMdfe.Text);
+                int cte = Convert.ToInt32(tbCte.Text);
+                int mdfe = Convert.ToInt32(tbMdfe.Text);
                 string veiculo = cbVeiculo.Text;
                 string placa = tbPlaca.Text;
                 string cidade = tbCidade.Text;

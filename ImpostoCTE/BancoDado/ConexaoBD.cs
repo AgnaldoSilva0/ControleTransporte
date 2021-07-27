@@ -15,7 +15,7 @@ namespace ImpostoCTE
         #region Conectar ou Criar Banco
         public static void conexao()
         {
-            string baseDados = Application.StartupPath + @"\db\DBSQLite.db";
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
 
             if (!File.Exists(baseDados))

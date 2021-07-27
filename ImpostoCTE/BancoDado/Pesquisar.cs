@@ -91,8 +91,8 @@ namespace ImpostoCTE.BancoDado
                         Convert.ToString(row["cidade"]),
                         Convert.ToString(row["tomador"]),
                         Convert.ToString(row["observacao"]),
-                        Convert.ToInt16(row["cte"]),
-                        Convert.ToInt16(row["mdfe"]),
+                        Convert.ToInt32(row["cte"]),
+                        Convert.ToInt32(row["mdfe"]),
                         Convert.ToDouble(row["valorFrete"])
                         ));
                 }
@@ -107,6 +107,53 @@ namespace ImpostoCTE.BancoDado
 
             }
 
+        }
+
+        public static Object detalhesFrete(int cte)
+        {
+            Frete detalhes = new Frete();
+
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+                string query = "SELECT * FROM table_frete";
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    //string data, string veiculo, string placa, string cidade, string tomador, string observacao, int cte, int mdfe, double valorFrete
+                    detalhes.Data = Convert.ToString(row["data"]);
+                    detalhes.Veiculo = Convert.ToString(row["veiculo"]);
+                    detalhes.Placa = Convert.ToString(row["placa"]);
+                    detalhes.Cidade = Convert.ToString(row["cidade"]);
+                    detalhes.Tomador = Convert.ToString(row["tomador"]);
+                    detalhes.Observacao = Convert.ToString(row["observacao"]);
+                    detalhes.Cte = Convert.ToInt32(row["cte"]);
+                    detalhes.Mdfe = Convert.ToInt32(row["mdfe"]);
+                    detalhes.ValorFrete =  Convert.ToDouble(row["valorFrete"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+
+            return detalhes;
         }
 
     }

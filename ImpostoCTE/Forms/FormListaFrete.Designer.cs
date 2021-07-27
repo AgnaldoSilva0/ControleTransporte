@@ -39,18 +39,37 @@ namespace ImpostoCTE.Forms
             this.chValor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tbPesquisarFrete = new System.Windows.Forms.TextBox();
             this.btPesquisar = new System.Windows.Forms.Button();
+            this.btExcluir = new System.Windows.Forms.Button();
+            this.lbTomador = new System.Windows.Forms.Label();
+            this.lbData = new System.Windows.Forms.Label();
+            this.lbCte = new System.Windows.Forms.Label();
+            this.lbMdfe = new System.Windows.Forms.Label();
+            this.lbCidade = new System.Windows.Forms.Label();
+            this.lbValor = new System.Windows.Forms.Label();
+            this.lbVeiculo = new System.Windows.Forms.Label();
+            this.lbPlaca = new System.Windows.Forms.Label();
+            this.lbObservacao = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
+            this.panel3.Controls.Add(this.lbObservacao);
+            this.panel3.Controls.Add(this.lbPlaca);
+            this.panel3.Controls.Add(this.lbVeiculo);
+            this.panel3.Controls.Add(this.lbValor);
+            this.panel3.Controls.Add(this.lbCidade);
+            this.panel3.Controls.Add(this.lbMdfe);
+            this.panel3.Controls.Add(this.lbCte);
+            this.panel3.Controls.Add(this.lbData);
+            this.panel3.Controls.Add(this.lbTomador);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.lbDescontoAviso);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 427);
+            this.panel3.Location = new System.Drawing.Point(0, 466);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(464, 100);
+            this.panel3.Size = new System.Drawing.Size(480, 100);
             this.panel3.TabIndex = 2;
             // 
             // label17
@@ -81,13 +100,17 @@ namespace ImpostoCTE.Forms
             this.chCte,
             this.chTomador,
             this.chValor});
+            this.listViewFrete.FullRowSelect = true;
+            this.listViewFrete.GridLines = true;
             this.listViewFrete.HideSelection = false;
             this.listViewFrete.Location = new System.Drawing.Point(0, 71);
+            this.listViewFrete.MultiSelect = false;
             this.listViewFrete.Name = "listViewFrete";
-            this.listViewFrete.Size = new System.Drawing.Size(464, 295);
+            this.listViewFrete.Size = new System.Drawing.Size(480, 295);
             this.listViewFrete.TabIndex = 3;
             this.listViewFrete.UseCompatibleStateImageBehavior = false;
             this.listViewFrete.View = System.Windows.Forms.View.Details;
+            this.listViewFrete.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewFrete_MouseClick);
             // 
             // chData
             // 
@@ -108,18 +131,18 @@ namespace ImpostoCTE.Forms
             // 
             this.chValor.Text = "Valor";
             this.chValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chValor.Width = 73;
+            this.chValor.Width = 87;
             // 
             // tbPesquisarFrete
             // 
-            this.tbPesquisarFrete.Location = new System.Drawing.Point(0, 373);
+            this.tbPesquisarFrete.Location = new System.Drawing.Point(0, 45);
             this.tbPesquisarFrete.Name = "tbPesquisarFrete";
             this.tbPesquisarFrete.Size = new System.Drawing.Size(182, 20);
             this.tbPesquisarFrete.TabIndex = 4;
             // 
             // btPesquisar
             // 
-            this.btPesquisar.Location = new System.Drawing.Point(188, 372);
+            this.btPesquisar.Location = new System.Drawing.Point(188, 44);
             this.btPesquisar.Name = "btPesquisar";
             this.btPesquisar.Size = new System.Drawing.Size(161, 21);
             this.btPesquisar.TabIndex = 5;
@@ -127,12 +150,122 @@ namespace ImpostoCTE.Forms
             this.btPesquisar.UseVisualStyleBackColor = true;
             this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
+            // btExcluir
+            // 
+            this.btExcluir.Location = new System.Drawing.Point(0, 373);
+            this.btExcluir.Name = "btExcluir";
+            this.btExcluir.Size = new System.Drawing.Size(101, 23);
+            this.btExcluir.TabIndex = 6;
+            this.btExcluir.Text = "Excluir Registro";
+            this.btExcluir.UseVisualStyleBackColor = true;
+            this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
+            // 
+            // lbTomador
+            // 
+            this.lbTomador.AutoSize = true;
+            this.lbTomador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTomador.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbTomador.Location = new System.Drawing.Point(196, 0);
+            this.lbTomador.Name = "lbTomador";
+            this.lbTomador.Size = new System.Drawing.Size(76, 18);
+            this.lbTomador.TabIndex = 3;
+            this.lbTomador.Text = "Tomador";
+            // 
+            // lbData
+            // 
+            this.lbData.AutoSize = true;
+            this.lbData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbData.Location = new System.Drawing.Point(3, 13);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(41, 16);
+            this.lbData.TabIndex = 4;
+            this.lbData.Text = "Data";
+            // 
+            // lbCte
+            // 
+            this.lbCte.AutoSize = true;
+            this.lbCte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbCte.Location = new System.Drawing.Point(3, 31);
+            this.lbCte.Name = "lbCte";
+            this.lbCte.Size = new System.Drawing.Size(38, 16);
+            this.lbCte.TabIndex = 5;
+            this.lbCte.Text = "CTE";
+            // 
+            // lbMdfe
+            // 
+            this.lbMdfe.AutoSize = true;
+            this.lbMdfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMdfe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbMdfe.Location = new System.Drawing.Point(3, 49);
+            this.lbMdfe.Name = "lbMdfe";
+            this.lbMdfe.Size = new System.Drawing.Size(50, 16);
+            this.lbMdfe.TabIndex = 6;
+            this.lbMdfe.Text = "MDFE";
+            // 
+            // lbCidade
+            // 
+            this.lbCidade.AutoSize = true;
+            this.lbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbCidade.Location = new System.Drawing.Point(3, 67);
+            this.lbCidade.Name = "lbCidade";
+            this.lbCidade.Size = new System.Drawing.Size(58, 16);
+            this.lbCidade.TabIndex = 7;
+            this.lbCidade.Text = "Cidade";
+            // 
+            // lbValor
+            // 
+            this.lbValor.AutoSize = true;
+            this.lbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbValor.Location = new System.Drawing.Point(273, 22);
+            this.lbValor.Name = "lbValor";
+            this.lbValor.Size = new System.Drawing.Size(47, 18);
+            this.lbValor.TabIndex = 8;
+            this.lbValor.Text = "Valor";
+            // 
+            // lbVeiculo
+            // 
+            this.lbVeiculo.AutoSize = true;
+            this.lbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVeiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbVeiculo.Location = new System.Drawing.Point(273, 40);
+            this.lbVeiculo.Name = "lbVeiculo";
+            this.lbVeiculo.Size = new System.Drawing.Size(63, 18);
+            this.lbVeiculo.TabIndex = 9;
+            this.lbVeiculo.Text = "Veiculo";
+            // 
+            // lbPlaca
+            // 
+            this.lbPlaca.AutoSize = true;
+            this.lbPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPlaca.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbPlaca.Location = new System.Drawing.Point(273, 58);
+            this.lbPlaca.Name = "lbPlaca";
+            this.lbPlaca.Size = new System.Drawing.Size(50, 18);
+            this.lbPlaca.TabIndex = 10;
+            this.lbPlaca.Text = "Placa";
+            // 
+            // lbObservacao
+            // 
+            this.lbObservacao.AutoSize = true;
+            this.lbObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbObservacao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbObservacao.Location = new System.Drawing.Point(3, 82);
+            this.lbObservacao.Name = "lbObservacao";
+            this.lbObservacao.Size = new System.Drawing.Size(93, 16);
+            this.lbObservacao.TabIndex = 11;
+            this.lbObservacao.Text = "Observacao";
+            // 
             // FormListaFrete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(464, 527);
+            this.ClientSize = new System.Drawing.Size(480, 566);
+            this.Controls.Add(this.btExcluir);
             this.Controls.Add(this.btPesquisar);
             this.Controls.Add(this.tbPesquisarFrete);
             this.Controls.Add(this.listViewFrete);
@@ -159,5 +292,15 @@ namespace ImpostoCTE.Forms
         private System.Windows.Forms.ColumnHeader chValor;
         private System.Windows.Forms.TextBox tbPesquisarFrete;
         private System.Windows.Forms.Button btPesquisar;
+        private System.Windows.Forms.Button btExcluir;
+        private System.Windows.Forms.Label lbObservacao;
+        private System.Windows.Forms.Label lbPlaca;
+        private System.Windows.Forms.Label lbVeiculo;
+        private System.Windows.Forms.Label lbValor;
+        private System.Windows.Forms.Label lbCidade;
+        private System.Windows.Forms.Label lbMdfe;
+        private System.Windows.Forms.Label lbCte;
+        private System.Windows.Forms.Label lbData;
+        private System.Windows.Forms.Label lbTomador;
     }
 }

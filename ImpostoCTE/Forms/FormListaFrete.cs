@@ -1,4 +1,5 @@
 ﻿using ImpostoCTE.BancoDado;
+using ImpostoCTE.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,26 @@ namespace ImpostoCTE.Forms
                     listViewFrete.Items.Add(new ListViewItem(new string[] { item.Data, Convert.ToString(item.Cte), item.Tomador, "R$ " + Convert.ToString(item.ValorFrete) }));
                 }
             }
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            Delete.deletarFrete(Convert.ToInt32(listViewFrete.SelectedItems[0].SubItems[1].Text));
+        }
+
+        private void listViewFrete_MouseClick(object sender, MouseEventArgs e)
+        {
+            //Precisa fazer (Frete) para converter o metodo em objeto
+            Frete detalhes = (Frete)Pesquisar.detalhesFrete(Convert.ToInt32(listViewFrete.SelectedItems[0].SubItems[1].Text));
+            lbPlaca.Text ="Placa " + detalhes.Placa;
+            lbData.Text = "Data: " + detalhes.Data;
+            lbCte.Text = "Cte: " +Convert.ToString(detalhes.Cte);
+            lbTomador.Text = "Tomador: " + detalhes.Tomador;
+            lbMdfe.Text = "Mdfe: " + Convert.ToString(detalhes.Mdfe);
+            lbValor.Text = "Valor: R$ " + Convert.ToString(detalhes.ValorFrete);
+            lbObservacao.Text = "OBS: " + detalhes.Observacao;
+            lbCidade.Text = "Cidade: " + detalhes.Cidade;
+            lbVeiculo.Text = "Veiculo: " + detalhes.Veiculo;
         }
     }
 }

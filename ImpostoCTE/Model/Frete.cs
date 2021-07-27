@@ -25,6 +25,10 @@ namespace ImpostoCTE.Model
             this.valorFrete = valorFrete;
         }
 
+        public Frete()
+        {
+        }
+
         public string Data { get => data; set => data = value; }
         public string Veiculo { get => veiculo; set => veiculo = value; }
         public string Placa { get => placa; set => placa = value; }

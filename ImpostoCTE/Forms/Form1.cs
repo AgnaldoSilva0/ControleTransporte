@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImpostoCTE.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -167,7 +168,7 @@ namespace ImpostoCTE
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            openChieldForm(new FormFuncionarios());
         }
 
         private void button4_Click_1(object sender, EventArgs e)

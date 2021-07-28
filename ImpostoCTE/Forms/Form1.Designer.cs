@@ -267,7 +267,7 @@ namespace ImpostoCTE
             this.bt.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.bt.Size = new System.Drawing.Size(173, 33);
             this.bt.TabIndex = 1;
-            this.bt.Text = "Lucro de Frete";
+            this.bt.Text = "Funcionários";
             this.bt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt.UseVisualStyleBackColor = true;
             this.bt.Click += new System.EventHandler(this.button3_Click);

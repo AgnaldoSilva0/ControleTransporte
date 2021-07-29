@@ -1,4 +1,5 @@
 ﻿using ImpostoCTE.BancoDado;
+using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,25 +12,21 @@ using System.Windows.Forms;
 
 namespace ImpostoCTE.Forms
 {
-    public partial class FormCadastroProduto : Form
+    public partial class Form_Cad_Prod : MetroSetForm
     {
-        public FormCadastroProduto()
+        public Form_Cad_Prod()
         {
             InitializeComponent();
         }
 
-        private void btFecharForm_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btCadastrarProduto_Click(object sender, EventArgs e)
         {
-            
-            Insert.insertBancoProduto(tbCodigoCadastro.Text, tbDescricaoCadastro.Text, 
-            Convert.ToDouble(tbPrecoCadastro.Text), Convert.ToInt16(tbIpiCadastro.Text));
+            Insert.insertBancoProduto(tbCodigo.Text, 
+                tbDescricao.Text,
+                Convert.ToDouble(tbPreco.Text), 
+                Convert.ToInt16(tbIpi.Text));
 
-            lbAvisoCadastro.Text = "Sucesso";
+            lbResultado.Text = "Sucesso";
         }
 
         private void noTextOnTextBox(object sender, KeyPressEventArgs e)

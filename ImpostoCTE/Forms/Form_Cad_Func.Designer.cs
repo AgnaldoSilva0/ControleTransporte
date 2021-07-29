@@ -214,7 +214,7 @@ namespace ImpostoCTE.Forms
             this.tbSalarioFunc.ThemeName = "MetroLite";
             this.tbSalarioFunc.UseSystemPasswordChar = false;
             this.tbSalarioFunc.WatermarkText = "";
-            this.tbSalarioFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
+            this.tbSalarioFunc.KeyPressed += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
             // 
             // btCadFunc
             // 
@@ -284,8 +284,8 @@ namespace ImpostoCTE.Forms
             this.tbIdFunc.ThemeAuthor = "Narwin";
             this.tbIdFunc.ThemeName = "MetroLite";
             this.tbIdFunc.UseSystemPasswordChar = false;
-            this.tbIdFunc.WatermarkText = "";
-            this.tbIdFunc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
+            this.tbIdFunc.WatermarkText = "ID";
+            this.tbIdFunc.KeyPressed += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
             // 
             // metroSetLabel6
             // 

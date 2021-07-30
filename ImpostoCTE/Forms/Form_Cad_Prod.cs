@@ -21,12 +21,23 @@ namespace ImpostoCTE.Forms
 
         private void btCadastrarProduto_Click(object sender, EventArgs e)
         {
-            Insert.insertBancoProduto(tbCodigo.Text, 
+            try
+            {
+                Insert.insertBancoProduto(tbCodigo.Text,
                 tbDescricao.Text,
-                Convert.ToDouble(tbPreco.Text), 
+                Convert.ToDouble(tbPreco.Text),
                 Convert.ToInt16(tbIpi.Text));
 
-            lbResultado.Text = "Sucesso";
+                lbResultado.Text = "Sucesso";
+                tbCodigo.Text = string.Empty;
+                tbDescricao.Text = string.Empty;
+                tbPreco.Text = string.Empty;
+                tbIpi.Text = string.Empty;
+                
+            } catch(Exception ex)
+            {
+                lbResultado.Text = "Campo Vazio";
+            }
         }
 
         private void noTextOnTextBox(object sender, KeyPressEventArgs e)

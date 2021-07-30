@@ -25,13 +25,20 @@ namespace ImpostoCTE
 
         private void btCalcularLucro_Click(object sender, EventArgs e)
         {
-            double valorFrete = Convert.ToDouble(tbValorFreteLucro.Text);
-            double imposto = Convert.ToDouble(tbImpostoLucro.Text);
-            double diaria = Convert.ToDouble(tbDiariaLucro.Text);
-            double combustivel = Convert.ToDouble(tbCombustivelLucro.Text);
-            double outrasDespesas = Convert.ToDouble(tbOutrasDespesasLucro.Text);
-            Operacoes.calcularLucroFrete(valorFrete, imposto, diaria, combustivel, outrasDespesas);
-            lbValorTotalLucro.Text = Convert.ToString(Operacoes.calcularLucroFrete(valorFrete, imposto, diaria, combustivel, outrasDespesas));
+            try
+            {
+                double valorFrete = Convert.ToDouble(tbValorFreteLucro.Text);
+                double imposto = Convert.ToDouble(tbImpostoLucro.Text);
+                double diaria = Convert.ToDouble(tbDiariaLucro.Text);
+                double combustivel = Convert.ToDouble(tbCombustivelLucro.Text);
+                double outrasDespesas = Convert.ToDouble(tbOutrasDespesasLucro.Text);
+                Operacoes.calcularLucroFrete(valorFrete, imposto, diaria, combustivel, outrasDespesas);
+                lbValorTotalLucro.Text = Convert.ToString(Operacoes.calcularLucroFrete(valorFrete, imposto, diaria, combustivel, outrasDespesas));
+            } catch(Exception ex)
+            {
+                MessageBox.Show("Campo Vazio");
+            }
+            
         }
 
         private void impedirLetrasTextBox(object sender, KeyPressEventArgs e)

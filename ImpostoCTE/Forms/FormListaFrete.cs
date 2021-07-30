@@ -35,7 +35,13 @@ namespace ImpostoCTE.Forms
 
         private void btExcluir_Click(object sender, EventArgs e)
         {
-            Delete.deletarFrete(Convert.ToInt32(listViewFrete.SelectedItems[0].SubItems[1].Text));
+            try
+            {
+                Delete.deletarFrete(Convert.ToInt32(listViewFrete.SelectedItems[0].SubItems[1].Text));
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Selecione um item para exclusão");
+            }
         }
 
         private void listViewFrete_MouseClick(object sender, MouseEventArgs e)

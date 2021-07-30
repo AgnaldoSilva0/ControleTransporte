@@ -21,18 +21,26 @@ namespace ImpostoCTE.Forms
 
         private void btCadFunc_Click(object sender, EventArgs e)
         {
-            Insert.insertBancoFuncionario(Convert.ToInt32(tbIdFunc.Text),
+            try
+            {
+                Insert.insertBancoFuncionario(Convert.ToInt32(tbIdFunc.Text),
                 tbNomeFunc.Text,
                 Convert.ToDouble(tbSalarioFunc.Text),
                 tbAdmissaoFunc.Text,
                 tbTelefoneFunc.Text);
 
-            tbIdFunc.Text = string.Empty;
-            tbIdFunc.Text = string.Empty;
-            tbNomeFunc.Text = string.Empty;
-            tbSalarioFunc.Text = string.Empty;
-            tbAdmissaoFunc.Text = string.Empty;
-            tbTelefoneFunc.Text = string.Empty;
+                tbIdFunc.Text = string.Empty;
+                tbNomeFunc.Text = string.Empty;
+                tbSalarioFunc.Text = string.Empty;
+                tbAdmissaoFunc.Text = string.Empty;
+                tbTelefoneFunc.Text = string.Empty;
+                MessageBox.Show(tbNomeFunc.Text + "Cadastrado");
+                lbRegistroInserido.Text = "Último Registo inserio: " + tbNomeFunc.Text;
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Campo Vazio");
+            }
+            
         }
 
         private void impedirLetrasTextBox(object sender, KeyPressEventArgs e)

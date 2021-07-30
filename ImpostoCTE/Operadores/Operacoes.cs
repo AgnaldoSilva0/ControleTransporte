@@ -16,7 +16,7 @@ namespace ImpostoCTE
 
         public static Double calcularLucroFrete(double valorFrete, double imposto, double diaria, double combustivel, double outrasDespesas)
         {
-            return valorFrete + imposto + diaria + combustivel + outrasDespesas;
+            return valorFrete - (imposto + diaria + combustivel + outrasDespesas);
         }
 
         public static void impedirLetrasTextBox(object sender, KeyPressEventArgs e) 

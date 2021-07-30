@@ -11,6 +11,7 @@ namespace ImpostoCTE
         private String codigo, descricao, aplicacao;
         private double preco;
         private int ipi;
+        public static int validator;
 
         public Produto(string codigo, string descricao, double preco, int ipi)
         {

@@ -67,9 +67,11 @@ namespace ImpostoCTE.BancoDado
 
                 MessageBox.Show("Registro Inserido");
                 comando.Dispose();
+                Produto.validator = 1;
             }
             catch (Exception ex)
             {
+                Produto.validator = 2;
                 MessageBox.Show("Erro ao inserir item" + ex);
             }
             finally

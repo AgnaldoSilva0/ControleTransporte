@@ -121,29 +121,36 @@ namespace ImpostoCTE
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Impostos imp = new Impostos();
-            imp.ValorFrete = Convert.ToDouble(mtbValorFrete.Text);
-
-            lbIcmsResult.Text = "R$ " + Convert.ToString(imp.Icms);
-            lbPisResult.Text = "R$ " + Convert.ToString(imp.Pis);
-            lbCofinsResult.Text = "R$ " + Convert.ToString(imp.Cofins);
-            lbIrtResult.Text = "R$ " + Convert.ToString(imp.ImpTri);
-            lbCsResult.Text = "R$ " + Convert.ToString(imp.ConSocial);
-
-            if (checkBox6.Checked == true)
+            try
             {
-                double icms = imp.Icms - (imp.Icms * 20 / 100);
-                lbIcmsResult.Text = "R$ " + Convert.ToString(icms);
-                lbValorTotalImpostos.Text = "R$ " + Convert.ToString(Operacoes.calcularTotalImposto(icms, imp.Pis, imp.Cofins, imp.ImpTri, imp.ConSocial));
-                lbDescontoAviso.Text = "Desconto aplicado no valor total";
-                lbDescontoAviso.ForeColor = Color.FromArgb(26, 229, 190);
+                Impostos imp = new Impostos();
+                imp.ValorFrete = Convert.ToDouble(mtbValorFrete.Text);
 
-                return;
+                lbIcmsResult.Text = "R$ " + Convert.ToString(imp.Icms);
+                lbPisResult.Text = "R$ " + Convert.ToString(imp.Pis);
+                lbCofinsResult.Text = "R$ " + Convert.ToString(imp.Cofins);
+                lbIrtResult.Text = "R$ " + Convert.ToString(imp.ImpTri);
+                lbCsResult.Text = "R$ " + Convert.ToString(imp.ConSocial);
+
+                if (checkBox6.Checked == true)
+                {
+                    double icms = imp.Icms - (imp.Icms * 20 / 100);
+                    lbIcmsResult.Text = "R$ " + Convert.ToString(icms);
+                    lbValorTotalImpostos.Text = "R$ " + Convert.ToString(Operacoes.calcularTotalImposto(icms, imp.Pis, imp.Cofins, imp.ImpTri, imp.ConSocial));
+                    lbDescontoAviso.Text = "Desconto aplicado no valor total";
+                    lbDescontoAviso.ForeColor = Color.FromArgb(26, 229, 190);
+
+                    return;
+                }
+
+                lbValorTotalImpostos.Text = "R$ " + Convert.ToString(Operacoes.calcularTotalImposto(imp.Icms, imp.Pis, imp.Cofins, imp.ImpTri, imp.ConSocial));
+                lbDescontoAviso.Text = "Desconto não aplicado no valor total";
+                lbDescontoAviso.ForeColor = Color.FromArgb(93, 93, 91);
+            } catch (Exception ex)
+            {
+                MessageBox.Show("Insira um valor");
             }
-
-            lbValorTotalImpostos.Text = "R$ " + Convert.ToString(Operacoes.calcularTotalImposto(imp.Icms, imp.Pis, imp.Cofins, imp.ImpTri, imp.ConSocial));
-            lbDescontoAviso.Text = "Desconto não aplicado no valor total";
-            lbDescontoAviso.ForeColor = Color.FromArgb(93, 93, 91);
+            
         }
 
         private void mtbValorFrete_KeyPress(object sender, KeyPressEventArgs e)

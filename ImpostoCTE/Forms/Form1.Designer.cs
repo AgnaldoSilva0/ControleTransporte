@@ -140,6 +140,7 @@ namespace ImpostoCTE
             this.btListaFrete.Dock = System.Windows.Forms.DockStyle.Top;
             this.btListaFrete.FlatAppearance.BorderSize = 0;
             this.btListaFrete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btListaFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btListaFrete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
             this.btListaFrete.Location = new System.Drawing.Point(0, 33);
             this.btListaFrete.Name = "btListaFrete";
@@ -156,6 +157,7 @@ namespace ImpostoCTE
             this.btLucroFrete.Dock = System.Windows.Forms.DockStyle.Top;
             this.btLucroFrete.FlatAppearance.BorderSize = 0;
             this.btLucroFrete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLucroFrete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btLucroFrete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
             this.btLucroFrete.Location = new System.Drawing.Point(0, 0);
             this.btLucroFrete.Name = "btLucroFrete";
@@ -172,7 +174,7 @@ namespace ImpostoCTE
             this.btMenuProduto.Dock = System.Windows.Forms.DockStyle.Top;
             this.btMenuProduto.FlatAppearance.BorderSize = 0;
             this.btMenuProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMenuProduto.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMenuProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMenuProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(229)))), ((int)(((byte)(190)))));
             this.btMenuProduto.Image = ((System.Drawing.Image)(resources.GetObject("btMenuProduto.Image")));
             this.btMenuProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -229,6 +231,7 @@ namespace ImpostoCTE
             this.btCadastrarProduto.Dock = System.Windows.Forms.DockStyle.Top;
             this.btCadastrarProduto.FlatAppearance.BorderSize = 0;
             this.btCadastrarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btCadastrarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCadastrarProduto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
             this.btCadastrarProduto.Location = new System.Drawing.Point(0, 99);
             this.btCadastrarProduto.Name = "btCadastrarProduto";
@@ -245,6 +248,7 @@ namespace ImpostoCTE
             this.btProdutos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btProdutos.FlatAppearance.BorderSize = 0;
             this.btProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btProdutos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
             this.btProdutos.Location = new System.Drawing.Point(0, 66);
             this.btProdutos.Name = "btProdutos";
@@ -261,6 +265,7 @@ namespace ImpostoCTE
             this.bt.Dock = System.Windows.Forms.DockStyle.Top;
             this.bt.FlatAppearance.BorderSize = 0;
             this.bt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
             this.bt.Location = new System.Drawing.Point(0, 33);
             this.bt.Name = "bt";
@@ -277,6 +282,7 @@ namespace ImpostoCTE
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(47)))), ((int)(((byte)(177)))));
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
@@ -293,7 +299,7 @@ namespace ImpostoCTE
             this.btMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btMenu.FlatAppearance.BorderSize = 0;
             this.btMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btMenu.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(229)))), ((int)(((byte)(190)))));
             this.btMenu.Image = ((System.Drawing.Image)(resources.GetObject("btMenu.Image")));
             this.btMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -320,11 +326,11 @@ namespace ImpostoCTE
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Lucida Sans", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label18.Location = new System.Drawing.Point(36, 80);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(87, 12);
+            this.label18.Size = new System.Drawing.Size(85, 13);
             this.label18.TabIndex = 1;
             this.label18.Text = "Agnaldo Silva";
             // 
@@ -384,11 +390,11 @@ namespace ImpostoCTE
             // lbValorTotalImpostos
             // 
             this.lbValorTotalImpostos.AutoSize = true;
-            this.lbValorTotalImpostos.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorTotalImpostos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValorTotalImpostos.ForeColor = System.Drawing.SystemColors.Control;
             this.lbValorTotalImpostos.Location = new System.Drawing.Point(264, 38);
             this.lbValorTotalImpostos.Name = "lbValorTotalImpostos";
-            this.lbValorTotalImpostos.Size = new System.Drawing.Size(38, 23);
+            this.lbValorTotalImpostos.Size = new System.Drawing.Size(38, 24);
             this.lbValorTotalImpostos.TabIndex = 0;
             this.lbValorTotalImpostos.Text = "0.0";
             // 

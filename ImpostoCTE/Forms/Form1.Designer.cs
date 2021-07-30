@@ -124,6 +124,8 @@ namespace ImpostoCTE
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(173, 566);
             this.panel1.TabIndex = 0;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // panelSubMenuProduto
             // 
@@ -774,6 +776,8 @@ namespace ImpostoCTE
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(480, 566);
             this.panel4.TabIndex = 2;
+            this.panel4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // mtbValorFrete
             // 
@@ -874,6 +878,8 @@ namespace ImpostoCTE
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.ResumeLayout(false);
             this.panelSubMenuProduto.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

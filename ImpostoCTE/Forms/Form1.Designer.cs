@@ -831,6 +831,8 @@ namespace ImpostoCTE
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(462, 94);
             this.panel10.TabIndex = 7;
+            this.panel10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
+            this.panel10.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             // 
             // pictureBox3
             // 

@@ -107,6 +107,12 @@
     <Compile Include="Forms\FormLucroFrete.Designer.cs">
       <DependentUpon>FormLucroFrete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_Cad_Frete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Cad_Frete.Designer.cs">
+      <DependentUpon>Form_Cad_Frete.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form_Cad_Func.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLucroFrete.resx">
       <DependentUpon>FormLucroFrete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Cad_Frete.resx">
+      <DependentUpon>Form_Cad_Frete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Cad_Func.resx">
       <DependentUpon>Form_Cad_Func.cs</DependentUpon>

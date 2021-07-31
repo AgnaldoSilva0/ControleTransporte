@@ -46,33 +46,11 @@ namespace ImpostoCTE
             this.label22 = new System.Windows.Forms.Label();
             this.lbValorTotalLucro = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.tbPlaca = new System.Windows.Forms.MaskedTextBox();
-            this.dtData = new System.Windows.Forms.DateTimePicker();
-            this.tbObservacao = new System.Windows.Forms.TextBox();
-            this.tbValorFrete = new System.Windows.Forms.TextBox();
-            this.tbCidade = new System.Windows.Forms.TextBox();
-            this.cbVeiculo = new System.Windows.Forms.ComboBox();
-            this.tbMdfe = new System.Windows.Forms.TextBox();
-            this.tbCte = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.btFecharTelaLucro = new System.Windows.Forms.Button();
-            this.btArmazenarFrete = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbTomador = new System.Windows.Forms.ComboBox();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbValorFreteLucro
@@ -217,11 +195,11 @@ namespace ImpostoCTE
             // lbValorTotalLucro
             // 
             this.lbValorTotalLucro.AutoSize = true;
-            this.lbValorTotalLucro.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValorTotalLucro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValorTotalLucro.ForeColor = System.Drawing.SystemColors.Control;
             this.lbValorTotalLucro.Location = new System.Drawing.Point(430, 37);
             this.lbValorTotalLucro.Name = "lbValorTotalLucro";
-            this.lbValorTotalLucro.Size = new System.Drawing.Size(38, 23);
+            this.lbValorTotalLucro.Size = new System.Drawing.Size(38, 24);
             this.lbValorTotalLucro.TabIndex = 0;
             this.lbValorTotalLucro.Text = "0.0";
             // 
@@ -239,231 +217,10 @@ namespace ImpostoCTE
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(251, 91);
+            this.panel1.Location = new System.Drawing.Point(89, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(229, 261);
             this.panel1.TabIndex = 13;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.panel2.Controls.Add(this.cbTomador);
-            this.panel2.Controls.Add(this.tbPlaca);
-            this.panel2.Controls.Add(this.dtData);
-            this.panel2.Controls.Add(this.tbObservacao);
-            this.panel2.Controls.Add(this.tbValorFrete);
-            this.panel2.Controls.Add(this.tbCidade);
-            this.panel2.Controls.Add(this.cbVeiculo);
-            this.panel2.Controls.Add(this.tbMdfe);
-            this.panel2.Controls.Add(this.tbCte);
-            this.panel2.Controls.Add(this.label14);
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.label12);
-            this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(0, 91);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(229, 261);
-            this.panel2.TabIndex = 14;
-            // 
-            // tbPlaca
-            // 
-            this.tbPlaca.HidePromptOnLeave = true;
-            this.tbPlaca.Location = new System.Drawing.Point(93, 125);
-            this.tbPlaca.Mask = "aaa0a00";
-            this.tbPlaca.Name = "tbPlaca";
-            this.tbPlaca.Size = new System.Drawing.Size(121, 20);
-            this.tbPlaca.TabIndex = 31;
-            this.tbPlaca.Click += new System.EventHandler(this.tbPlaca_Click);
-            // 
-            // dtData
-            // 
-            this.dtData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtData.Location = new System.Drawing.Point(91, 12);
-            this.dtData.Name = "dtData";
-            this.dtData.Size = new System.Drawing.Size(123, 20);
-            this.dtData.TabIndex = 30;
-            this.dtData.Value = new System.DateTime(2021, 7, 21, 16, 57, 38, 0);
-            // 
-            // tbObservacao
-            // 
-            this.tbObservacao.Location = new System.Drawing.Point(93, 231);
-            this.tbObservacao.Name = "tbObservacao";
-            this.tbObservacao.Size = new System.Drawing.Size(121, 20);
-            this.tbObservacao.TabIndex = 29;
-            // 
-            // tbValorFrete
-            // 
-            this.tbValorFrete.Location = new System.Drawing.Point(93, 205);
-            this.tbValorFrete.Name = "tbValorFrete";
-            this.tbValorFrete.Size = new System.Drawing.Size(121, 20);
-            this.tbValorFrete.TabIndex = 28;
-            this.tbValorFrete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
-            // 
-            // tbCidade
-            // 
-            this.tbCidade.Location = new System.Drawing.Point(93, 151);
-            this.tbCidade.Name = "tbCidade";
-            this.tbCidade.Size = new System.Drawing.Size(121, 20);
-            this.tbCidade.TabIndex = 26;
-            // 
-            // cbVeiculo
-            // 
-            this.cbVeiculo.FormattingEnabled = true;
-            this.cbVeiculo.Items.AddRange(new object[] {
-            "MB",
-            "MB 1620",
-            "MB 710",
-            "MB ATEGO",
-            "MB ACCELO 815",
-            "MB ACCELO 915",
-            "MB ACCELO 1016",
-            "VW Worker",
-            "VW Delivery",
-            "VW 8-120",
-            "VW 8-150",
-            "VW 9-160",
-            "VW Constellation",
-            "VW Constellation 24-250",
-            "VW Constellation 24-280",
-            "VW Constellation 13-190",
-            "Ford Cargo",
-            "VOLVO"});
-            this.cbVeiculo.Location = new System.Drawing.Point(93, 97);
-            this.cbVeiculo.Name = "cbVeiculo";
-            this.cbVeiculo.Size = new System.Drawing.Size(121, 21);
-            this.cbVeiculo.TabIndex = 24;
-            // 
-            // tbMdfe
-            // 
-            this.tbMdfe.Location = new System.Drawing.Point(93, 70);
-            this.tbMdfe.Name = "tbMdfe";
-            this.tbMdfe.Size = new System.Drawing.Size(121, 20);
-            this.tbMdfe.TabIndex = 23;
-            this.tbMdfe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
-            // 
-            // tbCte
-            // 
-            this.tbCte.Location = new System.Drawing.Point(93, 43);
-            this.tbCte.Name = "tbCte";
-            this.tbCte.Size = new System.Drawing.Size(121, 20);
-            this.tbCte.TabIndex = 22;
-            this.tbCte.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.impedirLetrasTextBox);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Cyan;
-            this.label14.Location = new System.Drawing.Point(3, 178);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(67, 16);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Tomador:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Cyan;
-            this.label13.Location = new System.Drawing.Point(3, 205);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(77, 16);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Valor Frete:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Cyan;
-            this.label12.Location = new System.Drawing.Point(3, 232);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 16);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Observação:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Cyan;
-            this.label11.Location = new System.Drawing.Point(3, 151);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 16);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Cidade:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Cyan;
-            this.label10.Location = new System.Drawing.Point(3, 124);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 16);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "Placa:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Cyan;
-            this.label9.Location = new System.Drawing.Point(3, 97);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 16);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Veiculo:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Cyan;
-            this.label8.Location = new System.Drawing.Point(3, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 16);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "MDFE: ";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Cyan;
-            this.label7.Location = new System.Drawing.Point(3, 43);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 16);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "CTE: ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Cyan;
-            this.label6.Location = new System.Drawing.Point(3, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 16);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Data: ";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Cyan;
-            this.label15.Location = new System.Drawing.Point(21, 33);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(187, 25);
-            this.label15.TabIndex = 16;
-            this.label15.Text = "Armazenar Frete";
             // 
             // label16
             // 
@@ -471,7 +228,7 @@ namespace ImpostoCTE
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Cyan;
-            this.label16.Location = new System.Drawing.Point(281, 33);
+            this.label16.Location = new System.Drawing.Point(137, 34);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(166, 25);
             this.label16.TabIndex = 17;
@@ -495,70 +252,22 @@ namespace ImpostoCTE
             this.btFecharTelaLucro.UseVisualStyleBackColor = false;
             this.btFecharTelaLucro.Click += new System.EventHandler(this.btFecharTelaLucro_Click);
             // 
-            // btArmazenarFrete
-            // 
-            this.btArmazenarFrete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.btArmazenarFrete.FlatAppearance.BorderSize = 0;
-            this.btArmazenarFrete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btArmazenarFrete.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btArmazenarFrete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(229)))), ((int)(((byte)(190)))));
-            this.btArmazenarFrete.Image = ((System.Drawing.Image)(resources.GetObject("btArmazenarFrete.Image")));
-            this.btArmazenarFrete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btArmazenarFrete.Location = new System.Drawing.Point(0, 352);
-            this.btArmazenarFrete.Name = "btArmazenarFrete";
-            this.btArmazenarFrete.Size = new System.Drawing.Size(173, 45);
-            this.btArmazenarFrete.TabIndex = 19;
-            this.btArmazenarFrete.Text = "Armazenar";
-            this.btArmazenarFrete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btArmazenarFrete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btArmazenarFrete.UseVisualStyleBackColor = false;
-            this.btArmazenarFrete.Click += new System.EventHandler(this.btArmazenarFrete_Click);
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial Unicode MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(229)))), ((int)(((byte)(190)))));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(307, 352);
+            this.button1.Location = new System.Drawing.Point(118, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(173, 45);
             this.button1.TabIndex = 20;
             this.button1.Text = "Calcular";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // cbTomador
-            // 
-            this.cbTomador.AutoCompleteCustomSource.AddRange(new string[] {
-            "Central do Adubo"});
-            this.cbTomador.FormattingEnabled = true;
-            this.cbTomador.Items.AddRange(new object[] {
-            "MB",
-            "MB 1620",
-            "MB 710",
-            "MB ATEGO",
-            "MB ACCELO 815",
-            "MB ACCELO 915",
-            "MB ACCELO 1016",
-            "VW Worker",
-            "VW Delivery",
-            "VW 8-120",
-            "VW 8-150",
-            "VW 9-160",
-            "VW Constellation",
-            "VW Constellation 24-250",
-            "VW Constellation 24-280",
-            "VW Constellation 13-190",
-            "Ford Cargo",
-            "VOLVO"});
-            this.cbTomador.Location = new System.Drawing.Point(93, 177);
-            this.cbTomador.Name = "cbTomador";
-            this.cbTomador.Size = new System.Drawing.Size(121, 21);
-            this.cbTomador.TabIndex = 32;
             // 
             // FormLucroFrete
             // 
@@ -567,11 +276,8 @@ namespace ImpostoCTE
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(480, 566);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btArmazenarFrete);
             this.Controls.Add(this.btFecharTelaLucro);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -581,8 +287,6 @@ namespace ImpostoCTE
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,29 +309,8 @@ namespace ImpostoCTE
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label lbValorTotalLucro;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.MaskedTextBox tbPlaca;
-        private System.Windows.Forms.DateTimePicker dtData;
-        private System.Windows.Forms.TextBox tbObservacao;
-        private System.Windows.Forms.TextBox tbValorFrete;
-        private System.Windows.Forms.TextBox tbCidade;
-        private System.Windows.Forms.ComboBox cbVeiculo;
-        private System.Windows.Forms.TextBox tbMdfe;
-        private System.Windows.Forms.TextBox tbCte;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button btFecharTelaLucro;
-        private System.Windows.Forms.Button btArmazenarFrete;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox cbTomador;
     }
 }

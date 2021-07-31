@@ -30,6 +30,15 @@ namespace ImpostoCTE.Forms
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lbObservacao = new System.Windows.Forms.Label();
+            this.lbPlaca = new System.Windows.Forms.Label();
+            this.lbVeiculo = new System.Windows.Forms.Label();
+            this.lbValor = new System.Windows.Forms.Label();
+            this.lbCidade = new System.Windows.Forms.Label();
+            this.lbMdfe = new System.Windows.Forms.Label();
+            this.lbCte = new System.Windows.Forms.Label();
+            this.lbData = new System.Windows.Forms.Label();
+            this.lbTomador = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.lbDescontoAviso = new System.Windows.Forms.Label();
             this.listViewFrete = new System.Windows.Forms.ListView();
@@ -40,15 +49,7 @@ namespace ImpostoCTE.Forms
             this.tbPesquisarFrete = new System.Windows.Forms.TextBox();
             this.btPesquisar = new System.Windows.Forms.Button();
             this.btExcluir = new System.Windows.Forms.Button();
-            this.lbTomador = new System.Windows.Forms.Label();
-            this.lbData = new System.Windows.Forms.Label();
-            this.lbCte = new System.Windows.Forms.Label();
-            this.lbMdfe = new System.Windows.Forms.Label();
-            this.lbCidade = new System.Windows.Forms.Label();
-            this.lbValor = new System.Windows.Forms.Label();
-            this.lbVeiculo = new System.Windows.Forms.Label();
-            this.lbPlaca = new System.Windows.Forms.Label();
-            this.lbObservacao = new System.Windows.Forms.Label();
+            this.btCadastrarFrete = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +72,105 @@ namespace ImpostoCTE.Forms
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(480, 100);
             this.panel3.TabIndex = 2;
+            // 
+            // lbObservacao
+            // 
+            this.lbObservacao.AutoSize = true;
+            this.lbObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbObservacao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbObservacao.Location = new System.Drawing.Point(3, 82);
+            this.lbObservacao.Name = "lbObservacao";
+            this.lbObservacao.Size = new System.Drawing.Size(93, 16);
+            this.lbObservacao.TabIndex = 11;
+            this.lbObservacao.Text = "Observacao";
+            // 
+            // lbPlaca
+            // 
+            this.lbPlaca.AutoSize = true;
+            this.lbPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPlaca.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbPlaca.Location = new System.Drawing.Point(273, 58);
+            this.lbPlaca.Name = "lbPlaca";
+            this.lbPlaca.Size = new System.Drawing.Size(50, 18);
+            this.lbPlaca.TabIndex = 10;
+            this.lbPlaca.Text = "Placa";
+            // 
+            // lbVeiculo
+            // 
+            this.lbVeiculo.AutoSize = true;
+            this.lbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbVeiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbVeiculo.Location = new System.Drawing.Point(273, 40);
+            this.lbVeiculo.Name = "lbVeiculo";
+            this.lbVeiculo.Size = new System.Drawing.Size(63, 18);
+            this.lbVeiculo.TabIndex = 9;
+            this.lbVeiculo.Text = "Veiculo";
+            // 
+            // lbValor
+            // 
+            this.lbValor.AutoSize = true;
+            this.lbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbValor.Location = new System.Drawing.Point(273, 22);
+            this.lbValor.Name = "lbValor";
+            this.lbValor.Size = new System.Drawing.Size(47, 18);
+            this.lbValor.TabIndex = 8;
+            this.lbValor.Text = "Valor";
+            // 
+            // lbCidade
+            // 
+            this.lbCidade.AutoSize = true;
+            this.lbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbCidade.Location = new System.Drawing.Point(3, 67);
+            this.lbCidade.Name = "lbCidade";
+            this.lbCidade.Size = new System.Drawing.Size(58, 16);
+            this.lbCidade.TabIndex = 7;
+            this.lbCidade.Text = "Cidade";
+            // 
+            // lbMdfe
+            // 
+            this.lbMdfe.AutoSize = true;
+            this.lbMdfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMdfe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbMdfe.Location = new System.Drawing.Point(3, 49);
+            this.lbMdfe.Name = "lbMdfe";
+            this.lbMdfe.Size = new System.Drawing.Size(50, 16);
+            this.lbMdfe.TabIndex = 6;
+            this.lbMdfe.Text = "MDFE";
+            // 
+            // lbCte
+            // 
+            this.lbCte.AutoSize = true;
+            this.lbCte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbCte.Location = new System.Drawing.Point(3, 31);
+            this.lbCte.Name = "lbCte";
+            this.lbCte.Size = new System.Drawing.Size(38, 16);
+            this.lbCte.TabIndex = 5;
+            this.lbCte.Text = "CTE";
+            // 
+            // lbData
+            // 
+            this.lbData.AutoSize = true;
+            this.lbData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbData.Location = new System.Drawing.Point(3, 13);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(41, 16);
+            this.lbData.TabIndex = 4;
+            this.lbData.Text = "Data";
+            // 
+            // lbTomador
+            // 
+            this.lbTomador.AutoSize = true;
+            this.lbTomador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTomador.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lbTomador.Location = new System.Drawing.Point(196, 0);
+            this.lbTomador.Name = "lbTomador";
+            this.lbTomador.Size = new System.Drawing.Size(76, 18);
+            this.lbTomador.TabIndex = 3;
+            this.lbTomador.Text = "Tomador";
             // 
             // label17
             // 
@@ -152,7 +252,7 @@ namespace ImpostoCTE.Forms
             // 
             // btExcluir
             // 
-            this.btExcluir.Location = new System.Drawing.Point(0, 373);
+            this.btExcluir.Location = new System.Drawing.Point(379, 372);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(101, 23);
             this.btExcluir.TabIndex = 6;
@@ -160,104 +260,15 @@ namespace ImpostoCTE.Forms
             this.btExcluir.UseVisualStyleBackColor = true;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
-            // lbTomador
+            // btCadastrarFrete
             // 
-            this.lbTomador.AutoSize = true;
-            this.lbTomador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTomador.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbTomador.Location = new System.Drawing.Point(196, 0);
-            this.lbTomador.Name = "lbTomador";
-            this.lbTomador.Size = new System.Drawing.Size(76, 18);
-            this.lbTomador.TabIndex = 3;
-            this.lbTomador.Text = "Tomador";
-            // 
-            // lbData
-            // 
-            this.lbData.AutoSize = true;
-            this.lbData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbData.Location = new System.Drawing.Point(3, 13);
-            this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(41, 16);
-            this.lbData.TabIndex = 4;
-            this.lbData.Text = "Data";
-            // 
-            // lbCte
-            // 
-            this.lbCte.AutoSize = true;
-            this.lbCte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCte.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbCte.Location = new System.Drawing.Point(3, 31);
-            this.lbCte.Name = "lbCte";
-            this.lbCte.Size = new System.Drawing.Size(38, 16);
-            this.lbCte.TabIndex = 5;
-            this.lbCte.Text = "CTE";
-            // 
-            // lbMdfe
-            // 
-            this.lbMdfe.AutoSize = true;
-            this.lbMdfe.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMdfe.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbMdfe.Location = new System.Drawing.Point(3, 49);
-            this.lbMdfe.Name = "lbMdfe";
-            this.lbMdfe.Size = new System.Drawing.Size(50, 16);
-            this.lbMdfe.TabIndex = 6;
-            this.lbMdfe.Text = "MDFE";
-            // 
-            // lbCidade
-            // 
-            this.lbCidade.AutoSize = true;
-            this.lbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCidade.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbCidade.Location = new System.Drawing.Point(3, 67);
-            this.lbCidade.Name = "lbCidade";
-            this.lbCidade.Size = new System.Drawing.Size(58, 16);
-            this.lbCidade.TabIndex = 7;
-            this.lbCidade.Text = "Cidade";
-            // 
-            // lbValor
-            // 
-            this.lbValor.AutoSize = true;
-            this.lbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbValor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbValor.Location = new System.Drawing.Point(273, 22);
-            this.lbValor.Name = "lbValor";
-            this.lbValor.Size = new System.Drawing.Size(47, 18);
-            this.lbValor.TabIndex = 8;
-            this.lbValor.Text = "Valor";
-            // 
-            // lbVeiculo
-            // 
-            this.lbVeiculo.AutoSize = true;
-            this.lbVeiculo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVeiculo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbVeiculo.Location = new System.Drawing.Point(273, 40);
-            this.lbVeiculo.Name = "lbVeiculo";
-            this.lbVeiculo.Size = new System.Drawing.Size(63, 18);
-            this.lbVeiculo.TabIndex = 9;
-            this.lbVeiculo.Text = "Veiculo";
-            // 
-            // lbPlaca
-            // 
-            this.lbPlaca.AutoSize = true;
-            this.lbPlaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPlaca.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbPlaca.Location = new System.Drawing.Point(273, 58);
-            this.lbPlaca.Name = "lbPlaca";
-            this.lbPlaca.Size = new System.Drawing.Size(50, 18);
-            this.lbPlaca.TabIndex = 10;
-            this.lbPlaca.Text = "Placa";
-            // 
-            // lbObservacao
-            // 
-            this.lbObservacao.AutoSize = true;
-            this.lbObservacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbObservacao.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbObservacao.Location = new System.Drawing.Point(3, 82);
-            this.lbObservacao.Name = "lbObservacao";
-            this.lbObservacao.Size = new System.Drawing.Size(93, 16);
-            this.lbObservacao.TabIndex = 11;
-            this.lbObservacao.Text = "Observacao";
+            this.btCadastrarFrete.Location = new System.Drawing.Point(0, 372);
+            this.btCadastrarFrete.Name = "btCadastrarFrete";
+            this.btCadastrarFrete.Size = new System.Drawing.Size(126, 23);
+            this.btCadastrarFrete.TabIndex = 7;
+            this.btCadastrarFrete.Text = "Cadastrar Frete";
+            this.btCadastrarFrete.UseVisualStyleBackColor = true;
+            this.btCadastrarFrete.Click += new System.EventHandler(this.btCadastrarFrete_Click);
             // 
             // FormListaFrete
             // 
@@ -265,6 +276,7 @@ namespace ImpostoCTE.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
             this.ClientSize = new System.Drawing.Size(480, 566);
+            this.Controls.Add(this.btCadastrarFrete);
             this.Controls.Add(this.btExcluir);
             this.Controls.Add(this.btPesquisar);
             this.Controls.Add(this.tbPesquisarFrete);
@@ -302,5 +314,6 @@ namespace ImpostoCTE.Forms
         private System.Windows.Forms.Label lbCte;
         private System.Windows.Forms.Label lbData;
         private System.Windows.Forms.Label lbTomador;
+        private System.Windows.Forms.Button btCadastrarFrete;
     }
 }

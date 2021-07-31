@@ -51,35 +51,10 @@ namespace ImpostoCTE
             
         }
 
-        private void tbPlaca_Click(object sender, EventArgs e)
-        {
-            tbPlaca.Select(tbPlaca.Text.Length, 0);
-        }
-
         private void btFecharTelaLucro_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void btArmazenarFrete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string data = dtData.Text;
-                int cte = Convert.ToInt32(tbCte.Text);
-                int mdfe = Convert.ToInt32(tbMdfe.Text);
-                string veiculo = cbVeiculo.Text;
-                string placa = tbPlaca.Text;
-                string cidade = tbCidade.Text;
-                string tomador = cbTomador.Text;
-                double valorFrete = Convert.ToDouble(tbValorFrete.Text);
-                string observacao = tbObservacao.Text;
-                Insert.inserirFrete(data, cte, mdfe, veiculo, placa, cidade, tomador, valorFrete, observacao);
-            } catch (System.FormatException)
-            {
-                MessageBox.Show("Um dos campos está vazio");
-            }
             
         }
     }
-}

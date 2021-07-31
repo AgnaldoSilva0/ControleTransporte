@@ -58,5 +58,11 @@ namespace ImpostoCTE.Forms
             lbCidade.Text = "Cidade: " + detalhes.Cidade;
             lbVeiculo.Text = "Veiculo: " + detalhes.Veiculo;
         }
+
+        private void btCadastrarFrete_Click(object sender, EventArgs e)
+        {
+            Form_Cad_Frete formCadFrete = new Form_Cad_Frete();
+            formCadFrete.ShowDialog();
+        }
     }
 }

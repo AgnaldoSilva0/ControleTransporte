@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroSet_UI.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ImpostoCTE.Forms
 {
-    public partial class FormFuncionarios : Form
+    public partial class FormFuncionarios : MetroSetForm
     {
         public FormFuncionarios()
         {

@@ -29,5 +29,28 @@ namespace ImpostoCTE
             }
         }
 
+        public static void validator(MetroSet_UI.Controls.MetroSetTextBox textBox, string label)
+        {
+            textBox.BorderColor = System.Drawing.Color.Crimson;
+            textBox.Focus();
+            MessageBox.Show(label);
+        }
+
+        public static void validator(MetroSet_UI.Controls.MetroSetTextBox textBox, string label, MetroSet_UI.Controls.MetroSetTextBox textBoxAnterior)
+        {
+            textBoxAnterior.BorderColor = System.Drawing.Color.Black;
+            textBox.BorderColor = System.Drawing.Color.Crimson;
+            textBox.Focus();
+            MessageBox.Show(label);
+        }
+
+        public static void validator(MetroSet_UI.Controls.MetroSetComboBox textBox, string label, MetroSet_UI.Controls.MetroSetTextBox textBoxAnterior)
+        {
+            textBoxAnterior.BorderColor = System.Drawing.Color.Black;
+            textBox.BorderColor = System.Drawing.Color.Crimson;
+            textBox.Focus();
+            MessageBox.Show(label);
+        }
+
     }
 }

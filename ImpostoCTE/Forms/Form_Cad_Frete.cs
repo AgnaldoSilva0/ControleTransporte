@@ -23,6 +23,42 @@ namespace ImpostoCTE.Forms
         {
             try
             {
+                if (tbCte.Text == string.Empty)
+                {
+                    Operacoes.validator(tbCte, "Preencha o CTE");
+                    return;
+                }
+                if (tbMdfe.Text == string.Empty)
+                {
+                    Operacoes.validator(tbCte, "Preencha o MDFE", tbCte);
+                    return;
+                }
+                if (cbVeiculo.Text == string.Empty)
+                {
+                    Operacoes.validator(cbVeiculo, "Selecione o Veiculo", tbMdfe);
+                    return;
+                }
+                if (tbPlaca.Text == string.Empty)
+                {
+                    Operacoes.validator(tbPlaca, "Preencha a Placa", tbMdfe);
+                    return;
+                }
+                if (tbCidade.Text == string.Empty)
+                {
+                    Operacoes.validator(tbCidade, "Preencha a Cidade", tbPlaca);
+                    return;
+                }
+                if (cbTomador.Text == string.Empty)
+                {
+                    Operacoes.validator(cbTomador, "Selecione o Tomador", tbCidade);
+                    return;
+                }
+                if (tbValorFrete.Text == string.Empty)
+                {
+                    Operacoes.validator(tbValorFrete, "Preencha o Valor do Frete", tbMdfe);
+                    return;
+                }
+
                 string data = dtData.Text;
                 int cte = Convert.ToInt32(tbCte.Text);
                 int mdfe = Convert.ToInt32(tbMdfe.Text);
@@ -38,6 +74,11 @@ namespace ImpostoCTE.Forms
             {
                 MessageBox.Show("Um dos campos está vazio");
             }
+        }
+
+        private void tbCte_KeyPressed(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }

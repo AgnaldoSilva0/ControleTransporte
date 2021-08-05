@@ -233,6 +233,7 @@ namespace ImpostoCTE.Forms
             this.tbCte.ThemeName = "MetroLite";
             this.tbCte.UseSystemPasswordChar = false;
             this.tbCte.WatermarkText = "CTE";
+            this.tbCte.KeyPressed += new System.Windows.Forms.KeyPressEventHandler(this.tbCte_KeyPressed);
             // 
             // tbMdfe
             // 
@@ -344,6 +345,7 @@ namespace ImpostoCTE.Forms
             this.tbObservacao.Style = MetroSet_UI.Enums.Style.Light;
             this.tbObservacao.StyleManager = null;
             this.tbObservacao.TabIndex = 14;
+            this.tbObservacao.Text = "N/A";
             this.tbObservacao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.tbObservacao.ThemeAuthor = "Narwin";
             this.tbObservacao.ThemeName = "MetroLite";
@@ -363,6 +365,8 @@ namespace ImpostoCTE.Forms
             // 
             this.cbVeiculo.AllowDrop = true;
             this.cbVeiculo.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));
+            this.cbVeiculo.AutoCompleteCustomSource.AddRange(new string[] {
+            "MB"});
             this.cbVeiculo.BackColor = System.Drawing.Color.Transparent;
             this.cbVeiculo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.cbVeiculo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(150)))), ((int)(((byte)(150)))));

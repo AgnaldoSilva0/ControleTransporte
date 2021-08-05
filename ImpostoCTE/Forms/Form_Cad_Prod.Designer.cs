@@ -47,7 +47,7 @@ namespace ImpostoCTE.Forms
             this.metroSetLabel1.IsDerivedStyle = true;
             this.metroSetLabel1.Location = new System.Drawing.Point(3, 94);
             this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel1.Size = new System.Drawing.Size(86, 23);
             this.metroSetLabel1.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel1.StyleManager = null;
             this.metroSetLabel1.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace ImpostoCTE.Forms
             this.metroSetLabel2.IsDerivedStyle = true;
             this.metroSetLabel2.Location = new System.Drawing.Point(3, 123);
             this.metroSetLabel2.Name = "metroSetLabel2";
-            this.metroSetLabel2.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel2.Size = new System.Drawing.Size(86, 23);
             this.metroSetLabel2.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel2.StyleManager = null;
             this.metroSetLabel2.TabIndex = 1;
@@ -75,7 +75,7 @@ namespace ImpostoCTE.Forms
             this.metroSetLabel3.IsDerivedStyle = true;
             this.metroSetLabel3.Location = new System.Drawing.Point(3, 152);
             this.metroSetLabel3.Name = "metroSetLabel3";
-            this.metroSetLabel3.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel3.Size = new System.Drawing.Size(86, 23);
             this.metroSetLabel3.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel3.StyleManager = null;
             this.metroSetLabel3.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace ImpostoCTE.Forms
             this.metroSetLabel4.IsDerivedStyle = true;
             this.metroSetLabel4.Location = new System.Drawing.Point(3, 181);
             this.metroSetLabel4.Name = "metroSetLabel4";
-            this.metroSetLabel4.Size = new System.Drawing.Size(100, 23);
+            this.metroSetLabel4.Size = new System.Drawing.Size(86, 23);
             this.metroSetLabel4.Style = MetroSet_UI.Enums.Style.Light;
             this.metroSetLabel4.StyleManager = null;
             this.metroSetLabel4.TabIndex = 3;
@@ -102,7 +102,7 @@ namespace ImpostoCTE.Forms
             this.tbCodigo.AutoCompleteCustomSource = null;
             this.tbCodigo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbCodigo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbCodigo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbCodigo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbCodigo.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbCodigo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbCodigo.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -131,7 +131,7 @@ namespace ImpostoCTE.Forms
             this.tbDescricao.AutoCompleteCustomSource = null;
             this.tbDescricao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbDescricao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbDescricao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbDescricao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbDescricao.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbDescricao.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbDescricao.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -160,7 +160,7 @@ namespace ImpostoCTE.Forms
             this.tbPreco.AutoCompleteCustomSource = null;
             this.tbPreco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbPreco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbPreco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbPreco.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbPreco.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbPreco.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -190,7 +190,7 @@ namespace ImpostoCTE.Forms
             this.tbIpi.AutoCompleteCustomSource = null;
             this.tbIpi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbIpi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbIpi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbIpi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbIpi.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbIpi.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbIpi.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));

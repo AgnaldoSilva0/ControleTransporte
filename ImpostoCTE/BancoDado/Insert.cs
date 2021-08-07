@@ -96,7 +96,7 @@ namespace ImpostoCTE.BancoDado
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
 
-                comando.CommandText = "INSERT INTO table_funcionario(id, nome, admissao, telefone, salarioSemanal) " +
+                comando.CommandText = "INSERT INTO table_funcionarios(id, nome, admissao, telefone, salarioSemanal) " +
                     "VALUES ('" + id + "', '" + nome + "', '" + admissao + "', '" + telefone + "', '"+ salario +"' )";
 
                 comando.ExecuteNonQuery();

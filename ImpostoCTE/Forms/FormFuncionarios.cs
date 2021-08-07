@@ -1,4 +1,5 @@
 ﻿using ImpostoCTE.BancoDado;
+using ImpostoCTE.Model;
 using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
@@ -44,6 +45,22 @@ namespace ImpostoCTE.Forms
                         Convert.ToString(item.Nome), item.Telefone, Convert.ToString(item.SalarioSemanal) }));
                 }
             }
+        }
+
+        private void listViewFunc_MouseClick(object sender, MouseEventArgs e)
+        {
+            foreach (var item in Listas.listFuncionario)
+            {
+                if(item.Id == Convert.ToInt32(listViewFunc.SelectedItems[0].SubItems[0].Text))
+                {
+                    lbAdmissaoClick.Text = item.Admissao;
+                }
+
+            }
+            
+            
+            //Funcionario detalhes = (Funcionario)Pesquisar.detalhesFrete(Convert.ToInt32(listViewFunc.SelectedItems[0].SubItems[1].Text));
+            
         }
     }
 }

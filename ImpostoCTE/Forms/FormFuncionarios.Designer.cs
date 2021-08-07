@@ -36,7 +36,7 @@ namespace ImpostoCTE.Forms
             this.clmSalario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.lbAdmissaoClick = new MetroFramework.Controls.MetroLabel();
             this.btCadastrarFunc = new MetroFramework.Controls.MetroButton();
             this.btPesquisarFunc = new MetroFramework.Controls.MetroButton();
             this.tbPesquisarFun = new MetroFramework.Controls.MetroTextBox();
@@ -45,6 +45,7 @@ namespace ImpostoCTE.Forms
             // 
             // listViewFunc
             // 
+            this.listViewFunc.Alignment = System.Windows.Forms.ListViewAlignment.Default;
             this.listViewFunc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmID,
             this.clmNome,
@@ -60,11 +61,12 @@ namespace ImpostoCTE.Forms
             this.listViewFunc.UseCompatibleStateImageBehavior = false;
             this.listViewFunc.UseSelectable = true;
             this.listViewFunc.View = System.Windows.Forms.View.Details;
+            this.listViewFunc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewFunc_MouseClick);
             // 
             // clmID
             // 
             this.clmID.Text = "ID";
-            this.clmID.Width = 36;
+            this.clmID.Width = 114;
             // 
             // clmNome
             // 
@@ -96,7 +98,7 @@ namespace ImpostoCTE.Forms
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroPanel1.Controls.Add(this.metroLabel2);
+            this.metroPanel1.Controls.Add(this.lbAdmissaoClick);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -109,14 +111,14 @@ namespace ImpostoCTE.Forms
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // metroLabel2
+            // lbAdmissaoClick
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(79, 16);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(75, 19);
-            this.metroLabel2.TabIndex = 3;
-            this.metroLabel2.Text = "00/00/0000";
+            this.lbAdmissaoClick.AutoSize = true;
+            this.lbAdmissaoClick.Location = new System.Drawing.Point(79, 16);
+            this.lbAdmissaoClick.Name = "lbAdmissaoClick";
+            this.lbAdmissaoClick.Size = new System.Drawing.Size(75, 19);
+            this.lbAdmissaoClick.TabIndex = 3;
+            this.lbAdmissaoClick.Text = "00/00/0000";
             // 
             // btCadastrarFunc
             // 
@@ -197,7 +199,7 @@ namespace ImpostoCTE.Forms
         private System.Windows.Forms.ColumnHeader clmSalario;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel lbAdmissaoClick;
         private MetroFramework.Controls.MetroButton btCadastrarFunc;
         private MetroFramework.Controls.MetroButton btPesquisarFunc;
         private MetroFramework.Controls.MetroTextBox tbPesquisarFun;

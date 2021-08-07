@@ -233,7 +233,6 @@ namespace ImpostoCTE.Forms
             this.tbCte.ThemeName = "MetroLite";
             this.tbCte.UseSystemPasswordChar = false;
             this.tbCte.WatermarkText = "CTE";
-            this.tbCte.KeyPressed += new System.Windows.Forms.KeyPressEventHandler(this.tbCte_KeyPressed);
             // 
             // tbMdfe
             // 

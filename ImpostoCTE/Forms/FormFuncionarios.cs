@@ -1,4 +1,5 @@
-﻿using MetroSet_UI.Forms;
+﻿using ImpostoCTE.BancoDado;
+using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ImpostoCTE.Forms
 {
-    public partial class FormFuncionarios : MetroSetForm
+    public partial class FormFuncionarios : MetroFramework.Forms.MetroForm
     {
         public FormFuncionarios()
         {
@@ -23,6 +24,26 @@ namespace ImpostoCTE.Forms
             Form_Cad_Func formCadFuncionario = new Form_Cad_Func();
             //Dialog pq bloqueia a tela principal, só desbloqueia após fechar o form
             formCadFuncionario.ShowDialog();
+        }
+
+        private void btCadastrarFunc_Click(object sender, EventArgs e)
+        {
+            Form_Cad_Func form_Cad_Func = new Form_Cad_Func();
+            form_Cad_Func.ShowDialog();
+        }
+
+        private void btPesquisarFunc_Click(object sender, EventArgs e)
+        {
+            listViewFunc.Items.Clear();
+            Pesquisar.pesquisarFuncionario();
+            foreach (var item in Listas.listFuncionario)
+            {
+                if (item.Nome.IndexOf(tbPesquisarFun.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    listViewFunc.Items.Add(new ListViewItem(new string[] { Convert.ToString(item.Id),
+                        Convert.ToString(item.Nome), item.Telefone, Convert.ToString(item.SalarioSemanal) }));
+                }
+            }
         }
     }
 }

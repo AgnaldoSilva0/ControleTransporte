@@ -75,10 +75,5 @@ namespace ImpostoCTE.Forms
                 MessageBox.Show("Um dos campos está vazio");
             }
         }
-
-        private void tbCte_KeyPressed(object sender, KeyPressEventArgs e)
-        {
-            
-        }
     }
 }

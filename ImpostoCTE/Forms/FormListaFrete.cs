@@ -38,7 +38,7 @@ namespace ImpostoCTE.Forms
             try
             {
                 Delete.deletarFrete(Convert.ToInt32(listViewFrete.SelectedItems[0].SubItems[1].Text));
-            } catch (Exception ex)
+            } catch (Exception)
             {
                 MessageBox.Show("Selecione um item para exclusão");
             }

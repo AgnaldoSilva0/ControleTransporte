@@ -323,6 +323,7 @@ namespace ImpostoCTE.Forms
             this.Name = "Form_Cad_Func";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Funcionário";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form_Cad_Func_FormClosed);
             this.ResumeLayout(false);
 
         }

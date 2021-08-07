@@ -34,7 +34,7 @@ namespace ImpostoCTE
                 double outrasDespesas = Convert.ToDouble(tbOutrasDespesasLucro.Text);
                 Operacoes.calcularLucroFrete(valorFrete, imposto, diaria, combustivel, outrasDespesas);
                 lbValorTotalLucro.Text = Convert.ToString(Operacoes.calcularLucroFrete(valorFrete, imposto, diaria, combustivel, outrasDespesas));
-            } catch(Exception ex)
+            } catch(Exception)
             {
                 MessageBox.Show("Campo Vazio");
             }

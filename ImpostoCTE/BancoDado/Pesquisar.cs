@@ -109,6 +109,53 @@ namespace ImpostoCTE.BancoDado
 
         }
 
+        public static void pesquisarFuncionario()
+        {
+            Listas.listFuncionario.Clear();
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+                string query = "SELECT * FROM table_funcionarios";
+                //if (codigo != "")
+                //{
+                //   query = "SELECT * FROM produto WHERE nome LIKE '" + codigo + "'";
+                //}
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    //int id, string nome, string admissao, string telefone, double salarioSemanal
+                    Listas.listFuncionario.Add(new Funcionario(Convert.ToInt16(row["ID"]),
+                        Convert.ToString(row["nome"]),
+                        Convert.ToString(row["admissao"]),
+                        Convert.ToString(row["telefone"]),
+                        Convert.ToDouble(row["salarioSemanal"])
+                        ));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+
+            }
+
+        }
+
         public static Object detalhesFrete(int cte)
         {
             Frete detalhes = new Frete();

@@ -53,7 +53,7 @@ namespace ImpostoCTE.Forms
                 Convert.ToInt16(tbIpi.Text));
 
                 limparTextBox();
-            } catch(Exception ex)
+            } catch(Exception)
             {
                 
             }

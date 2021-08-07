@@ -60,7 +60,7 @@ namespace ImpostoCTE.Forms
                 tbTelefoneFunc.Text);
                 limparTextBox();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Campo Vazio");
             }
@@ -90,5 +90,9 @@ namespace ImpostoCTE.Forms
             lbRegistroInserido.Text = "Último Registo inserio: " + tbNomeFunc.Text;
         }
 
+        private void Form_Cad_Func_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Pesquisar.pesquisarFuncionario();
+        }
     }
 }

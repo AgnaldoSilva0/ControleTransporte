@@ -164,7 +164,7 @@ namespace ImpostoCTE
                 lbValorTotalImpostos.Text = "R$ " + Convert.ToString(Operacoes.calcularTotalImposto(imp.Icms, imp.Pis, imp.Cofins, imp.ImpTri, imp.ConSocial));
                 lbDescontoAviso.Text = "Desconto não aplicado no valor total";
                 lbDescontoAviso.ForeColor = Color.FromArgb(93, 93, 91);
-            } catch (Exception ex)
+            } catch (Exception)
             {
                 MessageBox.Show("Insira um valor");
             }
@@ -193,7 +193,8 @@ namespace ImpostoCTE
 
         private void button3_Click(object sender, EventArgs e)
         {
-            openChieldForm(new FormFuncionarios());
+            FormFuncionarios formFuncionarios = new FormFuncionarios();
+            formFuncionarios.ShowDialog();
         }
 
         private void button4_Click_1(object sender, EventArgs e)

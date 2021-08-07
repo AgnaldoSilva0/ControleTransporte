@@ -29,137 +29,177 @@ namespace ImpostoCTE.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.lbDescontoAviso = new System.Windows.Forms.Label();
-            this.lbValorTotalImpostos = new System.Windows.Forms.Label();
-            this.btCadastrarFuncionario = new System.Windows.Forms.Button();
-            this.metroSetListBox1 = new MetroSet_UI.Controls.MetroSetListBox();
-            this.panel3.SuspendLayout();
+            this.listViewFunc = new MetroFramework.Controls.MetroListView();
+            this.clmID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmTelefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.clmSalario = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.btCadastrarFunc = new MetroFramework.Controls.MetroButton();
+            this.btPesquisarFunc = new MetroFramework.Controls.MetroButton();
+            this.tbPesquisarFun = new MetroFramework.Controls.MetroTextBox();
+            this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel3
+            // listViewFunc
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(21)))), ((int)(((byte)(32)))));
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.lbDescontoAviso);
-            this.panel3.Controls.Add(this.lbValorTotalImpostos);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(12, 454);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(456, 100);
-            this.panel3.TabIndex = 2;
+            this.listViewFunc.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.clmID,
+            this.clmNome,
+            this.clmTelefone,
+            this.clmSalario});
+            this.listViewFunc.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.listViewFunc.FullRowSelect = true;
+            this.listViewFunc.Location = new System.Drawing.Point(1, 71);
+            this.listViewFunc.Name = "listViewFunc";
+            this.listViewFunc.OwnerDraw = true;
+            this.listViewFunc.Size = new System.Drawing.Size(494, 256);
+            this.listViewFunc.TabIndex = 3;
+            this.listViewFunc.UseCompatibleStateImageBehavior = false;
+            this.listViewFunc.UseSelectable = true;
+            this.listViewFunc.View = System.Windows.Forms.View.Details;
             // 
-            // label17
+            // clmID
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(456, 82);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(21, 7);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "V 1.0";
+            this.clmID.Text = "ID";
+            this.clmID.Width = 36;
             // 
-            // label22
+            // clmNome
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label22.Location = new System.Drawing.Point(6, 40);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(205, 20);
-            this.label22.TabIndex = 3;
-            this.label22.Text = "Valor Total de Impostos:";
+            this.clmNome.Text = "Nome";
+            this.clmNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.clmNome.Width = 171;
             // 
-            // lbDescontoAviso
+            // clmTelefone
             // 
-            this.lbDescontoAviso.AutoSize = true;
-            this.lbDescontoAviso.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.lbDescontoAviso.Location = new System.Drawing.Point(265, 67);
-            this.lbDescontoAviso.Name = "lbDescontoAviso";
-            this.lbDescontoAviso.Size = new System.Drawing.Size(56, 22);
-            this.lbDescontoAviso.TabIndex = 2;
-            this.lbDescontoAviso.Text = "NULL";
+            this.clmTelefone.Text = "Telefone";
+            this.clmTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.clmTelefone.Width = 110;
             // 
-            // lbValorTotalImpostos
+            // clmSalario
             // 
-            this.lbValorTotalImpostos.AutoSize = true;
-            this.lbValorTotalImpostos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbValorTotalImpostos.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbValorTotalImpostos.Location = new System.Drawing.Point(264, 38);
-            this.lbValorTotalImpostos.Name = "lbValorTotalImpostos";
-            this.lbValorTotalImpostos.Size = new System.Drawing.Size(38, 24);
-            this.lbValorTotalImpostos.TabIndex = 0;
-            this.lbValorTotalImpostos.Text = "0.0";
+            this.clmSalario.Text = "Salário";
+            this.clmSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.clmSalario.Width = 94;
             // 
-            // btCadastrarFuncionario
+            // metroLabel1
             // 
-            this.btCadastrarFuncionario.Location = new System.Drawing.Point(12, 399);
-            this.btCadastrarFuncionario.Name = "btCadastrarFuncionario";
-            this.btCadastrarFuncionario.Size = new System.Drawing.Size(118, 34);
-            this.btCadastrarFuncionario.TabIndex = 3;
-            this.btCadastrarFuncionario.Text = "Cadastrar";
-            this.btCadastrarFuncionario.UseVisualStyleBackColor = true;
-            this.btCadastrarFuncionario.Click += new System.EventHandler(this.btCadastrarFuncionario_Click);
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(4, 16);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(69, 19);
+            this.metroLabel1.TabIndex = 2;
+            this.metroLabel1.Text = "Admissão:";
             // 
-            // metroSetListBox1
+            // metroPanel1
             // 
-            this.metroSetListBox1.BackColor = System.Drawing.Color.White;
-            this.metroSetListBox1.BorderColor = System.Drawing.Color.LightGray;
-            this.metroSetListBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.metroSetListBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            this.metroSetListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetListBox1.HoveredItemBackColor = System.Drawing.Color.LightGray;
-            this.metroSetListBox1.HoveredItemColor = System.Drawing.Color.DimGray;
-            this.metroSetListBox1.IsDerivedStyle = true;
-            this.metroSetListBox1.ItemHeight = 30;
-            this.metroSetListBox1.Items.Add("Nome");
-            this.metroSetListBox1.Items.Add("Salário");
-            this.metroSetListBox1.Location = new System.Drawing.Point(15, 96);
-            this.metroSetListBox1.MultiSelect = false;
-            this.metroSetListBox1.Name = "metroSetListBox1";
-            this.metroSetListBox1.SelectedIndex = -1;
-            this.metroSetListBox1.SelectedItem = null;
-            this.metroSetListBox1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetListBox1.SelectedItemColor = System.Drawing.Color.White;
-            this.metroSetListBox1.SelectedText = null;
-            this.metroSetListBox1.SelectedValue = null;
-            this.metroSetListBox1.ShowBorder = true;
-            this.metroSetListBox1.ShowScrollBar = true;
-            this.metroSetListBox1.Size = new System.Drawing.Size(412, 77);
-            this.metroSetListBox1.Style = MetroSet_UI.Enums.Style.Light;
-            this.metroSetListBox1.StyleManager = null;
-            this.metroSetListBox1.TabIndex = 4;
-            this.metroSetListBox1.ThemeAuthor = "Narwin";
-            this.metroSetListBox1.ThemeName = "MetroLite";
+            this.metroPanel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroPanel1.Controls.Add(this.metroLabel2);
+            this.metroPanel1.Controls.Add(this.metroLabel1);
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 10;
+            this.metroPanel1.Location = new System.Drawing.Point(15, 417);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(467, 84);
+            this.metroPanel1.TabIndex = 4;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(79, 16);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(75, 19);
+            this.metroLabel2.TabIndex = 3;
+            this.metroLabel2.Text = "00/00/0000";
+            // 
+            // btCadastrarFunc
+            // 
+            this.btCadastrarFunc.Location = new System.Drawing.Point(19, 334);
+            this.btCadastrarFunc.Name = "btCadastrarFunc";
+            this.btCadastrarFunc.Size = new System.Drawing.Size(75, 23);
+            this.btCadastrarFunc.TabIndex = 5;
+            this.btCadastrarFunc.Text = "Cadastrar";
+            this.btCadastrarFunc.UseSelectable = true;
+            this.btCadastrarFunc.Click += new System.EventHandler(this.btCadastrarFunc_Click);
+            // 
+            // btPesquisarFunc
+            // 
+            this.btPesquisarFunc.Location = new System.Drawing.Point(405, 334);
+            this.btPesquisarFunc.Name = "btPesquisarFunc";
+            this.btPesquisarFunc.Size = new System.Drawing.Size(75, 23);
+            this.btPesquisarFunc.TabIndex = 6;
+            this.btPesquisarFunc.Text = "Pesquisar";
+            this.btPesquisarFunc.UseSelectable = true;
+            this.btPesquisarFunc.Click += new System.EventHandler(this.btPesquisarFunc_Click);
+            // 
+            // tbPesquisarFun
+            // 
+            // 
+            // 
+            // 
+            this.tbPesquisarFun.CustomButton.Image = null;
+            this.tbPesquisarFun.CustomButton.Location = new System.Drawing.Point(76, 1);
+            this.tbPesquisarFun.CustomButton.Name = "";
+            this.tbPesquisarFun.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbPesquisarFun.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbPesquisarFun.CustomButton.TabIndex = 1;
+            this.tbPesquisarFun.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbPesquisarFun.CustomButton.UseSelectable = true;
+            this.tbPesquisarFun.CustomButton.Visible = false;
+            this.tbPesquisarFun.Lines = new string[0];
+            this.tbPesquisarFun.Location = new System.Drawing.Point(301, 333);
+            this.tbPesquisarFun.MaxLength = 32767;
+            this.tbPesquisarFun.Name = "tbPesquisarFun";
+            this.tbPesquisarFun.PasswordChar = '\0';
+            this.tbPesquisarFun.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbPesquisarFun.SelectedText = "";
+            this.tbPesquisarFun.SelectionLength = 0;
+            this.tbPesquisarFun.SelectionStart = 0;
+            this.tbPesquisarFun.ShortcutsEnabled = true;
+            this.tbPesquisarFun.Size = new System.Drawing.Size(98, 23);
+            this.tbPesquisarFun.TabIndex = 7;
+            this.tbPesquisarFun.UseSelectable = true;
+            this.tbPesquisarFun.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbPesquisarFun.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // FormFuncionarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(480, 566);
-            this.Controls.Add(this.metroSetListBox1);
-            this.Controls.Add(this.btCadastrarFuncionario);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(497, 517);
+            this.Controls.Add(this.tbPesquisarFun);
+            this.Controls.Add(this.btPesquisarFunc);
+            this.Controls.Add(this.btCadastrarFunc);
+            this.Controls.Add(this.metroPanel1);
+            this.Controls.Add(this.listViewFunc);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormFuncionarios";
-            this.Text = "FormFuncionarios";
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.Padding = new System.Windows.Forms.Padding(12, 60, 12, 13);
+            this.Text = "Funcionarios";
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label lbDescontoAviso;
-        private System.Windows.Forms.Label lbValorTotalImpostos;
-        private System.Windows.Forms.Button btCadastrarFuncionario;
-        private MetroSet_UI.Controls.MetroSetListBox metroSetListBox1;
+
+        private MetroFramework.Controls.MetroListView listViewFunc;
+        private System.Windows.Forms.ColumnHeader clmID;
+        private System.Windows.Forms.ColumnHeader clmNome;
+        private System.Windows.Forms.ColumnHeader clmTelefone;
+        private System.Windows.Forms.ColumnHeader clmSalario;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroPanel metroPanel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroButton btCadastrarFunc;
+        private MetroFramework.Controls.MetroButton btPesquisarFunc;
+        private MetroFramework.Controls.MetroTextBox tbPesquisarFun;
     }
 }

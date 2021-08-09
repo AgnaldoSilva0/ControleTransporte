@@ -101,26 +101,75 @@ namespace ImpostoCTE
         private void checkBox5_CheckedChanged(object sender, EventArgs e)
         {
             alterarCor(lbIcms, lbIcmsAtivado, checkBox5);
+            if (checkBox5.Checked == false)
+            {
+                Impostos.icms = 0;
+            } else
+            {
+                Impostos.icms = 18.0;
+            }
+            //PerformClick pra executar o botão calcular imposto
+            button6.PerformClick();
          }
 
         private void cbPis_CheckedChanged(object sender, EventArgs e)
         {
             alterarCor(lbPis, lbPisAtivado, cbPis);
+            if (cbPis.Checked == false)
+            {
+                Impostos.pis = 0;
+            }
+            else
+            {
+                Impostos.pis = 0.65;
+            }
+            //PerformClick pra executar o botão calcular imposto
+            button6.PerformClick();
         }
 
         private void cbCofins_CheckedChanged(object sender, EventArgs e)
         {
             alterarCor(lbCofins, lbCofinsAtivado, cbCofins);
+            if (cbCofins.Checked == false)
+            {
+                Impostos.cofins = 0;
+            }
+            else
+            {
+                Impostos.cofins = 3.0;
+            }
+            //PerformClick pra executar o botão calcular imposto
+            button6.PerformClick();
         }
 
         private void cbImpTrim_CheckedChanged(object sender, EventArgs e)
         {
             alterarCor(lbImpTri, lbIrtAtivado, cbImpTrim);
+            if (cbImpTrim.Checked == false)
+            {
+                Impostos.impTri = 0;
+            }
+            else
+            {
+                Impostos.impTri = 1.2;
+            }
+            //PerformClick pra executar o botão calcular imposto
+            button6.PerformClick();
         }
 
         private void cbConSocial_CheckedChanged(object sender, EventArgs e)
         {
             alterarCor(lbConSocial, lbCsAtivado, cbConSocial);
+            if (cbConSocial.Checked == false)
+            {
+                Impostos.conSocial = 0;
+            }
+            else
+            {
+                Impostos.conSocial = 1.08;
+            }
+            //PerformClick pra executar o botão calcular imposto
+            button6.PerformClick();
         }
 
         private void checkBox6_CheckedChanged(object sender, EventArgs e)

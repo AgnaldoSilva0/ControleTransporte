@@ -18,13 +18,14 @@ namespace ImpostoCTE.Forms
             InitializeComponent();
         }
 
-        public Form_Edit_Func(int id, string nome, string telefone, double salarioSemanal)
+        public Form_Edit_Func(int id, string nome, string telefone, double salarioSemanal, string funcao)
         {
             InitializeComponent();
             tbNomeFunc.Text = nome;
             tbIdFunc.Text = Convert.ToString(id);
             tbTelefoneFunc.Text = telefone;
             tbSalarioFunc.Text = Convert.ToString(salarioSemanal);
+            tbFuncaoFunc.Text = funcao;
         }
 
         private void btEditFunc_Click(object sender, EventArgs e)
@@ -33,7 +34,8 @@ namespace ImpostoCTE.Forms
             update.editarFunc(Convert.ToInt32(tbIdFunc.Text), 
                 tbNomeFunc.Text, 
                 tbTelefoneFunc.Text, 
-                Convert.ToDouble(tbSalarioFunc.Text)
+                Convert.ToDouble(tbSalarioFunc.Text),
+                tbFuncaoFunc.Text
                 );
 
             this.Close();

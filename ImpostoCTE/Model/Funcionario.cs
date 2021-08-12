@@ -11,14 +11,16 @@ namespace ImpostoCTE.Model
         private int id;
         private string nome, admissao, telefone;
         private double salarioSemanal;
+        private string funcao;
 
-        public Funcionario(int id, string nome, string admissao, string telefone, double salarioSemanal)
+        public Funcionario(int id, string nome, string admissao, string telefone, double salarioSemanal, string funcao)
         {
             this.id = id;
             this.nome = nome;
             this.admissao = admissao;
             this.telefone = telefone;
             this.salarioSemanal = salarioSemanal;
+            this.funcao = funcao;
         }
 
         public int Id { get => id; set => id = value; }
@@ -26,5 +28,6 @@ namespace ImpostoCTE.Model
         public string Admissao { get => admissao; set => admissao = value; }
         public string Telefone { get => telefone; set => telefone = value; }
         public double SalarioSemanal { get => salarioSemanal; set => salarioSemanal = value; }
+        public string Funcao { get => funcao; set => funcao = value; }
     }
 }

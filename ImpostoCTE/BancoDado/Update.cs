@@ -10,7 +10,7 @@ namespace ImpostoCTE.BancoDado
 {
     class Update
     {
-        public void editarFunc(int id, string nome, string telefone, double salarioSemanal)
+        public void editarFunc(int id, string nome, string telefone, double salarioSemanal, string funcao)
         {
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
@@ -23,7 +23,7 @@ namespace ImpostoCTE.BancoDado
 
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
-                string query = "UPDATE table_funcionarios SET nome = '" + nome + "', telefone = '" + telefone + "', salarioSemanal = '" + salarioSemanal + "' WHERE id LIKE '" + id + "' ";
+                string query = "UPDATE table_funcionarios SET nome = '" + nome + "', telefone = '" + telefone + "', salarioSemanal = '" + salarioSemanal + "', funcao = '"+ funcao +"'  WHERE id LIKE '" + id + "' ";
                 
                 comando.CommandText = query;
 

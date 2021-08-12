@@ -40,7 +40,7 @@ namespace ImpostoCTE.Forms
             this.btCadastrarFunc = new MetroFramework.Controls.MetroButton();
             this.btPesquisarFunc = new MetroFramework.Controls.MetroButton();
             this.tbPesquisarFun = new MetroFramework.Controls.MetroTextBox();
-            this.tbFuncao = new MetroFramework.Controls.MetroLabel();
+            this.lbFuncao = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -101,7 +101,7 @@ namespace ImpostoCTE.Forms
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.metroPanel1.Controls.Add(this.tbFuncao);
+            this.metroPanel1.Controls.Add(this.lbFuncao);
             this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.lbAdmissaoClick);
             this.metroPanel1.Controls.Add(this.metroLabel1);
@@ -175,14 +175,14 @@ namespace ImpostoCTE.Forms
             this.tbPesquisarFun.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbPesquisarFun.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // tbFuncao
+            // lbFuncao
             // 
-            this.tbFuncao.AutoSize = true;
-            this.tbFuncao.Location = new System.Drawing.Point(79, 50);
-            this.tbFuncao.Name = "tbFuncao";
-            this.tbFuncao.Size = new System.Drawing.Size(33, 19);
-            this.tbFuncao.TabIndex = 5;
-            this.tbFuncao.Text = "N/A";
+            this.lbFuncao.AutoSize = true;
+            this.lbFuncao.Location = new System.Drawing.Point(79, 50);
+            this.lbFuncao.Name = "lbFuncao";
+            this.lbFuncao.Size = new System.Drawing.Size(33, 19);
+            this.lbFuncao.TabIndex = 5;
+            this.lbFuncao.Text = "N/A";
             // 
             // metroLabel3
             // 
@@ -227,7 +227,7 @@ namespace ImpostoCTE.Forms
         private MetroFramework.Controls.MetroButton btPesquisarFunc;
         private MetroFramework.Controls.MetroTextBox tbPesquisarFun;
         private System.Windows.Forms.ColumnHeader clmNome;
-        private MetroFramework.Controls.MetroLabel tbFuncao;
+        private MetroFramework.Controls.MetroLabel lbFuncao;
         private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

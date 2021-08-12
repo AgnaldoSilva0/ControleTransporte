@@ -41,6 +41,8 @@ namespace ImpostoCTE.Forms
             this.lbRegistroInserido = new MetroSet_UI.Controls.MetroSetLabel();
             this.tbIdFunc = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel6 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.tbFuncao = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
             this.SuspendLayout();
             // 
             // metroSetLabel1
@@ -226,7 +228,7 @@ namespace ImpostoCTE.Forms
             this.btCadFunc.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btCadFunc.HoverTextColor = System.Drawing.Color.White;
             this.btCadFunc.IsDerivedStyle = true;
-            this.btCadFunc.Location = new System.Drawing.Point(15, 224);
+            this.btCadFunc.Location = new System.Drawing.Point(15, 267);
             this.btCadFunc.Name = "btCadFunc";
             this.btCadFunc.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btCadFunc.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -247,7 +249,7 @@ namespace ImpostoCTE.Forms
             // 
             this.lbRegistroInserido.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbRegistroInserido.IsDerivedStyle = true;
-            this.lbRegistroInserido.Location = new System.Drawing.Point(36, 259);
+            this.lbRegistroInserido.Location = new System.Drawing.Point(36, 302);
             this.lbRegistroInserido.Name = "lbRegistroInserido";
             this.lbRegistroInserido.Size = new System.Drawing.Size(100, 23);
             this.lbRegistroInserido.Style = MetroSet_UI.Enums.Style.Light;
@@ -301,12 +303,57 @@ namespace ImpostoCTE.Forms
             this.metroSetLabel6.ThemeAuthor = "Narwin";
             this.metroSetLabel6.ThemeName = "MetroLite";
             // 
+            // tbFuncao
+            // 
+            this.tbFuncao.AutoCompleteCustomSource = null;
+            this.tbFuncao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbFuncao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbFuncao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbFuncao.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbFuncao.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbFuncao.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.tbFuncao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbFuncao.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.tbFuncao.Image = null;
+            this.tbFuncao.IsDerivedStyle = true;
+            this.tbFuncao.Lines = null;
+            this.tbFuncao.Location = new System.Drawing.Point(142, 208);
+            this.tbFuncao.MaxLength = 32767;
+            this.tbFuncao.Multiline = false;
+            this.tbFuncao.Name = "tbFuncao";
+            this.tbFuncao.ReadOnly = false;
+            this.tbFuncao.Size = new System.Drawing.Size(121, 23);
+            this.tbFuncao.Style = MetroSet_UI.Enums.Style.Light;
+            this.tbFuncao.StyleManager = null;
+            this.tbFuncao.TabIndex = 13;
+            this.tbFuncao.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbFuncao.ThemeAuthor = "Narwin";
+            this.tbFuncao.ThemeName = "MetroLite";
+            this.tbFuncao.UseSystemPasswordChar = false;
+            this.tbFuncao.WatermarkText = "";
+            // 
+            // metroSetLabel5
+            // 
+            this.metroSetLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel5.IsDerivedStyle = true;
+            this.metroSetLabel5.Location = new System.Drawing.Point(15, 208);
+            this.metroSetLabel5.Name = "metroSetLabel5";
+            this.metroSetLabel5.Size = new System.Drawing.Size(121, 23);
+            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel5.StyleManager = null;
+            this.metroSetLabel5.TabIndex = 12;
+            this.metroSetLabel5.Text = "Função:";
+            this.metroSetLabel5.ThemeAuthor = "Narwin";
+            this.metroSetLabel5.ThemeName = "MetroLite";
+            // 
             // Form_Cad_Func
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(30)))), ((int)(((byte)(45)))));
-            this.ClientSize = new System.Drawing.Size(266, 303);
+            this.ClientSize = new System.Drawing.Size(266, 343);
+            this.Controls.Add(this.tbFuncao);
+            this.Controls.Add(this.metroSetLabel5);
             this.Controls.Add(this.tbIdFunc);
             this.Controls.Add(this.metroSetLabel6);
             this.Controls.Add(this.lbRegistroInserido);
@@ -342,5 +389,7 @@ namespace ImpostoCTE.Forms
         private MetroSet_UI.Controls.MetroSetLabel lbRegistroInserido;
         private MetroSet_UI.Controls.MetroSetTextBox tbIdFunc;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel6;
+        private MetroSet_UI.Controls.MetroSetTextBox tbFuncao;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel5;
     }
 }

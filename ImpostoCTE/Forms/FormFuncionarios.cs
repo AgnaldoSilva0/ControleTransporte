@@ -54,6 +54,7 @@ namespace ImpostoCTE.Forms
                 if(item.Id == Convert.ToInt32(listViewFunc.SelectedItems[0].SubItems[0].Text))
                 {
                     lbAdmissaoClick.Text = item.Admissao;
+                    lbFuncao.Text = item.Funcao;
                 }
 
             }
@@ -69,7 +70,8 @@ namespace ImpostoCTE.Forms
             string nome = listViewFunc.SelectedItems[0].SubItems[1].Text;
             string telefone = listViewFunc.SelectedItems[0].SubItems[2].Text;
             double salarioSemanal = Convert.ToDouble(listViewFunc.SelectedItems[0].SubItems[3].Text);
-            Form_Edit_Func form_Edit_Func = new Form_Edit_Func(id, nome, telefone, salarioSemanal);
+            string funcao = lbFuncao.Text;
+            Form_Edit_Func form_Edit_Func = new Form_Edit_Func(id, nome, telefone, salarioSemanal, funcao);
             form_Edit_Func.ShowDialog();
         }
     }

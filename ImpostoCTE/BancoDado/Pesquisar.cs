@@ -140,7 +140,8 @@ namespace ImpostoCTE.BancoDado
                         Convert.ToString(row["nome"]),
                         Convert.ToString(row["admissao"]),
                         Convert.ToString(row["telefone"]),
-                        Convert.ToDouble(row["salarioSemanal"])
+                        Convert.ToDouble(row["salarioSemanal"]),
+                        Convert.ToString(row["funcao"])
                         ));
                 }
             }

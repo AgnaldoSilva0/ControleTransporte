@@ -53,11 +53,20 @@ namespace ImpostoCTE.Forms
                     return;
                 }
 
+                if (tbFuncao.Text == string.Empty)
+                {
+                    validator(tbFuncao, "Preencha a função");
+                    return;
+                }
+
                 Insert.insertBancoFuncionario(Convert.ToInt32(tbIdFunc.Text),
                 tbNomeFunc.Text,
                 Convert.ToDouble(tbSalarioFunc.Text),
                 tbAdmissaoFunc.Text,
-                tbTelefoneFunc.Text);
+                tbTelefoneFunc.Text,
+                tbFuncao.Text
+                );
+
                 limparTextBox();
             }
             catch (Exception)

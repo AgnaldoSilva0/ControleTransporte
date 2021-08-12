@@ -82,7 +82,7 @@ namespace ImpostoCTE.BancoDado
         #endregion
 
         #region InserirFuncionario
-        public static void insertBancoFuncionario(int id, string nome, double salario, string admissao, string telefone)
+        public static void insertBancoFuncionario(int id, string nome, double salario, string admissao, string telefone, string funcao)
         {
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
@@ -96,8 +96,8 @@ namespace ImpostoCTE.BancoDado
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
 
-                comando.CommandText = "INSERT INTO table_funcionarios(id, nome, admissao, telefone, salarioSemanal) " +
-                    "VALUES ('" + id + "', '" + nome + "', '" + admissao + "', '" + telefone + "', '"+ salario +"' )";
+                comando.CommandText = "INSERT INTO table_funcionarios(id, nome, admissao, telefone, salarioSemanal, funcao) " +
+                    "VALUES ('" + id + "', '" + nome + "', '" + admissao + "', '" + telefone + "', '"+ salario +"', '"+ funcao +"' )";
 
                 comando.ExecuteNonQuery();
 

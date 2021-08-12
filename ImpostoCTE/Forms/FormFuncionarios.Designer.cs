@@ -40,6 +40,8 @@ namespace ImpostoCTE.Forms
             this.btCadastrarFunc = new MetroFramework.Controls.MetroButton();
             this.btPesquisarFunc = new MetroFramework.Controls.MetroButton();
             this.tbPesquisarFun = new MetroFramework.Controls.MetroTextBox();
+            this.tbFuncao = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +64,7 @@ namespace ImpostoCTE.Forms
             this.listViewFunc.UseSelectable = true;
             this.listViewFunc.View = System.Windows.Forms.View.Details;
             this.listViewFunc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewFunc_MouseClick);
+            this.listViewFunc.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewFunc_MouseDoubleClick);
             // 
             // clmID
             // 
@@ -98,6 +101,8 @@ namespace ImpostoCTE.Forms
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.metroPanel1.Controls.Add(this.tbFuncao);
+            this.metroPanel1.Controls.Add(this.metroLabel3);
             this.metroPanel1.Controls.Add(this.lbAdmissaoClick);
             this.metroPanel1.Controls.Add(this.metroLabel1);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -124,7 +129,7 @@ namespace ImpostoCTE.Forms
             // 
             this.btCadastrarFunc.Location = new System.Drawing.Point(19, 334);
             this.btCadastrarFunc.Name = "btCadastrarFunc";
-            this.btCadastrarFunc.Size = new System.Drawing.Size(75, 23);
+            this.btCadastrarFunc.Size = new System.Drawing.Size(115, 23);
             this.btCadastrarFunc.TabIndex = 5;
             this.btCadastrarFunc.Text = "Cadastrar";
             this.btCadastrarFunc.UseSelectable = true;
@@ -170,8 +175,27 @@ namespace ImpostoCTE.Forms
             this.tbPesquisarFun.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.tbPesquisarFun.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // tbFuncao
+            // 
+            this.tbFuncao.AutoSize = true;
+            this.tbFuncao.Location = new System.Drawing.Point(79, 50);
+            this.tbFuncao.Name = "tbFuncao";
+            this.tbFuncao.Size = new System.Drawing.Size(33, 19);
+            this.tbFuncao.TabIndex = 5;
+            this.tbFuncao.Text = "N/A";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(4, 50);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(54, 19);
+            this.metroLabel3.TabIndex = 4;
+            this.metroLabel3.Text = "Função:";
+            // 
             // FormFuncionarios
             // 
+            this.AcceptButton = this.btPesquisarFunc;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 517);
@@ -194,7 +218,6 @@ namespace ImpostoCTE.Forms
 
         private MetroFramework.Controls.MetroListView listViewFunc;
         private System.Windows.Forms.ColumnHeader clmID;
-        private System.Windows.Forms.ColumnHeader clmNome;
         private System.Windows.Forms.ColumnHeader clmTelefone;
         private System.Windows.Forms.ColumnHeader clmSalario;
         private MetroFramework.Controls.MetroLabel metroLabel1;
@@ -203,5 +226,8 @@ namespace ImpostoCTE.Forms
         private MetroFramework.Controls.MetroButton btCadastrarFunc;
         private MetroFramework.Controls.MetroButton btPesquisarFunc;
         private MetroFramework.Controls.MetroTextBox tbPesquisarFun;
+        private System.Windows.Forms.ColumnHeader clmNome;
+        private MetroFramework.Controls.MetroLabel tbFuncao;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
     }
 }

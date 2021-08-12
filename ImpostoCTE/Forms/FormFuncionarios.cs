@@ -62,5 +62,15 @@ namespace ImpostoCTE.Forms
             //Funcionario detalhes = (Funcionario)Pesquisar.detalhesFrete(Convert.ToInt32(listViewFunc.SelectedItems[0].SubItems[1].Text));
             
         }
+
+        private void listViewFunc_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            int id = Convert.ToInt32(listViewFunc.SelectedItems[0].SubItems[0].Text);
+            string nome = listViewFunc.SelectedItems[0].SubItems[1].Text;
+            string telefone = listViewFunc.SelectedItems[0].SubItems[2].Text;
+            double salarioSemanal = Convert.ToDouble(listViewFunc.SelectedItems[0].SubItems[3].Text);
+            Form_Edit_Func form_Edit_Func = new Form_Edit_Func(id, nome, telefone, salarioSemanal);
+            form_Edit_Func.ShowDialog();
+        }
     }
 }

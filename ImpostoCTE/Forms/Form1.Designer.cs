@@ -81,7 +81,7 @@ namespace ImpostoCTE
             this.lbCsResult = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.lbConSocial = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbUfDestino = new System.Windows.Forms.ComboBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.mtbValorFrete = new System.Windows.Forms.MaskedTextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -745,15 +745,19 @@ namespace ImpostoCTE
             this.lbConSocial.TabIndex = 4;
             this.lbConSocial.Text = "CON. SOCIAL";
             // 
-            // comboBox1
+            // cbUfDestino
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(87, 167);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(174, 21);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.Text = "UF Destino";
+            this.cbUfDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbUfDestino.FormattingEnabled = true;
+            this.cbUfDestino.Items.AddRange(new object[] {
+            "Sergipe",
+            "Outra UF"});
+            this.cbUfDestino.Location = new System.Drawing.Point(87, 167);
+            this.cbUfDestino.Name = "cbUfDestino";
+            this.cbUfDestino.Size = new System.Drawing.Size(174, 21);
+            this.cbUfDestino.TabIndex = 3;
+            this.cbUfDestino.Text = "UF Destino";
+            this.cbUfDestino.SelectedIndexChanged += new System.EventHandler(this.cbUfDestino_SelectedIndexChanged);
             // 
             // panel4
             // 
@@ -765,7 +769,7 @@ namespace ImpostoCTE
             this.panel4.Controls.Add(this.checkBox6);
             this.panel4.Controls.Add(this.panel10);
             this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.cbUfDestino);
             this.panel4.Controls.Add(this.panel9);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel7);
@@ -952,7 +956,7 @@ namespace ImpostoCTE
         private System.Windows.Forms.Label lbCsResult;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lbConSocial;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbUfDestino;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button6;

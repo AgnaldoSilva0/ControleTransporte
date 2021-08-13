@@ -106,7 +106,13 @@ namespace ImpostoCTE
                 Impostos.icms = 0;
             } else
             {
-                Impostos.icms = 18.0;
+                if (cbUfDestino.Text == "Outra UF")
+                {
+                    Impostos.icms = 12.0;
+                } else
+                {
+                    Impostos.icms = 18.0;
+                }
             }
             //PerformClick pra executar o botão calcular imposto
             button6.PerformClick();
@@ -242,8 +248,8 @@ namespace ImpostoCTE
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FormFuncionarios formFuncionarios = new FormFuncionarios();
-            formFuncionarios.ShowDialog();
+            Form_Login_Func form_Login_Func = new Form_Login_Func();
+            form_Login_Func.ShowDialog();
         }
 
         private void button4_Click_1(object sender, EventArgs e)
@@ -262,6 +268,16 @@ namespace ImpostoCTE
             openChieldForm(new Forms.FormListaFrete());
         }
 
+        private void cbUfDestino_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbUfDestino.Text == "Outra UF")
+            {
+                Impostos.icms = 12;
+            } else
+            {
+                Impostos.icms = 18;
+            }
+        }
     }
 
    

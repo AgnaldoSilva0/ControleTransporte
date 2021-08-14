@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImpostoCTE.BancoDado;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,8 @@ namespace ImpostoCTE.Forms
 
         private void btEntrar_Click(object sender, EventArgs e)
         {
-            //Senha teste, ainda falta implementar armazenamento
-            if (tbUsuario.Text.ToUpper() == "AGNALDO" && tbSenha.Text == "1234")
+            Pesquisar pesquisar = new Pesquisar();
+            if (pesquisar.verificarSenhaFunc(tbUsuario.Text.ToUpper(), tbSenha.Text) == true)
             {
                 FormFuncionarios formFuncionarios = new FormFuncionarios();
                 formFuncionarios.ShowDialog();

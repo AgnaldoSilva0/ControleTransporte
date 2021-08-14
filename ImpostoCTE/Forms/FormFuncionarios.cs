@@ -18,6 +18,8 @@ namespace ImpostoCTE.Forms
         public FormFuncionarios()
         {
             InitializeComponent();
+            listViewFunc.Columns.Remove(clmSalario);
+            
         }
 
         private void btCadastrarFuncionario_Click(object sender, EventArgs e)
@@ -35,6 +37,7 @@ namespace ImpostoCTE.Forms
 
         private void btPesquisarFunc_Click(object sender, EventArgs e)
         {
+            listViewFunc.Columns.Add(clmSalario);
             listViewFunc.Items.Clear();
             Pesquisar.pesquisarFuncionario();
             foreach (var item in Listas.listFuncionario)

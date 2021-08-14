@@ -204,5 +204,46 @@ namespace ImpostoCTE.BancoDado
             return detalhes;
         }
 
+        public Boolean verificarSenhaFunc(string usuario, string senha)
+        {
+            Boolean result = false;
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+
+                 string query = "SELECT * FROM table_usuario WHERE usuario LIKE '" + usuario + "' AND senha LIKE '"+ senha +"'";
+                
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+                if (dados.Rows.Count > 0)
+                {
+                    result = true;
+                } else
+                {
+                    result = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return result;
+        }
+
     }
 }

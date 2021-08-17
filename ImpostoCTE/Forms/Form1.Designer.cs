@@ -291,7 +291,7 @@ namespace ImpostoCTE
             this.button2.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(173, 33);
             this.button2.TabIndex = 0;
-            this.button2.Text = "Calculo CTE";
+            this.button2.Text = "Orçamento";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);

@@ -1,4 +1,5 @@
 ﻿using ImpostoCTE.Forms;
+using ImpostoCTE.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -243,7 +244,8 @@ namespace ImpostoCTE
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            Form_Pedido form_Pedido = new Form_Pedido();
+            form_Pedido.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -47,6 +47,11 @@ namespace ImpostoCTE.Model
 
         private void btAdicionarProduto_Click(object sender, EventArgs e)
         {
+            Update update = new Update();
+            Pesquisar pesquisar = new Pesquisar();
+            int newEstoque = Convert.ToInt32(lbEstoqueAtual.Text) + 1;
+            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text);
+            update.atualizarEstoqueProduto(id, newEstoque);
             contador = 0;
             timerEstoqueAlterado.Start();
         }

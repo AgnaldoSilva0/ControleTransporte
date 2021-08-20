@@ -253,5 +253,48 @@ namespace ImpostoCTE.BancoDado
         }
         #endregion
 
+        #region retorna ID do produto para atualizar o estoque do mesmo
+        public int retornarIdProduto(string codigo, string descricao)
+        {
+            int id = 0;
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+                string query = "SELECT * FROM table_produto INNER JOIN table_estoque ON table_produto.id = table_estoque.idProduto " +
+                    "WHERE codigo LIKE '"+ codigo + "' AND descricao = '" + descricao + "'";
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    if (Convert.ToString(row["codigo"]) == codigo)
+                    {
+                        id = Convert.ToInt32(row["idEstoque"]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+
+            }
+
+            return id;
+        }
+        #endregion
     }
 }

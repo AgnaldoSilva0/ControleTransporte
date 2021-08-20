@@ -23,7 +23,7 @@ namespace ImpostoCTE.BancoDado
             SQLiteConnection conexao = new SQLiteConnection(strConection);
             try
             {
-                string query = "SELECT * FROM banco_produto";
+                string query = "SELECT * FROM table_produto INNER JOIN table_estoque ON table_produto.id = table_estoque.idProduto";
                 //if (codigo != "")
                 //{
                 //   query = "SELECT * FROM produto WHERE nome LIKE '" + codigo + "'";
@@ -41,7 +41,7 @@ namespace ImpostoCTE.BancoDado
                 foreach (System.Data.DataRow row in dados.Rows)
                 {
                     Listas.listProduto.Add(new Produto(Convert.ToString(row["codigo"]), Convert.ToString(row["descricao"]),
-                        Convert.ToDouble(row["preco"]), Convert.ToInt16(row["ipi"])));
+                        Convert.ToDouble(row["preco"]), Convert.ToInt16(row["ipi"]), Convert.ToInt32(row["quantidade"])));
                 }
             }
             catch (Exception ex)
@@ -57,6 +57,7 @@ namespace ImpostoCTE.BancoDado
         }
         #endregion
 
+        #region Preencher Lista de frete
         public static void preencherTabelaFrete()
         {
             Listas.listFrete.Clear();
@@ -108,7 +109,9 @@ namespace ImpostoCTE.BancoDado
             }
 
         }
+        #endregion
 
+        #region Pesquisar Funcionario
         public static void pesquisarFuncionario()
         {
             Listas.listFuncionario.Clear();
@@ -156,7 +159,9 @@ namespace ImpostoCTE.BancoDado
             }
 
         }
+        #endregion
 
+        #region Detalhes dos fretes retorna objeto
         public static Object detalhesFrete(int cte)
         {
             Frete detalhes = new Frete();
@@ -203,7 +208,9 @@ namespace ImpostoCTE.BancoDado
 
             return detalhes;
         }
+        #endregion
 
+        #region Validar Senha Para abrir tela funcionario
         public Boolean verificarSenhaFunc(string usuario, string senha)
         {
             Boolean result = false;
@@ -244,6 +251,7 @@ namespace ImpostoCTE.BancoDado
             }
             return result;
         }
+        #endregion
 
     }
 }

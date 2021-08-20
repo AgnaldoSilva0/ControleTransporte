@@ -61,7 +61,7 @@ namespace ImpostoCTE.BancoDado
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
 
-                comando.CommandText = "INSERT INTO banco_produto(codigo, descricao, preco, ipi) VALUES ('" + codigo + "', '" + descricao + "', '" + preco + "', '" + ipi + "' )";
+                comando.CommandText = "INSERT INTO table_produto(codigo, descricao, preco, ipi) VALUES ('" + codigo + "', '" + descricao + "', '" + preco + "', '" + ipi + "' )";
 
                 comando.ExecuteNonQuery();
 

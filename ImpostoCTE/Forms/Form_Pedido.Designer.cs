@@ -363,6 +363,7 @@ namespace ImpostoCTE.Model
             this.btDiminuirProduto.Text = "-";
             this.btDiminuirProduto.ThemeAuthor = "Narwin";
             this.btDiminuirProduto.ThemeName = "MetroLite";
+            this.btDiminuirProduto.Click += new System.EventHandler(this.btDiminuirProduto_Click);
             // 
             // btAdicionarProduto
             // 

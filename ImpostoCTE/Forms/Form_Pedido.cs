@@ -54,6 +54,21 @@ namespace ImpostoCTE.Model
             update.atualizarEstoqueProduto(id, newEstoque);
             contador = 0;
             timerEstoqueAlterado.Start();
+            lbEstoqueAtual.Text = Convert.ToString(Convert.ToInt32(lbEstoqueAtual.Text) + 1);
+            btPesquisarProduto.PerformClick();
+        }
+
+        private void btDiminuirProduto_Click(object sender, EventArgs e)
+        {
+            Update update = new Update();
+            Pesquisar pesquisar = new Pesquisar();
+            int newEstoque = Convert.ToInt32(lbEstoqueAtual.Text) - 1;
+            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text);
+            update.atualizarEstoqueProduto(id, newEstoque);
+            contador = 0;
+            timerEstoqueAlterado.Start();
+            lbEstoqueAtual.Text = Convert.ToString(Convert.ToInt32(lbEstoqueAtual.Text) - 1);
+            btPesquisarProduto.PerformClick();
         }
 
         #region timer para alterar label de estoque alterado
@@ -82,5 +97,7 @@ namespace ImpostoCTE.Model
             lbDescricaoDetalhe.Text = listViewProdutos.SelectedItems[0].SubItems[1].Text;
             lbEstoqueAtual.Text = listViewProdutos.SelectedItems[0].SubItems[3].Text;
         }
+
+
     }
 }

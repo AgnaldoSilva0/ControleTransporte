@@ -28,7 +28,7 @@ namespace ImpostoCTE.Model
             {
                 if (item.Codigo.IndexOf(tbPesquisarProduto.Text, StringComparison.OrdinalIgnoreCase) >= 0 || item.Descricao.IndexOf(tbPesquisarProduto.Text, StringComparison.OrdinalIgnoreCase) >= 0)
                 {
-                    listViewProdutos.Items.Add(new ListViewItem(new string[] { item.Codigo, item.Descricao, "R$ " + Convert.ToString(item.Preco), Convert.ToString(item.Estoque) }));
+                    listViewProdutos.Items.Add(new ListViewItem(new string[] { item.Codigo, item.Descricao, Convert.ToString(item.Preco), Convert.ToString(item.Estoque) }));
                 }
             }
 
@@ -98,6 +98,14 @@ namespace ImpostoCTE.Model
             lbEstoqueAtual.Text = listViewProdutos.SelectedItems[0].SubItems[3].Text;
         }
 
+        private void listViewProdutos_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            string codigo = listViewProdutos.SelectedItems[0].SubItems[0].Text;
+            string descricao = listViewProdutos.SelectedItems[0].SubItems[1].Text;
+            double precoUnitario = Convert.ToDouble(listViewProdutos.SelectedItems[0].SubItems[2].Text);
 
+            Form_AddItemOrcamento form_AddItem = new Form_AddItemOrcamento(codigo, descricao, precoUnitario);
+            form_AddItem.ShowDialog();
+        }
     }
 }

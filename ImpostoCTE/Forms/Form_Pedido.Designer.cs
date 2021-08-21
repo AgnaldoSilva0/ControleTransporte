@@ -82,6 +82,7 @@ namespace ImpostoCTE.Model
             this.listViewProdutos.UseSelectable = true;
             this.listViewProdutos.View = System.Windows.Forms.View.Details;
             this.listViewProdutos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listViewProdutos_MouseClick);
+            this.listViewProdutos.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listViewProdutos_MouseDoubleClick);
             // 
             // clmCodigo
             // 

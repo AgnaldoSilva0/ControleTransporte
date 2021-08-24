@@ -1,4 +1,5 @@
-﻿using MetroSet_UI.Forms;
+﻿using ImpostoCTE.Model;
+using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,6 +56,11 @@ namespace ImpostoCTE.Forms
         private void tbQuantidadeProduto_KeyPressed(object sender, KeyPressEventArgs e)
         {
             Operacoes.impedirLetrasTextBox(sender, e);
+        }
+
+        private void btAddProduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

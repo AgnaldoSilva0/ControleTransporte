@@ -127,6 +127,7 @@ namespace ImpostoCTE.Forms
             this.btAddProduto.Text = "Adicionar";
             this.btAddProduto.ThemeAuthor = "Narwin";
             this.btAddProduto.ThemeName = "MetroLite";
+            this.btAddProduto.Click += new System.EventHandler(this.btAddProduto_Click);
             // 
             // tbPrecoProduto
             // 
@@ -255,7 +256,7 @@ namespace ImpostoCTE.Forms
             this.btFecharTelaAdd.Location = new System.Drawing.Point(331, 4);
             this.btFecharTelaAdd.Name = "btFecharTelaAdd";
             this.btFecharTelaAdd.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.btFecharTelaAdd.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btFecharTelaAdd.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btFecharTelaAdd.NormalTextColor = System.Drawing.Color.White;
             this.btFecharTelaAdd.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.btFecharTelaAdd.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));

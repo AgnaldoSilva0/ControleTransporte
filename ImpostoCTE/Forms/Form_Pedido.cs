@@ -36,8 +36,8 @@ namespace ImpostoCTE.Model
 
         private void btAlterarCliente_Click(object sender, EventArgs e)
         {
-            Form_Edit_Cliente_Pedido form_Edit_Pedido = new Form_Edit_Cliente_Pedido();
-            form_Edit_Pedido.ShowDialog();
+            Form_Selecionar_Orcamento Selecionar_Orcamento = new Form_Selecionar_Orcamento();
+            Selecionar_Orcamento.ShowDialog();
         }
 
         private void btFecharTelaPedido_Click(object sender, EventArgs e)
@@ -45,6 +45,7 @@ namespace ImpostoCTE.Model
             this.Close();
         }
 
+        #region Controle de Estoque
         private void btAdicionarProduto_Click(object sender, EventArgs e)
         {
             Update update = new Update();
@@ -70,6 +71,7 @@ namespace ImpostoCTE.Model
             lbEstoqueAtual.Text = Convert.ToString(Convert.ToInt32(lbEstoqueAtual.Text) - 1);
             btPesquisarProduto.PerformClick();
         }
+        #endregion
 
         #region timer para alterar label de estoque alterado
         private int contador;
@@ -105,7 +107,11 @@ namespace ImpostoCTE.Model
             double precoUnitario = Convert.ToDouble(listViewProdutos.SelectedItems[0].SubItems[2].Text);
 
             Form_AddItemOrcamento form_AddItem = new Form_AddItemOrcamento(codigo, descricao, precoUnitario);
+            //Ao usar ShowDialog o código pausa no mesmo local
             form_AddItem.ShowDialog();
+            this.Refresh();
+            MessageBox.Show("ATUALIZOUUU TESTE");
         }
+
     }
 }

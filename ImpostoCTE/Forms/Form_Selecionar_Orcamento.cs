@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ImpostoCTE.Forms
 {
-    public partial class Form_Edit_Cliente_Pedido : MetroFramework.Forms.MetroForm
+    public partial class Form_Selecionar_Orcamento : MetroFramework.Forms.MetroForm
     {
-        public Form_Edit_Cliente_Pedido()
+        public Form_Selecionar_Orcamento()
         {
             InitializeComponent();
         }
-
-        public Form_Edit_Cliente_Pedido(string nome, string veiculo, string placa, string data)
-        {
-            InitializeComponent();
-        }
-
     }
 }

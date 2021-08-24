@@ -1,7 +1,7 @@
 ﻿
 namespace ImpostoCTE.Forms
 {
-    partial class Form_Edit_Cliente_Pedido
+    partial class Form_Novo_Pedido
     {
         /// <summary>
         /// Required designer variable.
@@ -29,47 +29,16 @@ namespace ImpostoCTE.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbClienteEdit = new MetroFramework.Controls.MetroTextBox();
             this.tbVeiculoEdit = new MetroFramework.Controls.MetroTextBox();
             this.btPlacaEdit = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.btEditar = new MetroFramework.Controls.MetroButton();
+            this.btCriar = new MetroFramework.Controls.MetroButton();
             this.dtDataEdit = new MetroFramework.Controls.MetroDateTime();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.SuspendLayout();
-            // 
-            // tbClienteEdit
-            // 
-            // 
-            // 
-            // 
-            this.tbClienteEdit.CustomButton.Image = null;
-            this.tbClienteEdit.CustomButton.Location = new System.Drawing.Point(192, 1);
-            this.tbClienteEdit.CustomButton.Name = "";
-            this.tbClienteEdit.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbClienteEdit.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbClienteEdit.CustomButton.TabIndex = 1;
-            this.tbClienteEdit.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbClienteEdit.CustomButton.UseSelectable = true;
-            this.tbClienteEdit.CustomButton.Visible = false;
-            this.tbClienteEdit.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.tbClienteEdit.Lines = new string[0];
-            this.tbClienteEdit.Location = new System.Drawing.Point(112, 84);
-            this.tbClienteEdit.MaxLength = 32767;
-            this.tbClienteEdit.Name = "tbClienteEdit";
-            this.tbClienteEdit.PasswordChar = '\0';
-            this.tbClienteEdit.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbClienteEdit.SelectedText = "";
-            this.tbClienteEdit.SelectionLength = 0;
-            this.tbClienteEdit.SelectionStart = 0;
-            this.tbClienteEdit.ShortcutsEnabled = true;
-            this.tbClienteEdit.Size = new System.Drawing.Size(214, 23);
-            this.tbClienteEdit.TabIndex = 0;
-            this.tbClienteEdit.UseSelectable = true;
-            this.tbClienteEdit.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbClienteEdit.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tbVeiculoEdit
             // 
@@ -136,9 +105,10 @@ namespace ImpostoCTE.Forms
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(12, 87);
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(11, 78);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(52, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(68, 25);
             this.metroLabel1.TabIndex = 4;
             this.metroLabel1.Text = "Cliente:";
             // 
@@ -169,14 +139,14 @@ namespace ImpostoCTE.Forms
             this.metroLabel4.TabIndex = 7;
             this.metroLabel4.Text = "Data:";
             // 
-            // btEditar
+            // btCriar
             // 
-            this.btEditar.Location = new System.Drawing.Point(112, 213);
-            this.btEditar.Name = "btEditar";
-            this.btEditar.Size = new System.Drawing.Size(142, 32);
-            this.btEditar.TabIndex = 8;
-            this.btEditar.Text = "Editar";
-            this.btEditar.UseSelectable = true;
+            this.btCriar.Location = new System.Drawing.Point(112, 213);
+            this.btCriar.Name = "btCriar";
+            this.btCriar.Size = new System.Drawing.Size(142, 32);
+            this.btCriar.TabIndex = 8;
+            this.btCriar.Text = "Criar";
+            this.btCriar.UseSelectable = true;
             // 
             // dtDataEdit
             // 
@@ -186,21 +156,31 @@ namespace ImpostoCTE.Forms
             this.dtDataEdit.Size = new System.Drawing.Size(214, 29);
             this.dtDataEdit.TabIndex = 9;
             // 
-            // Form_Edit_Cliente_Pedido
+            // metroComboBox1
+            // 
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(112, 78);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(214, 29);
+            this.metroComboBox1.TabIndex = 10;
+            this.metroComboBox1.UseSelectable = true;
+            // 
+            // Form_Novo_Pedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 268);
+            this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.dtDataEdit);
-            this.Controls.Add(this.btEditar);
+            this.Controls.Add(this.btCriar);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.btPlacaEdit);
             this.Controls.Add(this.tbVeiculoEdit);
-            this.Controls.Add(this.tbClienteEdit);
-            this.Name = "Form_Edit_Cliente_Pedido";
+            this.Name = "Form_Novo_Pedido";
             this.Text = "Editar";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,15 +188,14 @@ namespace ImpostoCTE.Forms
         }
 
         #endregion
-
-        private MetroFramework.Controls.MetroTextBox tbClienteEdit;
         private MetroFramework.Controls.MetroTextBox tbVeiculoEdit;
         private MetroFramework.Controls.MetroTextBox btPlacaEdit;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroButton btEditar;
+        private MetroFramework.Controls.MetroButton btCriar;
         private MetroFramework.Controls.MetroDateTime dtDataEdit;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
     }
 }

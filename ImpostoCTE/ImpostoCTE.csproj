@@ -140,11 +140,11 @@
     <Compile Include="Forms\Form_Cad_Prod.Designer.cs">
       <DependentUpon>Form_Cad_Prod.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Edit_Cliente_Pedido.cs">
+    <Compile Include="Forms\Form_Novo_Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Edit_Cliente_Pedido.Designer.cs">
-      <DependentUpon>Form_Edit_Cliente_Pedido.cs</DependentUpon>
+    <Compile Include="Forms\Form_Novo_Pedido.Designer.cs">
+      <DependentUpon>Form_Novo_Pedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Edit_Func.cs">
       <SubType>Form</SubType>
@@ -164,10 +164,17 @@
     <Compile Include="Forms\Form_Pedido.Designer.cs">
       <DependentUpon>Form_Pedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Form_Selecionar_Orcamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form_Selecionar_Orcamento.Designer.cs">
+      <DependentUpon>Form_Selecionar_Orcamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Frete.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Impostos.cs" />
     <Compile Include="Model\Listas.cs" />
+    <Compile Include="Model\Pedido.cs" />
     <Compile Include="Operadores\Operacoes.cs" />
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Program.cs" />
@@ -199,8 +206,8 @@
     <EmbeddedResource Include="Forms\Form_Cad_Prod.resx">
       <DependentUpon>Form_Cad_Prod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Edit_Cliente_Pedido.resx">
-      <DependentUpon>Form_Edit_Cliente_Pedido.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Form_Novo_Pedido.resx">
+      <DependentUpon>Form_Novo_Pedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Edit_Func.resx">
       <DependentUpon>Form_Edit_Func.cs</DependentUpon>
@@ -210,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Pedido.resx">
       <DependentUpon>Form_Pedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form_Selecionar_Orcamento.resx">
+      <DependentUpon>Form_Selecionar_Orcamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

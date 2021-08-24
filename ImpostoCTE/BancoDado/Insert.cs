@@ -115,5 +115,39 @@ namespace ImpostoCTE.BancoDado
         }
         #endregion
 
+        #region Inserir Item no pedido
+        public static void insertBancoPedido(string idCliente, string idProduto, string data, int quantidade, int idPedido)
+        {
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+
+            try
+            {
+                conexao.Open();
+
+                SQLiteCommand comando = new SQLiteCommand();
+                comando.Connection = conexao;
+
+                comando.CommandText = "INSERT INTO table_pedido(idCliente, idProduto, data, quantidade, idPedido) " +
+                    "VALUES ('" + idCliente + "', '" + idProduto + "', '" + data + "', '" + quantidade + "', '"+idPedido+"' )";
+
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Inserido");
+                comando.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir item" + ex);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        #endregion
+
     }
 }

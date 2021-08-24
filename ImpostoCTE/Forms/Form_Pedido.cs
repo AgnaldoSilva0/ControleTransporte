@@ -51,7 +51,7 @@ namespace ImpostoCTE.Model
             Update update = new Update();
             Pesquisar pesquisar = new Pesquisar();
             int newEstoque = Convert.ToInt32(lbEstoqueAtual.Text) + 1;
-            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text);
+            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text, 1);
             update.atualizarEstoqueProduto(id, newEstoque);
             contador = 0;
             timerEstoqueAlterado.Start();
@@ -64,7 +64,7 @@ namespace ImpostoCTE.Model
             Update update = new Update();
             Pesquisar pesquisar = new Pesquisar();
             int newEstoque = Convert.ToInt32(lbEstoqueAtual.Text) - 1;
-            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text);
+            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text, 1);
             update.atualizarEstoqueProduto(id, newEstoque);
             contador = 0;
             timerEstoqueAlterado.Start();

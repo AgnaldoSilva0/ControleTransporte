@@ -254,7 +254,7 @@ namespace ImpostoCTE.BancoDado
         #endregion
 
         #region retorna ID do produto para atualizar o estoque do mesmo
-        public int retornarIdProduto(string codigo, string descricao)
+        public int retornarIdProduto(string codigo, string descricao, int operacao)
         {
             int id = 0;
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
@@ -274,12 +274,19 @@ namespace ImpostoCTE.BancoDado
 
                 adaptador.Fill(dados);
 
-
+                //Adaptado com IF para reusar o código, para retornar o id do produto ou o id do estoque
                 foreach (System.Data.DataRow row in dados.Rows)
                 {
                     if (Convert.ToString(row["codigo"]) == codigo)
                     {
-                        id = Convert.ToInt32(row["idEstoque"]);
+                        if (operacao == 1)
+                        {
+                            id = Convert.ToInt32(row["idEstoque"]);
+                        } 
+                        else
+                        {
+                            id = Convert.ToInt32(row["id"]);
+                        }
                     }
                 }
             }
@@ -296,5 +303,6 @@ namespace ImpostoCTE.BancoDado
             return id;
         }
         #endregion
+
     }
 }

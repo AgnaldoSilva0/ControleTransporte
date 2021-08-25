@@ -123,6 +123,7 @@ namespace ImpostoCTE.Forms
             this.btPesquisar.Text = "Novo";
             this.btPesquisar.ThemeAuthor = "Narwin";
             this.btPesquisar.ThemeName = "MetroLite";
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // Pesquisar
             // 

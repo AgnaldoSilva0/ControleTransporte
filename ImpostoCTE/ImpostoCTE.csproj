@@ -170,6 +170,7 @@
     <Compile Include="Forms\Form_Selecionar_Orcamento.Designer.cs">
       <DependentUpon>Form_Selecionar_Orcamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Cliente.cs" />
     <Compile Include="Model\Frete.cs" />
     <Compile Include="Model\Funcionario.cs" />
     <Compile Include="Model\Impostos.cs" />

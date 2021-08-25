@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ImpostoCTE.BancoDado;
+using ImpostoCTE.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +17,28 @@ namespace ImpostoCTE.Forms
         public Form_Novo_Pedido()
         {
             InitializeComponent();
+            preencherComboBoxCliente();
         }
 
-        public Form_Novo_Pedido(string nome, string veiculo, string placa, string data)
+        private void btCriar_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+            //Pedido.idClienteRef 
+            Pedido.idOrcamentoRef = Convert.ToInt32(tbIdOrcamento.Text);
+            Pedido.nomeClienteRef = cbCliente.Text;
+            Pedido.placaRef = tbPlaca.Text;
+            Pedido.veiculoRef = tbVeiculo.Text;
+            Pedido.dataRef = dtData.Text;
+            this.Close();
+        }
+
+        private void preencherComboBoxCliente()
+        {
+            Pesquisar pesquisar = new Pesquisar();
+            pesquisar.preencherTabelaCliente();
+
+            foreach(Cliente cliente in Listas.listCliente) {
+                cbCliente.Items.Add(cliente.Nome);
+            }
         }
 
     }

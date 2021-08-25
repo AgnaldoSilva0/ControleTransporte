@@ -111,8 +111,49 @@ namespace ImpostoCTE.BancoDado
         }
         #endregion
 
+        #region Preencher Lista Cliente
+        public void preencherTabelaCliente()
+        {
+            Listas.listCliente.Clear();
+            //string baseDados = Application.StartupPath + @"\db\DBSQLite.db"; C:\BDs\dds
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+                string query = "SELECT * FROM table_cliente";
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    Listas.listCliente.Add(new Cliente(Convert.ToInt32(row["id"]),
+                        Convert.ToString(row["nome"]),
+                        Convert.ToString(row["telefone"])
+                        ));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        #endregion
+
         #region Pesquisar Funcionario
-        public static void pesquisarFuncionario()
+            public static void pesquisarFuncionario()
         {
             Listas.listFuncionario.Clear();
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";

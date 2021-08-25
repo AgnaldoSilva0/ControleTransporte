@@ -23,5 +23,11 @@ namespace ImpostoCTE.Model
         public int IdProduto { get => idProduto; set => idProduto = value; }
         public int Quantidade { get => quantidade; set => quantidade = value; }
         public string Data { get => data; set => data = value; }
+
+
+        //Variaveis de referência
+        public static int idClienteRef, idOrcamentoRef;
+        public static string nomeClienteRef, dataRef, veiculoRef, placaRef;
     }
+
 }

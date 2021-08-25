@@ -16,5 +16,12 @@ namespace ImpostoCTE.Forms
         {
             InitializeComponent();
         }
+
+        private void btPesquisar_Click(object sender, EventArgs e)
+        {
+            Form_Novo_Pedido form_Novo_Pedido = new Form_Novo_Pedido();
+            form_Novo_Pedido.ShowDialog();
+            this.Close();
+        }
     }
 }

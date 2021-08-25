@@ -38,6 +38,12 @@ namespace ImpostoCTE.Model
         {
             Form_Selecionar_Orcamento Selecionar_Orcamento = new Form_Selecionar_Orcamento();
             Selecionar_Orcamento.ShowDialog();
+            lbCliente.Text = Pedido.nomeClienteRef;
+            lbData.Text = Pedido.dataRef;
+            lbIdOrcamento.Text = Convert.ToString(Pedido.idOrcamentoRef);
+            lbPlaca.Text = Pedido.placaRef;
+            lbVeiculo.Text = Pedido.veiculoRef;
+
         }
 
         private void btFecharTelaPedido_Click(object sender, EventArgs e)

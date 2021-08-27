@@ -1,4 +1,5 @@
 ﻿using System;
+using ImpostoCTE.BancoDado;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,24 @@ namespace ImpostoCTE.Forms
             Form_Novo_Pedido form_Novo_Pedido = new Form_Novo_Pedido();
             form_Novo_Pedido.ShowDialog();
             this.Close();
+        }
+
+        private void btAbrirOrcamento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btPesquisarOrcamento_Click(object sender, EventArgs e)
+        {
+            listViewOrcamentos.Items.Clear();
+            Pesquisar.preencherListaOrcamento();
+            foreach (var item in Listas.listPedido)
+            {
+                if (Convert.ToString(item.IdCliente).IndexOf(tbPesquisarOrcamento.Text, StringComparison.OrdinalIgnoreCase) >= 0 || item.Placa.IndexOf(tbPesquisarOrcamento.Text, StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    listViewOrcamentos.Items.Add(new ListViewItem(new string[] { Convert.ToString(item.IdPedido), Convert.ToString(item.IdCliente), Convert.ToString(item.Placa), Convert.ToString(item.Modelo) }));
+                }
+            }
         }
     }
 }

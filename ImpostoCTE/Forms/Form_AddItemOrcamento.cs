@@ -1,4 +1,5 @@
-﻿using ImpostoCTE.Model;
+﻿using ImpostoCTE.BancoDado;
+using ImpostoCTE.Model;
 using MetroSet_UI.Forms;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,11 @@ namespace ImpostoCTE.Forms
             InitializeComponent();
         }
 
-        public Form_AddItemOrcamento(string codigo, string descricao, double valorUnitario)
+        public Form_AddItemOrcamento(string codigo, string descricao, double valorUnitario, int idCliente, int idPedido)
         {
             InitializeComponent();
+            varIdCliente = idCliente;
+            varIdPedido = idPedido;
             preencherTextBox(codigo, descricao, valorUnitario);
         }
 
@@ -48,6 +51,7 @@ namespace ImpostoCTE.Forms
             tbQuantidadeProduto.Text = Convert.ToString(quantidadeAtual - 1);
         }
 
+        #region KeyPressed Metodos
         private void tbPrecoProduto_KeyPressed(object sender, KeyPressEventArgs e)
         {
             Operacoes.impedirLetrasTextBox(sender, e);
@@ -57,10 +61,21 @@ namespace ImpostoCTE.Forms
         {
             Operacoes.impedirLetrasTextBox(sender, e);
         }
+        #endregion
 
+        private int varIdCliente = 0;
+        private int varIdPedido = 0;
         private void btAddProduto_Click(object sender, EventArgs e)
         {
+            Insert insert = new Insert();
+            string data = DateTime.Now.Date.ToString("yyyy-MM-dd");
+            
 
+            insert.insertBancoPedido(varIdCliente, 
+                Pesquisar.retornarIdProduto(lbCodigoProduto.Text, lbDescricaoProduto.Text, 2), 
+                data, 
+                Convert.ToInt32(tbQuantidadeProduto.Text),
+                varIdPedido);
         }
     }
 }

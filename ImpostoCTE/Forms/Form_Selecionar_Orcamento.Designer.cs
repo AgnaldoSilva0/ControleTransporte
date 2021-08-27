@@ -29,7 +29,7 @@ namespace ImpostoCTE.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
+            this.listViewOrcamentos = new MetroFramework.Controls.MetroListView();
             this.clmId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmPlaca = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,28 +37,28 @@ namespace ImpostoCTE.Forms
             this.clmStatus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btAbrirOrcamento = new MetroFramework.Controls.MetroButton();
             this.btPesquisar = new MetroSet_UI.Controls.MetroSetButton();
-            this.Pesquisar = new MetroFramework.Controls.MetroButton();
-            this.tbPesquisar = new MetroFramework.Controls.MetroTextBox();
+            this.btPesquisarOrcamento = new MetroFramework.Controls.MetroButton();
+            this.tbPesquisarOrcamento = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
-            // metroListView1
+            // listViewOrcamentos
             // 
-            this.metroListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewOrcamentos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmId,
             this.clmCliente,
             this.clmPlaca,
             this.clmModelo,
             this.clmStatus});
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(23, 116);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(539, 295);
-            this.metroListView1.TabIndex = 0;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
-            this.metroListView1.View = System.Windows.Forms.View.Details;
+            this.listViewOrcamentos.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.listViewOrcamentos.FullRowSelect = true;
+            this.listViewOrcamentos.Location = new System.Drawing.Point(23, 116);
+            this.listViewOrcamentos.Name = "listViewOrcamentos";
+            this.listViewOrcamentos.OwnerDraw = true;
+            this.listViewOrcamentos.Size = new System.Drawing.Size(539, 295);
+            this.listViewOrcamentos.TabIndex = 0;
+            this.listViewOrcamentos.UseCompatibleStateImageBehavior = false;
+            this.listViewOrcamentos.UseSelectable = true;
+            this.listViewOrcamentos.View = System.Windows.Forms.View.Details;
             // 
             // clmId
             // 
@@ -97,6 +97,7 @@ namespace ImpostoCTE.Forms
             this.btAbrirOrcamento.TabIndex = 1;
             this.btAbrirOrcamento.Text = "Abrir";
             this.btAbrirOrcamento.UseSelectable = true;
+            this.btAbrirOrcamento.Click += new System.EventHandler(this.btAbrirOrcamento_Click);
             // 
             // btPesquisar
             // 
@@ -125,57 +126,58 @@ namespace ImpostoCTE.Forms
             this.btPesquisar.ThemeName = "MetroLite";
             this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
-            // Pesquisar
+            // btPesquisarOrcamento
             // 
-            this.Pesquisar.Location = new System.Drawing.Point(197, 85);
-            this.Pesquisar.Name = "Pesquisar";
-            this.Pesquisar.Size = new System.Drawing.Size(75, 23);
-            this.Pesquisar.TabIndex = 3;
-            this.Pesquisar.Text = "btPesquisar";
-            this.Pesquisar.UseSelectable = true;
+            this.btPesquisarOrcamento.Location = new System.Drawing.Point(197, 85);
+            this.btPesquisarOrcamento.Name = "btPesquisarOrcamento";
+            this.btPesquisarOrcamento.Size = new System.Drawing.Size(75, 23);
+            this.btPesquisarOrcamento.TabIndex = 3;
+            this.btPesquisarOrcamento.Text = "Pesquisar";
+            this.btPesquisarOrcamento.UseSelectable = true;
+            this.btPesquisarOrcamento.Click += new System.EventHandler(this.btPesquisarOrcamento_Click);
             // 
-            // tbPesquisar
+            // tbPesquisarOrcamento
             // 
             // 
             // 
             // 
-            this.tbPesquisar.CustomButton.Image = null;
-            this.tbPesquisar.CustomButton.Location = new System.Drawing.Point(145, 1);
-            this.tbPesquisar.CustomButton.Name = "";
-            this.tbPesquisar.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.tbPesquisar.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.tbPesquisar.CustomButton.TabIndex = 1;
-            this.tbPesquisar.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.tbPesquisar.CustomButton.UseSelectable = true;
-            this.tbPesquisar.CustomButton.Visible = false;
-            this.tbPesquisar.Lines = new string[0];
-            this.tbPesquisar.Location = new System.Drawing.Point(24, 85);
-            this.tbPesquisar.MaxLength = 32767;
-            this.tbPesquisar.Name = "tbPesquisar";
-            this.tbPesquisar.PasswordChar = '\0';
-            this.tbPesquisar.PromptText = "FONT";
-            this.tbPesquisar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.tbPesquisar.SelectedText = "";
-            this.tbPesquisar.SelectionLength = 0;
-            this.tbPesquisar.SelectionStart = 0;
-            this.tbPesquisar.ShortcutsEnabled = true;
-            this.tbPesquisar.Size = new System.Drawing.Size(167, 23);
-            this.tbPesquisar.TabIndex = 4;
-            this.tbPesquisar.UseSelectable = true;
-            this.tbPesquisar.WaterMark = "FONT";
-            this.tbPesquisar.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.tbPesquisar.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.tbPesquisarOrcamento.CustomButton.Image = null;
+            this.tbPesquisarOrcamento.CustomButton.Location = new System.Drawing.Point(145, 1);
+            this.tbPesquisarOrcamento.CustomButton.Name = "";
+            this.tbPesquisarOrcamento.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.tbPesquisarOrcamento.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.tbPesquisarOrcamento.CustomButton.TabIndex = 1;
+            this.tbPesquisarOrcamento.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.tbPesquisarOrcamento.CustomButton.UseSelectable = true;
+            this.tbPesquisarOrcamento.CustomButton.Visible = false;
+            this.tbPesquisarOrcamento.Lines = new string[0];
+            this.tbPesquisarOrcamento.Location = new System.Drawing.Point(24, 85);
+            this.tbPesquisarOrcamento.MaxLength = 32767;
+            this.tbPesquisarOrcamento.Name = "tbPesquisarOrcamento";
+            this.tbPesquisarOrcamento.PasswordChar = '\0';
+            this.tbPesquisarOrcamento.PromptText = "FONT";
+            this.tbPesquisarOrcamento.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbPesquisarOrcamento.SelectedText = "";
+            this.tbPesquisarOrcamento.SelectionLength = 0;
+            this.tbPesquisarOrcamento.SelectionStart = 0;
+            this.tbPesquisarOrcamento.ShortcutsEnabled = true;
+            this.tbPesquisarOrcamento.Size = new System.Drawing.Size(167, 23);
+            this.tbPesquisarOrcamento.TabIndex = 4;
+            this.tbPesquisarOrcamento.UseSelectable = true;
+            this.tbPesquisarOrcamento.WaterMark = "FONT";
+            this.tbPesquisarOrcamento.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.tbPesquisarOrcamento.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Form_Selecionar_Orcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(585, 463);
-            this.Controls.Add(this.tbPesquisar);
-            this.Controls.Add(this.Pesquisar);
+            this.Controls.Add(this.tbPesquisarOrcamento);
+            this.Controls.Add(this.btPesquisarOrcamento);
             this.Controls.Add(this.btPesquisar);
             this.Controls.Add(this.btAbrirOrcamento);
-            this.Controls.Add(this.metroListView1);
+            this.Controls.Add(this.listViewOrcamentos);
             this.Name = "Form_Selecionar_Orcamento";
             this.Text = "Selecionar Orçamento";
             this.ResumeLayout(false);
@@ -184,7 +186,7 @@ namespace ImpostoCTE.Forms
 
         #endregion
 
-        private MetroFramework.Controls.MetroListView metroListView1;
+        private MetroFramework.Controls.MetroListView listViewOrcamentos;
         private System.Windows.Forms.ColumnHeader clmId;
         private System.Windows.Forms.ColumnHeader clmCliente;
         private System.Windows.Forms.ColumnHeader clmPlaca;
@@ -192,7 +194,7 @@ namespace ImpostoCTE.Forms
         private System.Windows.Forms.ColumnHeader clmStatus;
         private MetroFramework.Controls.MetroButton btAbrirOrcamento;
         private MetroSet_UI.Controls.MetroSetButton btPesquisar;
-        private MetroFramework.Controls.MetroButton Pesquisar;
-        private MetroFramework.Controls.MetroTextBox tbPesquisar;
+        private MetroFramework.Controls.MetroButton btPesquisarOrcamento;
+        private MetroFramework.Controls.MetroTextBox tbPesquisarOrcamento;
     }
 }

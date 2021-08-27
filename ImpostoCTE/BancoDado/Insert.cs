@@ -116,7 +116,7 @@ namespace ImpostoCTE.BancoDado
         #endregion
 
         #region Inserir Item no pedido
-        public static void insertBancoPedido(string idCliente, string idProduto, string data, int quantidade, int idPedido)
+        public void insertBancoPedido(int idCliente, int idProduto, string data, int quantidade, int idPedido)
         {
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";

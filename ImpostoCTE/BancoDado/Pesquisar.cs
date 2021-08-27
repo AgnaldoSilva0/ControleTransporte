@@ -115,7 +115,6 @@ namespace ImpostoCTE.BancoDado
         public void preencherTabelaCliente()
         {
             Listas.listCliente.Clear();
-            //string baseDados = Application.StartupPath + @"\db\DBSQLite.db"; C:\BDs\dds
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
 
@@ -152,8 +151,53 @@ namespace ImpostoCTE.BancoDado
         }
         #endregion
 
+        #region Preencher Lista de Orçamentos
+        public static void preencherListaOrcamento()
+        {
+            Listas.listPedido.Clear();
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+                string query = "SELECT * FROM table_pedido " +
+                    "INNER JOIN table_produto ON table_pedido.idProduto = table_produto.id " +
+                    "INNER JOIN table_cliente ON table_pedido.idCliente = table_cliente.id";
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    Listas.listPedido.Add(new Pedido(Convert.ToInt32(row["idCliente"]), 
+                        Convert.ToInt32(row["idProduto"]),
+                        Convert.ToInt32(row["quantidade"]), 
+                        Convert.ToString(row["data"]),
+                        Convert.ToInt32(row["idPedido"]),
+                        Convert.ToString(row["placa"]),
+                        Convert.ToString(row["modelo"])));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        #endregion
+
         #region Pesquisar Funcionario
-            public static void pesquisarFuncionario()
+        public static void pesquisarFuncionario()
         {
             Listas.listFuncionario.Clear();
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
@@ -295,7 +339,7 @@ namespace ImpostoCTE.BancoDado
         #endregion
 
         #region retorna ID do produto para atualizar o estoque do mesmo
-        public int retornarIdProduto(string codigo, string descricao, int operacao)
+        public static int retornarIdProduto(string codigo, string descricao, int operacao)
         {
             int id = 0;
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
@@ -343,6 +387,47 @@ namespace ImpostoCTE.BancoDado
 
             return id;
         }
+        #endregion
+
+        #region Retorna ID do cliente
+        public static int retornarIdCliente(string nome)
+        {
+            int id = 0;
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+                string query = "SELECT * FROM table_cliente WHERE nome LIKE '" + nome + "' ";
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    if (Convert.ToString(row["nome"]) == nome)
+                    {
+                       id = Convert.ToInt32(row["idEstoque"]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+            return id;
+        }
+
         #endregion
 
     }

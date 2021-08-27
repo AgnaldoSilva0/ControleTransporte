@@ -31,7 +31,6 @@ namespace ImpostoCTE.Model
                     listViewProdutos.Items.Add(new ListViewItem(new string[] { item.Codigo, item.Descricao, Convert.ToString(item.Preco), Convert.ToString(item.Estoque) }));
                 }
             }
-
         }
 
         private void btAlterarCliente_Click(object sender, EventArgs e)
@@ -55,9 +54,8 @@ namespace ImpostoCTE.Model
         private void btAdicionarProduto_Click(object sender, EventArgs e)
         {
             Update update = new Update();
-            Pesquisar pesquisar = new Pesquisar();
             int newEstoque = Convert.ToInt32(lbEstoqueAtual.Text) + 1;
-            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text, 1);
+            int id = Pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text, 1);
             update.atualizarEstoqueProduto(id, newEstoque);
             contador = 0;
             timerEstoqueAlterado.Start();
@@ -68,9 +66,8 @@ namespace ImpostoCTE.Model
         private void btDiminuirProduto_Click(object sender, EventArgs e)
         {
             Update update = new Update();
-            Pesquisar pesquisar = new Pesquisar();
             int newEstoque = Convert.ToInt32(lbEstoqueAtual.Text) - 1;
-            int id = pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text, 1);
+            int id = Pesquisar.retornarIdProduto(lbCodigoDetalhe.Text, lbDescricaoDetalhe.Text, 1);
             update.atualizarEstoqueProduto(id, newEstoque);
             contador = 0;
             timerEstoqueAlterado.Start();
@@ -111,12 +108,13 @@ namespace ImpostoCTE.Model
             string codigo = listViewProdutos.SelectedItems[0].SubItems[0].Text;
             string descricao = listViewProdutos.SelectedItems[0].SubItems[1].Text;
             double precoUnitario = Convert.ToDouble(listViewProdutos.SelectedItems[0].SubItems[2].Text);
+            int idCliente = Pesquisar.retornarIdCliente(lbCliente.Text);
+            int idPedido = Convert.ToInt32(lbIdOrcamento.Text);
 
-            Form_AddItemOrcamento form_AddItem = new Form_AddItemOrcamento(codigo, descricao, precoUnitario);
+            Form_AddItemOrcamento form_AddItem = new Form_AddItemOrcamento(codigo, descricao, precoUnitario, idCliente, idPedido);
             //Ao usar ShowDialog o código pausa no mesmo local
             form_AddItem.ShowDialog();
             this.Refresh();
-            MessageBox.Show("ATUALIZOUUU TESTE");
         }
 
     }

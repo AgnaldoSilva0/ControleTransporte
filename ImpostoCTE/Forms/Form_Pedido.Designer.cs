@@ -49,6 +49,13 @@ namespace ImpostoCTE.Model
             this.label3 = new MetroFramework.Controls.MetroLabel();
             this.btAlterarCliente = new MetroFramework.Controls.MetroButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.lbIDCliente = new MetroFramework.Controls.MetroLabel();
+            this.lbPlaca = new MetroFramework.Controls.MetroLabel();
+            this.lbData = new MetroFramework.Controls.MetroLabel();
+            this.lbVeiculo = new MetroFramework.Controls.MetroLabel();
+            this.lbCliente = new MetroFramework.Controls.MetroLabel();
+            this.lbIdOrcamento = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.btFecharTelaPedido = new MetroFramework.Controls.MetroButton();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
@@ -60,13 +67,6 @@ namespace ImpostoCTE.Model
             this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
             this.lbCodigoDetalhe = new MetroSet_UI.Controls.MetroSetLabel();
             this.timerEstoqueAlterado = new System.Windows.Forms.Timer(this.components);
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.lbIdOrcamento = new MetroFramework.Controls.MetroLabel();
-            this.lbCliente = new MetroFramework.Controls.MetroLabel();
-            this.lbVeiculo = new MetroFramework.Controls.MetroLabel();
-            this.lbData = new MetroFramework.Controls.MetroLabel();
-            this.lbPlaca = new MetroFramework.Controls.MetroLabel();
-            this.lbIDCliente = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -292,6 +292,98 @@ namespace ImpostoCTE.Model
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
+            // lbIDCliente
+            // 
+            this.lbIDCliente.AutoSize = true;
+            this.lbIDCliente.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbIDCliente.Location = new System.Drawing.Point(3, 12);
+            this.lbIDCliente.Name = "lbIDCliente";
+            this.lbIDCliente.Size = new System.Drawing.Size(12, 19);
+            this.lbIDCliente.TabIndex = 15;
+            this.lbIDCliente.Text = ".";
+            this.lbIDCliente.UseCustomBackColor = true;
+            this.lbIDCliente.UseCustomForeColor = true;
+            this.lbIDCliente.UseStyleColors = true;
+            // 
+            // lbPlaca
+            // 
+            this.lbPlaca.AutoSize = true;
+            this.lbPlaca.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbPlaca.Location = new System.Drawing.Point(333, 47);
+            this.lbPlaca.Name = "lbPlaca";
+            this.lbPlaca.Size = new System.Drawing.Size(40, 19);
+            this.lbPlaca.TabIndex = 14;
+            this.lbPlaca.Text = "NULL";
+            this.lbPlaca.UseCustomBackColor = true;
+            this.lbPlaca.UseCustomForeColor = true;
+            this.lbPlaca.UseStyleColors = true;
+            // 
+            // lbData
+            // 
+            this.lbData.AutoSize = true;
+            this.lbData.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbData.Location = new System.Drawing.Point(333, 12);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(40, 19);
+            this.lbData.TabIndex = 13;
+            this.lbData.Text = "NULL";
+            this.lbData.UseCustomBackColor = true;
+            this.lbData.UseCustomForeColor = true;
+            this.lbData.UseStyleColors = true;
+            // 
+            // lbVeiculo
+            // 
+            this.lbVeiculo.AutoSize = true;
+            this.lbVeiculo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbVeiculo.Location = new System.Drawing.Point(70, 47);
+            this.lbVeiculo.Name = "lbVeiculo";
+            this.lbVeiculo.Size = new System.Drawing.Size(40, 19);
+            this.lbVeiculo.TabIndex = 12;
+            this.lbVeiculo.Text = "NULL";
+            this.lbVeiculo.UseCustomBackColor = true;
+            this.lbVeiculo.UseCustomForeColor = true;
+            this.lbVeiculo.UseStyleColors = true;
+            // 
+            // lbCliente
+            // 
+            this.lbCliente.AutoSize = true;
+            this.lbCliente.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbCliente.Location = new System.Drawing.Point(70, 12);
+            this.lbCliente.Name = "lbCliente";
+            this.lbCliente.Size = new System.Drawing.Size(40, 19);
+            this.lbCliente.TabIndex = 11;
+            this.lbCliente.Text = "NULL";
+            this.lbCliente.UseCustomBackColor = true;
+            this.lbCliente.UseCustomForeColor = true;
+            this.lbCliente.UseStyleColors = true;
+            // 
+            // lbIdOrcamento
+            // 
+            this.lbIdOrcamento.AutoSize = true;
+            this.lbIdOrcamento.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbIdOrcamento.ForeColor = System.Drawing.Color.Navy;
+            this.lbIdOrcamento.Location = new System.Drawing.Point(495, 47);
+            this.lbIdOrcamento.Name = "lbIdOrcamento";
+            this.lbIdOrcamento.Size = new System.Drawing.Size(16, 19);
+            this.lbIdOrcamento.TabIndex = 10;
+            this.lbIdOrcamento.Text = "0";
+            this.lbIdOrcamento.UseCustomBackColor = true;
+            this.lbIdOrcamento.UseCustomForeColor = true;
+            this.lbIdOrcamento.UseStyleColors = true;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.metroLabel1.Location = new System.Drawing.Point(446, 47);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(28, 19);
+            this.metroLabel1.TabIndex = 9;
+            this.metroLabel1.Text = "Nº:";
+            this.metroLabel1.UseCustomBackColor = true;
+            this.metroLabel1.UseCustomForeColor = true;
+            this.metroLabel1.UseStyleColors = true;
+            // 
             // metroSetLabel1
             // 
             this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -467,98 +559,6 @@ namespace ImpostoCTE.Model
             // 
             this.timerEstoqueAlterado.Interval = 1000;
             this.timerEstoqueAlterado.Tick += new System.EventHandler(this.timerEstoqueAlterado_Tick);
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.metroLabel1.Location = new System.Drawing.Point(446, 47);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(28, 19);
-            this.metroLabel1.TabIndex = 9;
-            this.metroLabel1.Text = "Nº:";
-            this.metroLabel1.UseCustomBackColor = true;
-            this.metroLabel1.UseCustomForeColor = true;
-            this.metroLabel1.UseStyleColors = true;
-            // 
-            // lbIdOrcamento
-            // 
-            this.lbIdOrcamento.AutoSize = true;
-            this.lbIdOrcamento.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbIdOrcamento.ForeColor = System.Drawing.Color.Navy;
-            this.lbIdOrcamento.Location = new System.Drawing.Point(495, 47);
-            this.lbIdOrcamento.Name = "lbIdOrcamento";
-            this.lbIdOrcamento.Size = new System.Drawing.Size(43, 19);
-            this.lbIdOrcamento.TabIndex = 10;
-            this.lbIdOrcamento.Text = "Nº:  0";
-            this.lbIdOrcamento.UseCustomBackColor = true;
-            this.lbIdOrcamento.UseCustomForeColor = true;
-            this.lbIdOrcamento.UseStyleColors = true;
-            // 
-            // lbCliente
-            // 
-            this.lbCliente.AutoSize = true;
-            this.lbCliente.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbCliente.Location = new System.Drawing.Point(70, 12);
-            this.lbCliente.Name = "lbCliente";
-            this.lbCliente.Size = new System.Drawing.Size(40, 19);
-            this.lbCliente.TabIndex = 11;
-            this.lbCliente.Text = "NULL";
-            this.lbCliente.UseCustomBackColor = true;
-            this.lbCliente.UseCustomForeColor = true;
-            this.lbCliente.UseStyleColors = true;
-            // 
-            // lbVeiculo
-            // 
-            this.lbVeiculo.AutoSize = true;
-            this.lbVeiculo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbVeiculo.Location = new System.Drawing.Point(70, 47);
-            this.lbVeiculo.Name = "lbVeiculo";
-            this.lbVeiculo.Size = new System.Drawing.Size(40, 19);
-            this.lbVeiculo.TabIndex = 12;
-            this.lbVeiculo.Text = "NULL";
-            this.lbVeiculo.UseCustomBackColor = true;
-            this.lbVeiculo.UseCustomForeColor = true;
-            this.lbVeiculo.UseStyleColors = true;
-            // 
-            // lbData
-            // 
-            this.lbData.AutoSize = true;
-            this.lbData.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbData.Location = new System.Drawing.Point(333, 12);
-            this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(40, 19);
-            this.lbData.TabIndex = 13;
-            this.lbData.Text = "NULL";
-            this.lbData.UseCustomBackColor = true;
-            this.lbData.UseCustomForeColor = true;
-            this.lbData.UseStyleColors = true;
-            // 
-            // lbPlaca
-            // 
-            this.lbPlaca.AutoSize = true;
-            this.lbPlaca.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbPlaca.Location = new System.Drawing.Point(333, 47);
-            this.lbPlaca.Name = "lbPlaca";
-            this.lbPlaca.Size = new System.Drawing.Size(40, 19);
-            this.lbPlaca.TabIndex = 14;
-            this.lbPlaca.Text = "NULL";
-            this.lbPlaca.UseCustomBackColor = true;
-            this.lbPlaca.UseCustomForeColor = true;
-            this.lbPlaca.UseStyleColors = true;
-            // 
-            // lbIDCliente
-            // 
-            this.lbIDCliente.AutoSize = true;
-            this.lbIDCliente.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lbIDCliente.Location = new System.Drawing.Point(3, 12);
-            this.lbIDCliente.Name = "lbIDCliente";
-            this.lbIDCliente.Size = new System.Drawing.Size(12, 19);
-            this.lbIDCliente.TabIndex = 15;
-            this.lbIDCliente.Text = ".";
-            this.lbIDCliente.UseCustomBackColor = true;
-            this.lbIDCliente.UseCustomForeColor = true;
-            this.lbIDCliente.UseStyleColors = true;
             // 
             // Form_Pedido
             // 

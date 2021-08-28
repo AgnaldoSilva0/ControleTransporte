@@ -22,7 +22,6 @@ namespace ImpostoCTE.Forms
 
         private void btCriar_Click(object sender, EventArgs e)
         {
-            //Pedido.idClienteRef 
             Pedido.idOrcamentoRef = Convert.ToInt32(tbIdOrcamento.Text);
             Pedido.nomeClienteRef = cbCliente.Text;
             Pedido.placaRef = tbPlaca.Text;

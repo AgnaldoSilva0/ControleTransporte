@@ -35,7 +35,7 @@ namespace ImpostoCTE.Model
             this.clmDescricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmPreço = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmEstoque = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.metroListView2 = new MetroFramework.Controls.MetroListView();
+            this.listViewPedido = new MetroFramework.Controls.MetroListView();
             this.clmCodigoOrcamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmDescricaoOrcamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.clmPrecoOrcamento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -113,24 +113,24 @@ namespace ImpostoCTE.Model
             this.clmEstoque.Text = "Estoque";
             this.clmEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // metroListView2
+            // listViewPedido
             // 
-            this.metroListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewPedido.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.clmCodigoOrcamento,
             this.clmDescricaoOrcamento,
             this.clmPrecoOrcamento,
             this.clmQuantidadeOrcamento,
             this.clmTotalItemOrcamento});
-            this.metroListView2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView2.FullRowSelect = true;
-            this.metroListView2.Location = new System.Drawing.Point(461, 90);
-            this.metroListView2.Name = "metroListView2";
-            this.metroListView2.OwnerDraw = true;
-            this.metroListView2.Size = new System.Drawing.Size(556, 420);
-            this.metroListView2.TabIndex = 1;
-            this.metroListView2.UseCompatibleStateImageBehavior = false;
-            this.metroListView2.UseSelectable = true;
-            this.metroListView2.View = System.Windows.Forms.View.Details;
+            this.listViewPedido.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.listViewPedido.FullRowSelect = true;
+            this.listViewPedido.Location = new System.Drawing.Point(461, 90);
+            this.listViewPedido.Name = "listViewPedido";
+            this.listViewPedido.OwnerDraw = true;
+            this.listViewPedido.Size = new System.Drawing.Size(556, 420);
+            this.listViewPedido.TabIndex = 1;
+            this.listViewPedido.UseCompatibleStateImageBehavior = false;
+            this.listViewPedido.UseSelectable = true;
+            this.listViewPedido.View = System.Windows.Forms.View.Details;
             // 
             // clmCodigoOrcamento
             // 
@@ -350,9 +350,9 @@ namespace ImpostoCTE.Model
             this.lbCliente.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbCliente.Location = new System.Drawing.Point(70, 12);
             this.lbCliente.Name = "lbCliente";
-            this.lbCliente.Size = new System.Drawing.Size(40, 19);
+            this.lbCliente.Size = new System.Drawing.Size(58, 19);
             this.lbCliente.TabIndex = 11;
-            this.lbCliente.Text = "NULL";
+            this.lbCliente.Text = "AVULSO";
             this.lbCliente.UseCustomBackColor = true;
             this.lbCliente.UseCustomForeColor = true;
             this.lbCliente.UseStyleColors = true;
@@ -571,7 +571,7 @@ namespace ImpostoCTE.Model
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.btPesquisarProduto);
             this.Controls.Add(this.tbPesquisarProduto);
-            this.Controls.Add(this.metroListView2);
+            this.Controls.Add(this.listViewPedido);
             this.Controls.Add(this.listViewProdutos);
             this.Name = "Form_Pedido";
             this.Text = "Orçamento";
@@ -590,7 +590,7 @@ namespace ImpostoCTE.Model
         private System.Windows.Forms.ColumnHeader clmDescricao;
         private System.Windows.Forms.ColumnHeader clmPreço;
         private System.Windows.Forms.ColumnHeader clmEstoque;
-        private MetroFramework.Controls.MetroListView metroListView2;
+        private MetroFramework.Controls.MetroListView listViewPedido;
         private System.Windows.Forms.ColumnHeader clmCodigoOrcamento;
         private System.Windows.Forms.ColumnHeader clmDescricaoOrcamento;
         private System.Windows.Forms.ColumnHeader clmPrecoOrcamento;

@@ -14,5 +14,6 @@ namespace ImpostoCTE
         public static List<Funcionario> listFuncionario = new List<Funcionario>();
         public static List<Pedido> listPedido = new List<Pedido>();
         public static List<Cliente> listCliente = new List<Cliente>();
+        public static List<ItensPedido> listItensPedido = new List<ItensPedido>();
     }
 }

@@ -42,7 +42,7 @@ namespace ImpostoCTE.Model
             lbIdOrcamento.Text = Convert.ToString(Pedido.idOrcamentoRef);
             lbPlaca.Text = Pedido.placaRef;
             lbVeiculo.Text = Pedido.veiculoRef;
-
+            atualizarListaPedido();
         }
 
         private void btFecharTelaPedido_Click(object sender, EventArgs e)
@@ -110,11 +110,28 @@ namespace ImpostoCTE.Model
             double precoUnitario = Convert.ToDouble(listViewProdutos.SelectedItems[0].SubItems[2].Text);
             int idCliente = Pesquisar.retornarIdCliente(lbCliente.Text);
             int idPedido = Convert.ToInt32(lbIdOrcamento.Text);
+            string placa = lbPlaca.Text;
+            string modelo = lbVeiculo.Text;
 
-            Form_AddItemOrcamento form_AddItem = new Form_AddItemOrcamento(codigo, descricao, precoUnitario, idCliente, idPedido);
+            Form_AddItemOrcamento form_AddItem = new Form_AddItemOrcamento(codigo, descricao, precoUnitario, idCliente, idPedido, placa, modelo);
             //Ao usar ShowDialog o código pausa no mesmo local
             form_AddItem.ShowDialog();
             this.Refresh();
+        }
+
+        private void atualizarListaPedido()
+        {
+            listViewPedido.Items.Clear();
+            Pesquisar.preencherListaItensPedido(Convert.ToInt32(lbIdOrcamento.Text));
+            foreach (var item in Listas.listItensPedido)
+            {
+                listViewPedido.Items.Add(new ListViewItem(new string[] { 
+                    item.Codigo, 
+                    item.Descricao, 
+                    Convert.ToString(item.PrecoUni), 
+                    Convert.ToString(item.Quantidade),
+                    Convert.ToString(item.PrecoTotal) }));
+            }
         }
 
     }

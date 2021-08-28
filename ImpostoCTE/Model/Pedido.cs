@@ -8,6 +8,7 @@ namespace ImpostoCTE.Model
 {
     class Pedido
     {
+        #region Objeto Pedido para preencher tabela de cada pedido
         private int idCliente, idProduto, quantidade, idPedido;
         private string data, placa, modelo;
 
@@ -29,11 +30,15 @@ namespace ImpostoCTE.Model
         public int IdPedido { get => idPedido; set => idPedido = value; }
         public string Placa { get => placa; set => placa = value; }
         public string Modelo { get => modelo; set => modelo = value; }
+        #endregion
 
-
+        #region Variaveis staticas para uso de referencia
         //Variaveis de referência
         public static int idClienteRef, idOrcamentoRef;
         public static string nomeClienteRef, dataRef, veiculoRef, placaRef;
+        #endregion
+
+
     }
 
 }

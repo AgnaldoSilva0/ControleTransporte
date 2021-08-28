@@ -20,11 +20,13 @@ namespace ImpostoCTE.Forms
             InitializeComponent();
         }
 
-        public Form_AddItemOrcamento(string codigo, string descricao, double valorUnitario, int idCliente, int idPedido)
+        public Form_AddItemOrcamento(string codigo, string descricao, double valorUnitario, int idCliente, int idPedido, string placa, string modelo)
         {
             InitializeComponent();
             varIdCliente = idCliente;
             varIdPedido = idPedido;
+            varPlaca = placa;
+            varModelo = modelo;
             preencherTextBox(codigo, descricao, valorUnitario);
         }
 
@@ -65,6 +67,8 @@ namespace ImpostoCTE.Forms
 
         private int varIdCliente = 0;
         private int varIdPedido = 0;
+        private string varPlaca = null;
+        private string varModelo = null;
         private void btAddProduto_Click(object sender, EventArgs e)
         {
             Insert insert = new Insert();
@@ -75,7 +79,9 @@ namespace ImpostoCTE.Forms
                 Pesquisar.retornarIdProduto(lbCodigoProduto.Text, lbDescricaoProduto.Text, 2), 
                 data, 
                 Convert.ToInt32(tbQuantidadeProduto.Text),
-                varIdPedido);
+                varIdPedido,
+                varPlaca,
+                varModelo);
         }
     }
 }

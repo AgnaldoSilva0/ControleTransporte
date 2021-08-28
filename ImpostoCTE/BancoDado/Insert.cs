@@ -116,7 +116,7 @@ namespace ImpostoCTE.BancoDado
         #endregion
 
         #region Inserir Item no pedido
-        public void insertBancoPedido(int idCliente, int idProduto, string data, int quantidade, int idPedido)
+        public void insertBancoPedido(int idCliente, int idProduto, string data, int quantidade, int idPedido, string placa, string modelo)
         {
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
@@ -130,8 +130,8 @@ namespace ImpostoCTE.BancoDado
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
 
-                comando.CommandText = "INSERT INTO table_pedido(idCliente, idProduto, data, quantidade, idPedido) " +
-                    "VALUES ('" + idCliente + "', '" + idProduto + "', '" + data + "', '" + quantidade + "', '"+idPedido+"' )";
+                comando.CommandText = "INSERT INTO table_pedido(idCliente, idProduto, data, quantidade, idPedido, placa, modelo) " +
+                    "VALUES ('" + idCliente + "', '" + idProduto + "', '" + data + "', '" + quantidade + "', '"+idPedido+"', '" + placa + "', '" + modelo + "' )";
 
                 comando.ExecuteNonQuery();
 

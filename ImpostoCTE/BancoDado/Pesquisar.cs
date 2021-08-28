@@ -151,6 +151,54 @@ namespace ImpostoCTE.BancoDado
         }
         #endregion
 
+        #region Preencher Lista Itens do pedido
+        public static void preencherListaItensPedido(int idPedido)
+        {
+            Listas.listItensPedido.Clear();
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+            try
+            {
+                //if (codigo != "")
+                //{
+                //   query = "SELECT * FROM produto WHERE nome LIKE '" + codigo + "'";
+                //}
+                string query = "SELECT * FROM table_pedido " +
+                    "INNER JOIN table_produto ON table_pedido.idProduto = table_produto.id " +
+                    "INNER JOIN table_cliente ON table_pedido.idCliente = table_cliente.id " +
+                    "WHERE idPedido LIKE '" + idPedido + "' ";
+
+                DataTable dados = new DataTable();
+
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter(query, strConection);
+
+                conexao.Open();
+
+                adaptador.Fill(dados);
+
+                foreach (System.Data.DataRow row in dados.Rows)
+                {
+                    double precoTotalItem = Convert.ToDouble(row["preco"]) * Convert.ToDouble(row["quantidade"]);
+                    Listas.listItensPedido.Add(new ItensPedido(Convert.ToString(row["codigo"]),
+                        Convert.ToString(row["descricao"]),
+                        Convert.ToInt32(row["preco"]),
+                        precoTotalItem,
+                        Convert.ToInt32(row["quantidade"])));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        #endregion
+
         #region Preencher Lista de Orçamentos
         public static void preencherListaOrcamento()
         {
@@ -172,7 +220,6 @@ namespace ImpostoCTE.BancoDado
                 conexao.Open();
 
                 adaptador.Fill(dados);
-
 
                 foreach (System.Data.DataRow row in dados.Rows)
                 {
@@ -413,7 +460,7 @@ namespace ImpostoCTE.BancoDado
                 {
                     if (Convert.ToString(row["nome"]) == nome)
                     {
-                       id = Convert.ToInt32(row["idEstoque"]);
+                       id = Convert.ToInt32(row["id"]);
                     }
                 }
             }

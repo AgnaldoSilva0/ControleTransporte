@@ -58,7 +58,7 @@ namespace ImpostoCTE.BancoDado
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
 
-                string query = "UPDATE table_estoque SET quantidade = '" + newEstoque + "'  WHERE idProduto LIKE '" + idProduto + "' ";
+                string query = "UPDATE table_produto SET estoque = '" + newEstoque + "'  WHERE id LIKE '" + idProduto + "' ";
 
                 comando.CommandText = query;
 

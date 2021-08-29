@@ -47,10 +47,17 @@ namespace ImpostoCTE.Forms
                     return;
                 }
 
+                if (tbEstoque.Text == string.Empty)
+                {
+                    Operacoes.validator(tbIpi, "Preencha o Estoque", tbIpi);
+                    return;
+                }
+
                 Insert.insertBancoProduto(tbCodigo.Text,
                 tbDescricao.Text,
                 Convert.ToDouble(tbPreco.Text),
-                Convert.ToInt16(tbIpi.Text));
+                Convert.ToInt16(tbIpi.Text),
+                Convert.ToInt32(tbEstoque.Text));
 
                 limparTextBox();
             } catch(Exception)
@@ -71,6 +78,7 @@ namespace ImpostoCTE.Forms
             tbDescricao.Text = string.Empty;
             tbPreco.Text = string.Empty;
             tbIpi.Text = string.Empty;
+            tbEstoque.Text = string.Empty;
         }
 
     }

@@ -39,6 +39,8 @@ namespace ImpostoCTE.Forms
             this.tbIpi = new MetroSet_UI.Controls.MetroSetTextBox();
             this.btCadastrarProduto = new MetroSet_UI.Controls.MetroSetButton();
             this.lbResultado = new MetroSet_UI.Controls.MetroSetLabel();
+            this.tbEstoque = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
             this.SuspendLayout();
             // 
             // metroSetLabel1
@@ -102,7 +104,7 @@ namespace ImpostoCTE.Forms
             this.tbCodigo.AutoCompleteCustomSource = null;
             this.tbCodigo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbCodigo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbCodigo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbCodigo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbCodigo.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbCodigo.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbCodigo.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -131,7 +133,7 @@ namespace ImpostoCTE.Forms
             this.tbDescricao.AutoCompleteCustomSource = null;
             this.tbDescricao.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbDescricao.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbDescricao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbDescricao.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbDescricao.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbDescricao.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbDescricao.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -160,7 +162,7 @@ namespace ImpostoCTE.Forms
             this.tbPreco.AutoCompleteCustomSource = null;
             this.tbPreco.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbPreco.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbPreco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbPreco.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbPreco.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbPreco.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbPreco.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -190,7 +192,7 @@ namespace ImpostoCTE.Forms
             this.tbIpi.AutoCompleteCustomSource = null;
             this.tbIpi.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.tbIpi.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.tbIpi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbIpi.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbIpi.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.tbIpi.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
             this.tbIpi.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
@@ -225,7 +227,7 @@ namespace ImpostoCTE.Forms
             this.btCadastrarProduto.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.btCadastrarProduto.HoverTextColor = System.Drawing.Color.White;
             this.btCadastrarProduto.IsDerivedStyle = true;
-            this.btCadastrarProduto.Location = new System.Drawing.Point(3, 210);
+            this.btCadastrarProduto.Location = new System.Drawing.Point(3, 274);
             this.btCadastrarProduto.Name = "btCadastrarProduto";
             this.btCadastrarProduto.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.btCadastrarProduto.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -246,7 +248,7 @@ namespace ImpostoCTE.Forms
             // 
             this.lbResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.lbResultado.IsDerivedStyle = true;
-            this.lbResultado.Location = new System.Drawing.Point(79, 281);
+            this.lbResultado.Location = new System.Drawing.Point(56, 363);
             this.lbResultado.Name = "lbResultado";
             this.lbResultado.Size = new System.Drawing.Size(100, 23);
             this.lbResultado.Style = MetroSet_UI.Enums.Style.Light;
@@ -256,11 +258,57 @@ namespace ImpostoCTE.Forms
             this.lbResultado.ThemeAuthor = "Narwin";
             this.lbResultado.ThemeName = "MetroLite";
             // 
+            // tbEstoque
+            // 
+            this.tbEstoque.AutoCompleteCustomSource = null;
+            this.tbEstoque.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbEstoque.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbEstoque.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbEstoque.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbEstoque.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(155)))), ((int)(((byte)(155)))));
+            this.tbEstoque.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            this.tbEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.tbEstoque.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
+            this.tbEstoque.Image = null;
+            this.tbEstoque.IsDerivedStyle = true;
+            this.tbEstoque.Lines = null;
+            this.tbEstoque.Location = new System.Drawing.Point(95, 210);
+            this.tbEstoque.MaxLength = 32767;
+            this.tbEstoque.Multiline = false;
+            this.tbEstoque.Name = "tbEstoque";
+            this.tbEstoque.ReadOnly = false;
+            this.tbEstoque.Size = new System.Drawing.Size(217, 23);
+            this.tbEstoque.Style = MetroSet_UI.Enums.Style.Light;
+            this.tbEstoque.StyleManager = null;
+            this.tbEstoque.TabIndex = 11;
+            this.tbEstoque.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbEstoque.ThemeAuthor = "Narwin";
+            this.tbEstoque.ThemeName = "MetroLite";
+            this.tbEstoque.UseSystemPasswordChar = false;
+            this.tbEstoque.WatermarkText = "Estoque";
+            this.tbEstoque.KeyPressed += new System.Windows.Forms.KeyPressEventHandler(this.noTextOnTextBox);
+            // 
+            // metroSetLabel5
+            // 
+            this.metroSetLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetLabel5.IsDerivedStyle = true;
+            this.metroSetLabel5.Location = new System.Drawing.Point(3, 210);
+            this.metroSetLabel5.Name = "metroSetLabel5";
+            this.metroSetLabel5.Size = new System.Drawing.Size(86, 23);
+            this.metroSetLabel5.Style = MetroSet_UI.Enums.Style.Light;
+            this.metroSetLabel5.StyleManager = null;
+            this.metroSetLabel5.TabIndex = 10;
+            this.metroSetLabel5.Text = "Estoque:";
+            this.metroSetLabel5.ThemeAuthor = "Narwin";
+            this.metroSetLabel5.ThemeName = "MetroLite";
+            // 
             // Form_Cad_Prod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 341);
+            this.ClientSize = new System.Drawing.Size(315, 409);
+            this.Controls.Add(this.tbEstoque);
+            this.Controls.Add(this.metroSetLabel5);
             this.Controls.Add(this.lbResultado);
             this.Controls.Add(this.btCadastrarProduto);
             this.Controls.Add(this.tbIpi);
@@ -291,5 +339,7 @@ namespace ImpostoCTE.Forms
         private MetroSet_UI.Controls.MetroSetTextBox tbIpi;
         private MetroSet_UI.Controls.MetroSetButton btCadastrarProduto;
         private MetroSet_UI.Controls.MetroSetLabel lbResultado;
+        private MetroSet_UI.Controls.MetroSetTextBox tbEstoque;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel5;
     }
 }

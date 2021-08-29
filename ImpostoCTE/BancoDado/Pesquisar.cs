@@ -23,7 +23,7 @@ namespace ImpostoCTE.BancoDado
             SQLiteConnection conexao = new SQLiteConnection(strConection);
             try
             {
-                string query = "SELECT * FROM table_produto INNER JOIN table_estoque ON table_produto.id = table_estoque.idProduto";
+                string query = "SELECT * FROM table_produto";
                 //if (codigo != "")
                 //{
                 //   query = "SELECT * FROM produto WHERE nome LIKE '" + codigo + "'";
@@ -41,7 +41,7 @@ namespace ImpostoCTE.BancoDado
                 foreach (System.Data.DataRow row in dados.Rows)
                 {
                     Listas.listProduto.Add(new Produto(Convert.ToString(row["codigo"]), Convert.ToString(row["descricao"]),
-                        Convert.ToDouble(row["preco"]), Convert.ToInt16(row["ipi"]), Convert.ToInt32(row["quantidade"])));
+                        Convert.ToDouble(row["preco"]), Convert.ToInt16(row["ipi"]), Convert.ToInt32(row["estoque"])));
                 }
             }
             catch (Exception ex)
@@ -161,10 +161,6 @@ namespace ImpostoCTE.BancoDado
             SQLiteConnection conexao = new SQLiteConnection(strConection);
             try
             {
-                //if (codigo != "")
-                //{
-                //   query = "SELECT * FROM produto WHERE nome LIKE '" + codigo + "'";
-                //}
                 string query = "SELECT * FROM table_pedido " +
                     "INNER JOIN table_produto ON table_pedido.idProduto = table_produto.id " +
                     "INNER JOIN table_cliente ON table_pedido.idCliente = table_cliente.id " +
@@ -254,10 +250,6 @@ namespace ImpostoCTE.BancoDado
             try
             {
                 string query = "SELECT * FROM table_funcionarios";
-                //if (codigo != "")
-                //{
-                //   query = "SELECT * FROM produto WHERE nome LIKE '" + codigo + "'";
-                //}
 
                 DataTable dados = new DataTable();
 
@@ -395,7 +387,7 @@ namespace ImpostoCTE.BancoDado
             SQLiteConnection conexao = new SQLiteConnection(strConection);
             try
             {
-                string query = "SELECT * FROM table_produto INNER JOIN table_estoque ON table_produto.id = table_estoque.idProduto " +
+                string query = "SELECT * FROM table_produto " +
                     "WHERE codigo LIKE '"+ codigo + "' AND descricao = '" + descricao + "'";
 
                 DataTable dados = new DataTable();
@@ -413,7 +405,7 @@ namespace ImpostoCTE.BancoDado
                     {
                         if (operacao == 1)
                         {
-                            id = Convert.ToInt32(row["idEstoque"]);
+                            id = Convert.ToInt32(row["id"]);
                         } 
                         else
                         {

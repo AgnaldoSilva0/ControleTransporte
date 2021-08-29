@@ -47,7 +47,7 @@ namespace ImpostoCTE.BancoDado
         #endregion
 
         #region InserirProduto
-        public static void insertBancoProduto(string codigo, string descricao, double preco, int ipi)
+        public static void insertBancoProduto(string codigo, string descricao, double preco, int ipi, int estoque)
         {
             string baseDados = "C:\\BDs\\dds\\banco_dados.db";
             string strConection = @"Data Source = " + baseDados + "; Version = 3";
@@ -61,7 +61,7 @@ namespace ImpostoCTE.BancoDado
                 SQLiteCommand comando = new SQLiteCommand();
                 comando.Connection = conexao;
 
-                comando.CommandText = "INSERT INTO table_produto(codigo, descricao, preco, ipi) VALUES ('" + codigo + "', '" + descricao + "', '" + preco + "', '" + ipi + "' )";
+                comando.CommandText = "INSERT INTO table_produto(codigo, descricao, preco, ipi, estoque) VALUES ('" + codigo + "', '" + descricao + "', '" + preco + "', '" + ipi + "', '" + estoque + "' )";
 
                 comando.ExecuteNonQuery();
 

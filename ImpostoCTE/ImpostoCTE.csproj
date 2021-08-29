@@ -122,22 +122,22 @@
     <Compile Include="Forms\Form_AddItemOrcamento.Designer.cs">
       <DependentUpon>Form_AddItemOrcamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Cad_Frete.cs">
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Frete.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Cad_Frete.Designer.cs">
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Frete.Designer.cs">
       <DependentUpon>Form_Cad_Frete.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Cad_Func.cs">
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Func.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Cad_Func.Designer.cs">
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Func.Designer.cs">
       <DependentUpon>Form_Cad_Func.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Form_Cad_Prod.cs">
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Prod.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form_Cad_Prod.Designer.cs">
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Prod.Designer.cs">
       <DependentUpon>Form_Cad_Prod.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_Novo_Pedido.cs">
@@ -199,13 +199,13 @@
     <EmbeddedResource Include="Forms\Form_AddItemOrcamento.resx">
       <DependentUpon>Form_AddItemOrcamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Cad_Frete.resx">
+    <EmbeddedResource Include="Forms\Forms_Cadastro\Form_Cad_Frete.resx">
       <DependentUpon>Form_Cad_Frete.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Cad_Func.resx">
+    <EmbeddedResource Include="Forms\Forms_Cadastro\Form_Cad_Func.resx">
       <DependentUpon>Form_Cad_Func.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Form_Cad_Prod.resx">
+    <EmbeddedResource Include="Forms\Forms_Cadastro\Form_Cad_Prod.resx">
       <DependentUpon>Form_Cad_Prod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_Novo_Pedido.resx">

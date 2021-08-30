@@ -149,5 +149,39 @@ namespace ImpostoCTE.BancoDado
         }
         #endregion
 
+        #region Inserir Cliente
+        public void insertBancoCliente(string nome, string telefone)
+        {
+            string baseDados = "C:\\BDs\\dds\\banco_dados.db";
+            string strConection = @"Data Source = " + baseDados + "; Version = 3";
+
+            SQLiteConnection conexao = new SQLiteConnection(strConection);
+
+            try
+            {
+                conexao.Open();
+
+                SQLiteCommand comando = new SQLiteCommand();
+                comando.Connection = conexao;
+
+                comando.CommandText = "INSERT INTO table_cliente(nome, telefone) " +
+                    "VALUES ('" + nome + "', '" + telefone + "')";
+
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Inserido");
+                comando.Dispose();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir item" + ex);
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+        #endregion
+
     }
 }

@@ -86,11 +86,17 @@
     <Compile Include="Forms\Form1Metodos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="Forms\Forms_Cadastro\Form_Tela_Cadastros.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\Forms_Cadastro\Form_Tela_Cadastros.Designer.cs">
+      <DependentUpon>Form_Tela_Cadastros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form2.cs">
       <SubType>Form</SubType>
@@ -115,6 +121,12 @@
     </Compile>
     <Compile Include="Forms\FormLucroFrete.Designer.cs">
       <DependentUpon>FormLucroFrete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms_Cadastro\Form_Cad_Cliente.Designer.cs">
+      <DependentUpon>Form_Cad_Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form_AddItemOrcamento.cs">
       <SubType>Form</SubType>
@@ -181,8 +193,11 @@
     <Compile Include="Model\Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Forms_Cadastro\Form_Tela_Cadastros.resx">
+      <DependentUpon>Form_Tela_Cadastros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
@@ -195,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLucroFrete.resx">
       <DependentUpon>FormLucroFrete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Forms_Cadastro\Form_Cad_Cliente.resx">
+      <DependentUpon>Form_Cad_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form_AddItemOrcamento.resx">
       <DependentUpon>Form_AddItemOrcamento.cs</DependentUpon>

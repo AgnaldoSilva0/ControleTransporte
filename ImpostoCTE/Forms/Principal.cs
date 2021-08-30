@@ -261,8 +261,7 @@ namespace ImpostoCTE
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form_Cad_Prod formCadProd = new Form_Cad_Prod();
-            formCadProd.ShowDialog();
+            openChieldForm(new Forms.Forms_Cadastro.Form_Tela_Cadastros());
         }
 
         private void btListaFrete_Click(object sender, EventArgs e)
